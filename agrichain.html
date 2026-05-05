@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgriChain AI — Operations & Team Plan</title>
+<meta name="description" content="AgriChain AI operations and team plan covering governance, command chain approvals, team roles, feasibility workflow, and milestone timeline from May to June 2026.">
+<meta name="keywords" content="AgriChain, innovation lab, operations plan, AI team, cybersecurity, cloud, IoT, software engineering, project timeline">
+<meta name="author" content="Innovation Lab Operations Team">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#080c14">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AgriChain AI — Operations & Team Plan">
+<meta property="og:description" content="Governance, role clarity, approvals, and cross-team execution plan for the AgriChain AI platform.">
+<meta property="og:site_name" content="Innovation Lab">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AgriChain AI — Operations & Team Plan">
+<meta name="twitter:description" content="Master team operations plan with feasibility gates, approvals, and delivery milestones.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080c14'/%3E%3Cpath d='M14 44L26 20L38 44' fill='none' stroke='%2338bdf8' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M32 18L48 44' fill='none' stroke='%2334d399' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='32' fill='%23080c14'/%3E%3Cpath d='M44 126L73 54L102 126' fill='none' stroke='%2338bdf8' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M90 48L130 126' fill='none' stroke='%2334d399' stroke-width='14' stroke-linecap='round'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Literata:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:       #080c14;
+    --bg2:      #0d1524;
+    --bg3:      #111d30;
+    --surface:  #0d1524;
+    --surface2: #111d30;
+    --line:     rgba(99,179,237,0.12);
+    --muted:    #7a94b0;
+    --text:     #e2eaf4;
+    --text2:    #9eb2c9;
+    --white:    #f4f8ff;
+
+    --green:    #38bdf8;
+    --green2:   #0ea5e9;
+    --lime:     #34d399;
+    --amber:    #f59e0b;
+    --red:      #f87171;
+    --blue:     #38bdf8;
+    --purple:   #60a5fa;
+    --orange:   #f59e0b;
+
+    /* Team colours */
+    --t1: #c084fc;   /* AI/ML — purple */
+    --t1b:#1e1530;
+    --t2: #f05252;   /* Cyber — red */
+    --t2b:#1e1010;
+    --t3: #60a5fa;   /* Cloud — blue */
+    --t3b:#0f1a2a;
+    --t4: #3ddc84;   /* IoT — green */
+    --t4b:#0e2018;
+    --t5: #f0b429;   /* SE — amber */
+    --t5b:#1e1a0a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Literata', Georgia, serif;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* ── NOISE TEXTURE ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .wrap { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 40%, #0e2018 100%);
+    border-bottom: 1px solid var(--line);
+    padding: 70px 0 60px;
+    position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: 'AGRICHAIN';
+    position: absolute; right: -40px; top: 50%; transform: translateY(-50%);
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 180px; line-height: 1;
+    color: var(--green); opacity: 0.03; letter-spacing: -6px; white-space: nowrap;
+    pointer-events: none;
+  }
+  .hero-label {
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 3px;
+    color: var(--green); text-transform: uppercase; margin-bottom: 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-label::before { content: ''; width: 28px; height: 1px; background: var(--green); }
+  .hero h1 {
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 64px; line-height: 1.05;
+    color: var(--white); letter-spacing: -2px; margin-bottom: 16px;
+  }
+  .hero h1 span { color: var(--green); }
+  .hero-sub {
+    font-family: 'Literata', serif; font-style: italic; font-size: 18px;
+    color: var(--text2); max-width: 560px; margin-bottom: 24px;
+  }
+  .hero-link-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(56,189,248,0.1);
+    border: 1px solid rgba(56,189,248,0.35);
+    color: var(--green);
+    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 10px 16px; border-radius: 999px;
+    margin-bottom: 40px;
+    transition: all 0.2s ease;
+  }
+  .hero-link-btn:hover {
+    background: rgba(56,189,248,0.18);
+    border-color: rgba(56,189,248,0.5);
+    color: #9ee6ff;
+  }
+  .hero-meta {
+    display: flex; gap: 32px; flex-wrap: wrap;
+  }
+  .hero-stat {
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .hero-stat-num {
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 32px; color: var(--white);
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .hero-stat-num em { font-style: normal; color: var(--green); }
+  .divider-dot { color: var(--line); align-self: center; font-size: 28px; }
+
+  /* ── NAV PILLS ── */
+  .nav-bar {
+    background: var(--bg2); border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }
+  .nav-inner {
+    display: flex; gap: 0; overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-pill {
+    display: flex; align-items: center; gap: 8px;
+    padding: 14px 20px; text-decoration: none;
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--muted);
+    border-bottom: 2px solid transparent; white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .nav-pill:hover { color: var(--text); border-color: var(--line); }
+  .nav-pill.t1:hover { color: var(--t1); border-color: var(--t1); }
+  .nav-pill.t2:hover { color: var(--t2); border-color: var(--t2); }
+  .nav-pill.t3:hover { color: var(--t3); border-color: var(--t3); }
+  .nav-pill.t4:hover { color: var(--t4); border-color: var(--t4); }
+  .nav-pill.t5:hover { color: var(--t5); border-color: var(--t5); }
+  .nav-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+  /* ── SECTIONS ── */
+  section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+
+  .section-eyebrow {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 3px;
+    color: var(--muted); text-transform: uppercase;
+    display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
+  }
+  .section-eyebrow::before { content: ''; width: 20px; height: 1px; background: currentColor; }
+
+  .section-title {
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 36px;
+    color: var(--white); letter-spacing: -1px; margin-bottom: 8px;
+  }
+  .section-desc {
+    font-family: 'Literata', serif; font-style: italic;
+    font-size: 16px; color: var(--text2); max-width: 600px; margin-bottom: 40px;
+  }
+
+  /* ── OPS CARDS ── */
+  .ops-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 32px;
+  }
+  .ops-card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 12px; padding: 28px;
+    position: relative; overflow: hidden;
+  }
+  .ops-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--green), var(--lime));
+  }
+  .ops-card-role {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    color: var(--green); text-transform: uppercase; margin-bottom: 6px;
+  }
+  .ops-card-name {
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 28px;
+    color: var(--white); margin-bottom: 10px;
+  }
+  .ops-card-desc {
+    font-size: 14px; color: var(--text2); line-height: 1.6;
+  }
+
+  /* ── INTERN ROSTER ── */
+  .roster-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px;
+  }
+  .intern-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 16px 18px; position: relative; transition: border-color 0.2s;
+  }
+  .intern-card:hover { border-color: var(--muted); }
+  .intern-name {
+    font-family: 'Syne', sans-serif; font-weight: 600; font-size: 16px;
+    color: var(--white); margin-bottom: 6px;
+  }
+  .intern-badge {
+    display: inline-block; font-family: 'DM Mono', monospace; font-size: 9px;
+    letter-spacing: 1px; text-transform: uppercase; padding: 2px 7px;
+    border-radius: 4px; font-weight: 500;
+  }
+  .badge-new    { background: rgba(96,165,250,0.15); color: var(--blue); border: 1px solid rgba(96,165,250,0.3); }
+  .badge-inservice { background: rgba(240,180,41,0.15); color: var(--amber); border: 1px solid rgba(240,180,41,0.3); }
+  .badge-regular { background: rgba(61,220,132,0.12); color: var(--green); border: 1px solid rgba(61,220,132,0.25); }
+  .badge-ops    { background: rgba(168,224,96,0.12); color: var(--lime); border: 1px solid rgba(168,224,96,0.25); }
+  .intern-team-dot {
+    position: absolute; top: 14px; right: 14px;
+    width: 8px; height: 8px; border-radius: 50%;
+  }
+
+  /* ── TEAM CARDS ── */
+  .team-section {
+    background: var(--bg2); border: 1px solid var(--line); border-radius: 16px;
+    margin-bottom: 32px; overflow: hidden;
+  }
+  .team-header {
+    padding: 32px 36px; display: flex; align-items: flex-start; gap: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .team-num {
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 52px;
+    line-height: 1; opacity: 0.15; flex-shrink: 0; min-width: 72px;
+  }
+  .team-header-text { flex: 1; }
+  .team-tag {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2.5px;
+    text-transform: uppercase; margin-bottom: 8px; opacity: 0.85;
+  }
+  .team-name {
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 26px;
+    color: var(--white); margin-bottom: 6px; letter-spacing: -0.5px;
+  }
+  .team-sub {
+    font-family: 'Literata', serif; font-style: italic;
+    font-size: 14px; color: var(--text2);
+  }
+  .team-body {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;
+  }
+  .team-col {
+    padding: 28px 32px; border-right: 1px solid var(--line);
+  }
+  .team-col:last-child { border-right: none; }
+  .team-col-title {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 16px;
+  }
+
+  /* Members */
+  .member-list { display: flex; flex-direction: column; gap: 8px; }
+  .member-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px; border-radius: 8px;
+    background: var(--bg); border: 1px solid var(--line);
+    transition: border-color 0.2s;
+  }
+  .member-row:hover { border-color: var(--muted); }
+  .member-avatar {
+    width: 32px; height: 32px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px;
+    flex-shrink: 0;
+  }
+  .member-info { flex: 1; min-width: 0; }
+  .member-name {
+    font-family: 'Syne', sans-serif; font-weight: 600; font-size: 13px;
+    color: var(--white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .member-role {
+    font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--muted);
+  }
+
+  /* Tech stack pills */
+  .tech-list { display: flex; flex-wrap: wrap; gap: 7px; }
+  .tech-pill {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.5px;
+    padding: 4px 10px; border-radius: 6px; border: 1px solid var(--line);
+    background: var(--bg); color: var(--text2); transition: all 0.15s;
+  }
+  .tech-pill:hover { background: var(--surface); color: var(--white); }
+
+  /* Scope list */
+  .scope-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .scope-list li {
+    font-size: 13px; color: var(--text2); line-height: 1.6;
+    padding-left: 14px; position: relative;
+  }
+  .scope-list li::before {
+    content: '→'; position: absolute; left: 0; font-size: 11px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* ── MILESTONES ── */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px;
+    width: 1px; background: var(--line);
+  }
+  .tl-item { position: relative; margin-bottom: 24px; }
+  .tl-item::before {
+    content: ''; position: absolute; left: -24px; top: 6px;
+    width: 10px; height: 10px; border-radius: 50%;
+    border: 2px solid currentColor; background: var(--bg);
+  }
+  .tl-date {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    margin-bottom: 3px;
+  }
+  .tl-title {
+    font-family: 'Syne', sans-serif; font-weight: 600; font-size: 14px;
+    color: var(--white); margin-bottom: 3px;
+  }
+  .tl-desc { font-size: 12px; color: var(--text2); line-height: 1.5; }
+
+  /* ── INTEGRATION MATRIX ── */
+  .matrix-wrap { overflow-x: auto; }
+  .matrix-table {
+    width: 100%; border-collapse: collapse;
+    font-family: 'DM Mono', monospace; font-size: 11px;
+  }
+  .matrix-table th {
+    padding: 10px 14px; text-align: left;
+    background: var(--surface); color: var(--muted);
+    letter-spacing: 1px; text-transform: uppercase; font-size: 9px;
+    border: 1px solid var(--line);
+  }
+  .matrix-table td {
+    padding: 10px 14px; border: 1px solid var(--line);
+    color: var(--text2); font-size: 11px; vertical-align: top;
+    background: var(--bg2);
+  }
+  .matrix-table td.cell-team {
+    font-family: 'Syne', sans-serif; font-weight: 600; font-size: 12px;
+    color: var(--white); background: var(--bg3); white-space: nowrap;
+  }
+  .dot-yes { color: var(--green); font-size: 14px; }
+  .dot-no  { color: var(--line);  font-size: 14px; }
+
+  /* ── LEARNING OUTCOMES ── */
+  .outcomes-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
+  }
+  .outcome-card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 12px; padding: 20px;
+  }
+  .outcome-card-title {
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px;
+    margin-bottom: 14px;
+  }
+  .outcome-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .outcome-list li {
+    font-size: 12px; color: var(--text2); line-height: 1.5;
+    padding-left: 12px; position: relative;
+  }
+  .outcome-list li::before { content: '·'; position: absolute; left: 0; }
+
+  /* ── MASTER TIMELINE TABLE ── */
+  .mtl-grid {
+    display: grid; grid-template-columns: 160px repeat(5, 1fr); gap: 1px;
+    background: var(--line); border-radius: 12px; overflow: hidden;
+  }
+  .mtl-cell {
+    background: var(--bg2); padding: 14px 16px;
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.5px;
+  }
+  .mtl-header {
+    background: var(--surface); font-weight: 500;
+    display: flex; align-items: center; gap: 7px;
+  }
+  .mtl-phase {
+    background: var(--bg3);
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 11px;
+    display: flex; flex-direction: column; justify-content: center; gap: 2px;
+  }
+  .mtl-phase-date { font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 400; color: var(--muted); }
+  .mtl-content { font-size: 10px; line-height: 1.5; color: var(--text2); }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 48px 0; text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 22px;
+    color: var(--green); letter-spacing: -1px; margin-bottom: 8px;
+  }
+  .footer-sub {
+    font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    color: var(--muted); text-transform: uppercase;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero > .wrap > * {
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero > .wrap > *:nth-child(1) { animation-delay: 0.0s; }
+  .hero > .wrap > *:nth-child(2) { animation-delay: 0.1s; }
+  .hero > .wrap > *:nth-child(3) { animation-delay: 0.2s; }
+  .hero > .wrap > *:nth-child(4) { animation-delay: 0.3s; }
+  .hero > .wrap > *:nth-child(5) { animation-delay: 0.4s; }
+
+  .team-section {
+    animation: fadeUp 0.5s ease both;
+  }
+
+  @media (max-width: 900px) {
+    .wrap { padding: 0 20px; }
+    .hero { padding: 56px 0 48px; }
+    .hero h1 { font-size: 40px; }
+    .hero-sub { font-size: 16px; }
+    .hero-meta { gap: 18px; }
+    .hero-stat-num { font-size: 26px; }
+    .team-body { grid-template-columns: 1fr; }
+    .team-col { border-right: none; border-bottom: 1px solid var(--line); }
+    .team-col:last-child { border-bottom: none; }
+    .outcomes-grid { grid-template-columns: 1fr 1fr; }
+    .ops-grid { grid-template-columns: 1fr; }
+    .mtl-grid { grid-template-columns: 120px 1fr; }
+  }
+  @media (max-width: 640px) {
+    section { padding: 48px 0; }
+    .hero h1 { font-size: 34px; }
+    .hero-link-btn { width: 100%; justify-content: center; }
+    .nav-pill { padding: 12px 14px; font-size: 10px; letter-spacing: 1.1px; }
+    .section-title { font-size: 30px; }
+    .section-desc { font-size: 14px; }
+    .team-header { padding: 24px 18px; gap: 16px; }
+    .team-num { font-size: 42px; min-width: 56px; }
+    .team-col { padding: 22px 18px; }
+    .member-row { gap: 10px; }
+    .matrix-wrap { margin: 0 -6px; }
+    .mtl-cell { padding: 12px 10px; }
+    .outcomes-grid { grid-template-columns: 1fr; }
+    .footer { padding: 36px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ─────────────────────────────────────────── -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-label">Innovation Lab · Internal Operations Plan</div>
+    <h1><span>AgriChain</span> AI</h1>
+    <p class="hero-sub">Smart Agriculture Platform — Multi-Team Project Framework & Member Assignments</p>
+    <a class="hero-link-btn" href="innovation_lab_handbook.html">Open Operations Handbook -></a>
+    <div class="hero-meta">
+      <div class="hero-stat">
+        <span class="hero-stat-num"><em>5</em></span>
+        <span class="hero-stat-label">Technology Teams</span>
+      </div>
+      <div class="divider-dot">·</div>
+      <div class="hero-stat">
+        <span class="hero-stat-num"><em>17</em></span>
+        <span class="hero-stat-label">Members Assigned</span>
+      </div>
+      <div class="divider-dot">·</div>
+      <div class="hero-stat">
+        <span class="hero-stat-num"><em>2</em></span>
+        <span class="hero-stat-label">Operations Leads</span>
+      </div>
+      <div class="divider-dot">·</div>
+      <div class="hero-stat">
+        <span class="hero-stat-num"><em>30 Jun</em></span>
+        <span class="hero-stat-label">Final Submission</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── NAV ───────────────────────────────────────────── -->
+<nav class="nav-bar">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a href="#operations" class="nav-pill">
+        <span class="nav-dot" style="background:var(--green)"></span> Operations
+      </a>
+      <a href="#roster" class="nav-pill">
+        <span class="nav-dot" style="background:var(--muted)"></span> Full Roster
+      </a>
+      <a href="#team-ai" class="nav-pill t1">
+        <span class="nav-dot" style="background:var(--t1)"></span> 01 · AI &amp; ML
+      </a>
+      <a href="#team-cyber" class="nav-pill t2">
+        <span class="nav-dot" style="background:var(--t2)"></span> 02 · Cyber
+      </a>
+      <a href="#team-cloud" class="nav-pill t3">
+        <span class="nav-dot" style="background:var(--t3)"></span> 03 · Cloud
+      </a>
+      <a href="#team-iot" class="nav-pill t4">
+        <span class="nav-dot" style="background:var(--t4)"></span> 04 · IoT
+      </a>
+      <a href="#team-se" class="nav-pill t5">
+        <span class="nav-dot" style="background:var(--t5)"></span> 05 · Software Eng
+      </a>
+      <a href="#timeline" class="nav-pill">
+        <span class="nav-dot" style="background:var(--muted)"></span> Timeline
+      </a>
+      <a href="#learning" class="nav-pill">
+        <span class="nav-dot" style="background:var(--muted)"></span> Learning
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── OPERATIONS ────────────────────────────────────── -->
+<section id="operations">
+  <div class="wrap">
+    <div class="section-eyebrow">Layer 01</div>
+    <h2 class="section-title">Operations Leadership</h2>
+    <p class="section-desc">Strategic direction, system integration, and overall accountability for AgriChain AI.</p>
+
+    <div class="ops-grid">
+      <div class="ops-card">
+        <div class="ops-card-role">Project Manager · Layer 1</div>
+        <div class="ops-card-name">Jabu</div>
+        <div class="ops-card-desc">Overall project success, strategic direction, stakeholder management, and final sign-off on all deliverables. Also serving as domain member in the Cyber Security team to maintain technical visibility.</div>
+      </div>
+      <div class="ops-card" style="--card-color: var(--lime);">
+        <div class="ops-card-role" style="color:var(--lime)">Operations Lead · Second in Charge</div>
+        <div class="ops-card-name">Ntokozo</div>
+        <div class="ops-card-desc">System integration oversight, resource coordination, and milestone control across all five teams. Also serving as domain member in the IoT & Smart Technologies team for technical involvement.</div>
+      </div>
+    </div>
+
+    <div style="background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:24px 28px; display:flex; gap:32px; flex-wrap:wrap;">
+      <div>
+        <div style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:2px; color:var(--muted); margin-bottom:8px; text-transform:uppercase;">Operations Responsibilities</div>
+        <ul class="scope-list">
+          <li>Define long-term milestones and set major deliverables for all teams</li>
+          <li>Ensure all squads work toward one unified AgriChain AI platform</li>
+          <li>Enforce one standard delivery workflow across teams: planning, build, test, review, and demo</li>
+          <li>Require each team to research and justify its own technology stack first, including simulation technologies where needed</li>
+          <li>Run a clear command chain: Team Members -> Team Domain Leads -> Operations Lead -> Project Manager</li>
+          <li>Require feasibility discussions inside each team before implementation starts</li>
+          <li>Require feasibility presentations to Operations before architecture and tooling are approved</li>
+          <li>Approve changes on critical scope, integration contracts, security posture, and production deployment</li>
+          <li>Monitor progress, identify delays, and redistribute resources as needed</li>
+          <li>Ensure AI, Security, Cloud, IoT, and Frontend modules integrate correctly</li>
+          <li>Chair Monday/Wednesday/Friday stand-up meetings at 10:00 AM</li>
+          <li>Approve phase completions before teams advance to the next milestone</li>
+        </ul>
+      </div>
+      <div style="min-width:220px;">
+        <div style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:2px; color:var(--muted); margin-bottom:8px; text-transform:uppercase;">Stand-up Schedule</div>
+        <div style="display:flex; flex-direction:column; gap:7px;">
+          <div style="display:flex; gap:12px; align-items:center;">
+            <span style="font-family:'DM Mono',monospace; font-size:11px; color:var(--green);">MON · WED · FRI</span>
+          </div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <span style="font-family:'Syne',sans-serif; font-weight:700; font-size:22px; color:var(--white);">10:00 AM</span>
+          </div>
+          <div style="font-size:12px; color:var(--text2);">All teams · Planner task updates required before each stand-up</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:18px; background:rgba(56,189,248,0.07); border:1px solid rgba(56,189,248,0.22); border-radius:12px; padding:18px 22px;">
+      <div style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:2px; color:var(--green); margin-bottom:8px; text-transform:uppercase;">Command Chain &amp; Approval Flow (All Teams)</div>
+      <ul class="scope-list">
+        <li>Step 1: Team executes kickoff agenda on 06 May 2026: project brief, role clearance, and working agreements</li>
+        <li>Step 2: Team researches technology options (recommended stack is guidance, not compulsory) and simulation tools where required</li>
+        <li>Step 3: Team performs internal feasibility discussion and records risks, constraints, integration impacts, and effort</li>
+        <li>Step 4: Team presents feasibility findings and preferred stack to Operations for review and approval</li>
+        <li>Step 5: Team begins implementation only after Operations confirms go-ahead and integration dependencies</li>
+        <li>Step 6: Cross-team collaboration is mandatory for shared APIs, data contracts, security controls, and deployment readiness</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── FULL ROSTER ────────────────────────────────────── -->
+<section id="roster">
+  <div class="wrap">
+    <div class="section-eyebrow">All Members</div>
+    <h2 class="section-title">Full Team Roster</h2>
+    <p class="section-desc">All interns, their status, and assigned team. Hover a card to see team assignment.</p>
+
+    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:20px;">
+      <span class="intern-badge badge-regular">● Regular Intern</span>
+      <span class="intern-badge badge-new">● New Intern</span>
+      <span class="intern-badge badge-inservice">● In-Service (adjusted schedule)</span>
+      <span class="intern-badge badge-ops">● Operations</span>
+    </div>
+
+    <div class="roster-grid">
+      <!-- Operations -->
+      <div class="intern-card">
+        <span class="intern-badge badge-ops" style="margin-bottom:8px; display:inline-block;">Operations</span>
+        <div class="intern-name">Jabu</div>
+        <div style="font-size:11px; color:var(--text2); font-family:'DM Mono',monospace;">Project Manager<br>+ Cyber Team</div>
+        <div class="intern-team-dot" style="background:var(--lime)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-ops" style="margin-bottom:8px; display:inline-block;">Operations</span>
+        <div class="intern-name">Ntokozo</div>
+        <div style="font-size:11px; color:var(--text2); font-family:'DM Mono',monospace;">Ops Lead<br>+ IoT Team</div>
+        <div class="intern-team-dot" style="background:var(--lime)"></div>
+      </div>
+
+      <!-- AI Team -->
+      <div class="intern-card">
+        <span class="intern-badge badge-regular" style="margin-bottom:8px; display:inline-block;">Regular</span>
+        <div class="intern-name">Neliswa</div>
+        <div style="font-size:11px; color:var(--t1); font-family:'DM Mono',monospace;">AI &amp; ML Team</div>
+        <div class="intern-team-dot" style="background:var(--t1)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-regular" style="margin-bottom:8px; display:inline-block;">Regular</span>
+        <div class="intern-name">Mesuli</div>
+        <div style="font-size:11px; color:var(--t1); font-family:'DM Mono',monospace;">AI &amp; ML Team</div>
+        <div class="intern-team-dot" style="background:var(--t1)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-inservice" style="margin-bottom:8px; display:inline-block;">In-Service</span>
+        <div class="intern-name">Thandazani</div>
+        <div style="font-size:11px; color:var(--t1); font-family:'DM Mono',monospace;">AI &amp; ML Team</div>
+        <div class="intern-team-dot" style="background:var(--t1)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-inservice" style="margin-bottom:8px; display:inline-block;">In-Service</span>
+        <div class="intern-name">Nkanyiso</div>
+        <div style="font-size:11px; color:var(--t1); font-family:'DM Mono',monospace;">AI &amp; ML Team</div>
+        <div class="intern-team-dot" style="background:var(--t1)"></div>
+      </div>
+
+      <!-- Cyber Team -->
+      <div class="intern-card">
+        <span class="intern-badge badge-regular" style="margin-bottom:8px; display:inline-block;">Regular</span>
+        <div class="intern-name">Mpendulo</div>
+        <div style="font-size:11px; color:var(--t2); font-family:'DM Mono',monospace;">Cyber &amp; Blockchain</div>
+        <div class="intern-team-dot" style="background:var(--t2)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-regular" style="margin-bottom:8px; display:inline-block;">Regular</span>
+        <div class="intern-name">Nompilo</div>
+        <div style="font-size:11px; color:var(--t2); font-family:'DM Mono',monospace;">Cyber &amp; Blockchain</div>
+        <div class="intern-team-dot" style="background:var(--t2)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-regular" style="margin-bottom:8px; display:inline-block;">Regular</span>
+        <div class="intern-name">Ndumiso</div>
+        <div style="font-size:11px; color:var(--t2); font-family:'DM Mono',monospace;">Cyber &amp; Blockchain</div>
+        <div class="intern-team-dot" style="background:var(--t2)"></div>
+      </div>
+
+      <!-- Cloud Team -->
+      <div class="intern-card">
+        <span class="intern-badge badge-regular" style="margin-bottom:8px; display:inline-block;">Regular</span>
+        <div class="intern-name">Nkosinathi</div>
+        <div style="font-size:11px; color:var(--t3); font-family:'DM Mono',monospace;">Cloud &amp; Networks</div>
+        <div class="intern-team-dot" style="background:var(--t3)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-regular" style="margin-bottom:8px; display:inline-block;">Regular</span>
+        <div class="intern-name">Nkululeko</div>
+        <div style="font-size:11px; color:var(--t3); font-family:'DM Mono',monospace;">Cloud &amp; Networks</div>
+        <div class="intern-team-dot" style="background:var(--t3)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-new" style="margin-bottom:8px; display:inline-block;">New Intern</span>
+        <div class="intern-name">Nokwanda</div>
+        <div style="font-size:11px; color:var(--t3); font-family:'DM Mono',monospace;">Cloud &amp; Networks</div>
+        <div class="intern-team-dot" style="background:var(--t3)"></div>
+      </div>
+
+      <!-- IoT Team -->
+      <div class="intern-card">
+        <span class="intern-badge badge-regular" style="margin-bottom:8px; display:inline-block;">Regular</span>
+        <div class="intern-name">Ntando</div>
+        <div style="font-size:11px; color:var(--t4); font-family:'DM Mono',monospace;">IoT &amp; Smart Tech</div>
+        <div class="intern-team-dot" style="background:var(--t4)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-new" style="margin-bottom:8px; display:inline-block;">New Intern</span>
+        <div class="intern-name">Gugulethu</div>
+        <div style="font-size:11px; color:var(--t4); font-family:'DM Mono',monospace;">IoT &amp; Smart Tech</div>
+        <div class="intern-team-dot" style="background:var(--t4)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-regular" style="margin-bottom:8px; display:inline-block;">Regular</span>
+        <div class="intern-name">Wandile</div>
+        <div style="font-size:11px; color:var(--t4); font-family:'DM Mono',monospace;">IoT &amp; Smart Tech</div>
+        <div class="intern-team-dot" style="background:var(--t4)"></div>
+      </div>
+
+      <!-- SE Team -->
+      <div class="intern-card">
+        <span class="intern-badge badge-regular" style="margin-bottom:8px; display:inline-block;">Regular</span>
+        <div class="intern-name">Bright</div>
+        <div style="font-size:11px; color:var(--t5); font-family:'DM Mono',monospace;">Software Eng</div>
+        <div class="intern-team-dot" style="background:var(--t5)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-inservice" style="margin-bottom:8px; display:inline-block;">In-Service</span>
+        <div class="intern-name">Sbusiso</div>
+        <div style="font-size:11px; color:var(--t5); font-family:'DM Mono',monospace;">Software Eng</div>
+        <div class="intern-team-dot" style="background:var(--t5)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-new" style="margin-bottom:8px; display:inline-block;">New Intern</span>
+        <div class="intern-name">Basil</div>
+        <div style="font-size:11px; color:var(--t5); font-family:'DM Mono',monospace;">Software Eng</div>
+        <div class="intern-team-dot" style="background:var(--t5)"></div>
+      </div>
+      <div class="intern-card">
+        <span class="intern-badge badge-inservice" style="margin-bottom:8px; display:inline-block;">In-Service</span>
+        <div class="intern-name">Nqubeko</div>
+        <div style="font-size:11px; color:var(--t5); font-family:'DM Mono',monospace;">Software Eng</div>
+        <div class="intern-team-dot" style="background:var(--t5)"></div>
+      </div>
+
+      <!-- IoT Team -->
+      <div class="intern-card">
+        <span class="intern-badge badge-inservice" style="margin-bottom:8px; display:inline-block;">In-Service</span>
+        <div class="intern-name">Yudi</div>
+        <div style="font-size:11px; color:var(--t4); font-family:'DM Mono',monospace;">IoT &amp; Smart Tech</div>
+        <div class="intern-team-dot" style="background:var(--t4)"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px; padding:14px 20px; background:rgba(240,180,41,0.08); border:1px solid rgba(240,180,41,0.25); border-radius:8px; font-size:13px; color:var(--amber);">
+      <strong>⚠ In-Service Members:</strong> Thandazani, Nkanyiso, Sbusiso, and Nqubeko are enrolled in formal in-service training. Their tasks will be scoped to fit available hours, deadlines adjusted accordingly, and work completed asynchronously. Regular check-ins with their Team Lead are still expected.
+    </div>
+  </div>
+</section>
+
+<!-- ── TEAM 01: AI & ML ────────────────────────────────── -->
+<section id="team-ai" style="padding-top:0; border:none;">
+  <div class="wrap" style="padding-top:64px;">
+    <div class="section-eyebrow" style="color:var(--t1)">Team 01</div>
+    <h2 class="section-title">AI, Machine Learning &amp; Data Science</h2>
+    <p class="section-desc">AgriMind — The intelligent crop and disease intelligence engine of AgriChain.</p>
+
+    <div class="team-section" style="border-color:var(--t1); border-top:3px solid var(--t1);">
+      <div class="team-header" style="background:var(--t1b);">
+        <div class="team-num" style="color:var(--t1);">01</div>
+        <div class="team-header-text">
+          <div class="team-tag" style="color:var(--t1);">Sub-Project · AgriMind</div>
+          <div class="team-name">AI, Machine Learning &amp; Data Science</div>
+          <div class="team-sub">Crop prediction · Disease detection · Market forecasting · AI chatbot advisory</div>
+        </div>
+      </div>
+      <div class="team-body">
+        <div class="team-col">
+          <div class="team-col-title">Team Members</div>
+          <div class="member-list">
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(192,132,252,0.18); color:var(--t1);">NE</div>
+              <div class="member-info"><div class="member-name">Neliswa</div><div class="member-role">AI Developer</div></div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(192,132,252,0.18); color:var(--t1);">ME</div>
+              <div class="member-info"><div class="member-name">Mesuli</div><div class="member-role">ML Engineer</div></div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(192,132,252,0.18); color:var(--t1);">TH</div>
+              <div class="member-info">
+                <div class="member-name">Thandazani</div>
+                <div class="member-role">Data Scientist <span class="intern-badge badge-inservice" style="margin-left:4px">in-service</span></div>
+              </div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(192,132,252,0.18); color:var(--t1);">NK</div>
+              <div class="member-info">
+                <div class="member-name">Nkanyiso</div>
+                <div class="member-role">Data Analyst <span class="intern-badge badge-inservice" style="margin-left:4px">in-service</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-col">
+          <div class="team-col-title">Scope &amp; Deliverables</div>
+          <ul class="scope-list">
+            <li>Train ML models for crop yield prediction from sensor + historical data</li>
+            <li>Build CNN plant disease detector (image recognition, 10+ diseases)</li>
+            <li>Develop market price forecasting module using time-series models</li>
+            <li>Create AI recommendation engine for irrigation &amp; planting windows</li>
+            <li>Integrate Gemini API &amp; OpenAI API for NLP farm advisory chatbot</li>
+            <li>Build preprocessing pipelines with Pandas &amp; NumPy for raw IoT data</li>
+            <li>Expose all models as REST API endpoints (consumed by SE team)</li>
+            <li>Produce annotated teaching dataset for student exercises</li>
+          </ul>
+        </div>
+        <div class="team-col">
+          <div class="team-col-title">Recommended Technology Stack (Not Compulsory)</div>
+          <div class="tech-list">
+            <span class="tech-pill" style="border-color:rgba(192,132,252,0.3); color:var(--t1);">Python 3.x</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">NumPy</span>
+            <span class="tech-pill">TensorFlow</span>
+            <span class="tech-pill">Scikit-learn</span>
+            <span class="tech-pill">OpenCV</span>
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">Gemini API</span>
+            <span class="tech-pill">OpenAI API</span>
+            <span class="tech-pill">Supabase</span>
+            <span class="tech-pill">Matplotlib</span>
+          </div>
+          <div style="margin-top:10px; font-size:12px; color:var(--text2);">Teams may adopt alternatives after feasibility review and Operations approval.</div>
+          <div style="margin-top:20px;">
+            <div class="team-col-title">Integration Dependencies</div>
+            <ul class="scope-list">
+              <li style="color:var(--t4)">← IoT Team: live sensor data as model inputs</li>
+              <li style="color:var(--t3)">↑ Cloud Team: hosts &amp; scales the model APIs</li>
+              <li style="color:var(--t2)">🔒 Cyber Team: secures API endpoints</li>
+              <li style="color:var(--t5)">→ SE Team: consumes REST APIs for dashboard</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TEAM 02: CYBER ──────────────────────────────────── -->
+<section id="team-cyber" style="padding-top:0; border:none;">
+  <div class="wrap" style="padding-top:48px;">
+    <div class="section-eyebrow" style="color:var(--t2)">Team 02</div>
+    <h2 class="section-title">Cyber Security &amp; Blockchain</h2>
+    <p class="section-desc">AgriTrust — Securing identity, transactions, and compliance across the entire platform.</p>
+
+    <div class="team-section" style="border-color:var(--t2); border-top:3px solid var(--t2);">
+      <div class="team-header" style="background:var(--t2b);">
+        <div class="team-num" style="color:var(--t2);">02</div>
+        <div class="team-header-text">
+          <div class="team-tag" style="color:var(--t2);">Sub-Project · AgriTrust</div>
+          <div class="team-name">Cyber Security &amp; Blockchain</div>
+          <div class="team-sub">Authentication · Smart contracts · Encryption · POPIA compliance · Penetration testing</div>
+        </div>
+      </div>
+      <div class="team-body">
+        <div class="team-col">
+          <div class="team-col-title">Team Members</div>
+          <div class="member-list">
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(240,82,82,0.18); color:var(--t2);">MP</div>
+              <div class="member-info"><div class="member-name">Mpendulo</div><div class="member-role">Security Engineer</div></div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(240,82,82,0.18); color:var(--t2);">NO</div>
+              <div class="member-info"><div class="member-name">Nompilo</div><div class="member-role">Blockchain Dev</div></div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(168,224,96,0.18); color:var(--lime);">JA</div>
+              <div class="member-info">
+                <div class="member-name">Jabu</div>
+                <div class="member-role">PM + Domain Lead <span class="intern-badge badge-ops" style="margin-left:4px">ops</span></div>
+              </div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(240,82,82,0.18); color:var(--t2);">ND</div>
+              <div class="member-info"><div class="member-name">Ndumiso</div><div class="member-role">Security Analyst</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="team-col">
+          <div class="team-col-title">Scope &amp; Deliverables</div>
+          <ul class="scope-list">
+            <li>Implement JWT &amp; OAuth2 authentication and authorisation system</li>
+            <li>Design &amp; deploy Ethereum smart contracts (Solidity) for produce trading</li>
+            <li>Build end-to-end encryption for all data in transit and at rest (AES-256, TLS)</li>
+            <li>Implement blockchain transaction ledger for supply chain traceability</li>
+            <li>Ensure full POPIA compliance across the platform</li>
+            <li>Conduct penetration testing on all exposed APIs (OWASP ZAP)</li>
+            <li>Design role-based access control: Farmer · Buyer · Admin</li>
+            <li>Produce security audit report and threat model document</li>
+          </ul>
+        </div>
+        <div class="team-col">
+          <div class="team-col-title">Recommended Technology Stack (Not Compulsory)</div>
+          <div class="tech-list">
+            <span class="tech-pill" style="border-color:rgba(240,82,82,0.3); color:var(--t2);">Solidity</span>
+            <span class="tech-pill">Ethereum</span>
+            <span class="tech-pill">Hardhat</span>
+            <span class="tech-pill">JWT</span>
+            <span class="tech-pill">OAuth2</span>
+            <span class="tech-pill">bcrypt</span>
+            <span class="tech-pill">AES-256</span>
+            <span class="tech-pill">TLS 1.3</span>
+            <span class="tech-pill">OWASP ZAP</span>
+            <span class="tech-pill">POPIA</span>
+          </div>
+          <div style="margin-top:10px; font-size:12px; color:var(--text2);">Teams may adopt alternatives after feasibility review and Operations approval.</div>
+          <div style="margin-top:20px;">
+            <div class="team-col-title">Integration Dependencies</div>
+            <ul class="scope-list">
+              <li style="color:var(--t5)">→ SE Team: delivers auth middleware &amp; secure APIs</li>
+              <li style="color:var(--t3)">↑ Cloud Team: enforces HTTPS, VPC, secrets</li>
+              <li style="color:var(--t1)">🔑 AI Team: token-auth on all ML endpoints</li>
+              <li style="color:var(--t4)">🔒 IoT Team: encrypts device transmissions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TEAM 03: CLOUD ──────────────────────────────────── -->
+<section id="team-cloud" style="padding-top:0; border:none;">
+  <div class="wrap" style="padding-top:48px;">
+    <div class="section-eyebrow" style="color:var(--t3)">Team 03</div>
+    <h2 class="section-title">Cloud Computing, Distributed Systems &amp; Networks</h2>
+    <p class="section-desc">AgriCloud — Scalable infrastructure, CI/CD pipelines, and network communication layer.</p>
+
+    <div class="team-section" style="border-color:var(--t3); border-top:3px solid var(--t3);">
+      <div class="team-header" style="background:var(--t3b);">
+        <div class="team-num" style="color:var(--t3);">03</div>
+        <div class="team-header-text">
+          <div class="team-tag" style="color:var(--t3);">Sub-Project · AgriCloud</div>
+          <div class="team-name">Cloud Computing, Distributed Systems &amp; Networks</div>
+          <div class="team-sub">AWS/GCP infrastructure · Docker · CI/CD · API Gateway · Monitoring</div>
+        </div>
+      </div>
+      <div class="team-body">
+        <div class="team-col">
+          <div class="team-col-title">Team Members</div>
+          <div class="member-list">
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(96,165,250,0.18); color:var(--t3);">NK</div>
+              <div class="member-info"><div class="member-name">Nkosinathi</div><div class="member-role">Cloud Architect</div></div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(96,165,250,0.18); color:var(--t3);">NL</div>
+              <div class="member-info"><div class="member-name">Nkululeko</div><div class="member-role">DevOps Engineer</div></div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(96,165,250,0.18); color:var(--t3);">NW</div>
+              <div class="member-info">
+                <div class="member-name">Nokwanda</div>
+                <div class="member-role">Network Eng <span class="intern-badge badge-new" style="margin-left:4px">new</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-col">
+          <div class="team-col-title">Scope &amp; Deliverables</div>
+          <ul class="scope-list">
+            <li>Design overall cloud architecture on AWS or Google Cloud Platform</li>
+            <li>Set up Docker containerisation for all services</li>
+            <li>Configure Kubernetes / ECS orchestration for scalable deployments</li>
+            <li>Implement GitHub Actions CI/CD pipelines for all five teams</li>
+            <li>Configure Supabase PostgreSQL with replication for high availability</li>
+            <li>Design REST API &amp; WebSocket communication architecture</li>
+            <li>Set up load balancers, CDN, and auto-scaling groups</li>
+            <li>Configure CloudWatch / Grafana monitoring dashboards</li>
+          </ul>
+        </div>
+        <div class="team-col">
+          <div class="team-col-title">Recommended Technology Stack (Not Compulsory)</div>
+          <div class="tech-list">
+            <span class="tech-pill" style="border-color:rgba(96,165,250,0.3); color:var(--t3);">AWS / GCP</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">Kubernetes</span>
+            <span class="tech-pill">GitHub Actions</span>
+            <span class="tech-pill">Supabase</span>
+            <span class="tech-pill">WebSockets</span>
+            <span class="tech-pill">CloudWatch</span>
+            <span class="tech-pill">Grafana</span>
+            <span class="tech-pill">Prometheus</span>
+          </div>
+          <div style="margin-top:10px; font-size:12px; color:var(--text2);">Teams may adopt alternatives after feasibility review and Operations approval.</div>
+          <div style="margin-top:20px;">
+            <div class="team-col-title">Integration Dependencies</div>
+            <ul class="scope-list">
+              <li style="color:var(--t1)">↓ AI Team: hosts &amp; scales all ML model APIs</li>
+              <li style="color:var(--t4)">← IoT Team: cloud endpoints receive sensor data</li>
+              <li style="color:var(--t2)">🔒 Cyber Team: VPC, HTTPS certs, secrets mgmt</li>
+              <li style="color:var(--t5)">→ SE Team: deploys backend/frontend via CI/CD</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TEAM 04: IOT ────────────────────────────────────── -->
+<section id="team-iot" style="padding-top:0; border:none;">
+  <div class="wrap" style="padding-top:48px;">
+    <div class="section-eyebrow" style="color:var(--t4)">Team 04</div>
+    <h2 class="section-title">IoT &amp; Smart Technologies</h2>
+    <p class="section-desc">AgriFarm — The physical senses of AgriChain, connecting real farm data to the platform.</p>
+
+    <div class="team-section" style="border-color:var(--t4); border-top:3px solid var(--t4);">
+      <div class="team-header" style="background:var(--t4b);">
+        <div class="team-num" style="color:var(--t4);">04</div>
+        <div class="team-header-text">
+          <div class="team-tag" style="color:var(--t4);">Sub-Project · AgriFarm</div>
+          <div class="team-name">IoT &amp; Smart Technologies</div>
+          <div class="team-sub">Sensor simulation · LoRaWAN · MQTT · Automated irrigation · Real-time data pipeline</div>
+        </div>
+      </div>
+      <div class="team-body">
+        <div class="team-col">
+          <div class="team-col-title">Team Members</div>
+          <div class="member-list">
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(61,220,132,0.15); color:var(--t4);">NT</div>
+              <div class="member-info"><div class="member-name">Ntando</div><div class="member-role">IoT Developer</div></div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(168,224,96,0.18); color:var(--lime);">NZ</div>
+              <div class="member-info">
+                <div class="member-name">Ntokozo</div>
+                <div class="member-role">Ops Lead + Domain <span class="intern-badge badge-ops" style="margin-left:4px">ops</span></div>
+              </div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(61,220,132,0.15); color:var(--t4);">GU</div>
+              <div class="member-info">
+                <div class="member-name">Gugulethu</div>
+                <div class="member-role">Sensor Dev <span class="intern-badge badge-new" style="margin-left:4px">new</span></div>
+              </div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(61,220,132,0.15); color:var(--t4);">WA</div>
+              <div class="member-info"><div class="member-name">Wandile</div><div class="member-role">IoT Developer <span class="intern-badge badge-regular" style="margin-left:4px">regular</span></div></div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(240,180,41,0.15); color:var(--amber);">YU</div>
+              <div class="member-info"><div class="member-name">Yudi</div><div class="member-role">IoT Support <span class="intern-badge badge-inservice" style="margin-left:4px">in-service</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="team-col">
+          <div class="team-col-title">Scope &amp; Deliverables</div>
+          <ul class="scope-list">
+            <li>Design IoT sensor network: soil moisture, temperature, humidity, nutrients</li>
+            <li>Build hardware simulations using Node-RED, Wokwi, or Python scripts</li>
+            <li>Implement LoRaWAN communication for long-range, low-power transmission</li>
+            <li>Build automated irrigation controller triggered by AI recommendations</li>
+            <li>Develop real-time data ingestion pipeline to Supabase (every 60 seconds)</li>
+            <li>Create device management dashboard for adding/monitoring sensors</li>
+            <li>Implement alert system for drought, frost, and threshold breaches</li>
+            <li>Document sensor data schema and MQTT topics for other teams</li>
+          </ul>
+        </div>
+        <div class="team-col">
+          <div class="team-col-title">Recommended Technology Stack (Not Compulsory)</div>
+          <div class="tech-list">
+            <span class="tech-pill" style="border-color:rgba(61,220,132,0.3); color:var(--t4);">LoRaWAN</span>
+            <span class="tech-pill">MQTT</span>
+            <span class="tech-pill">Node-RED</span>
+            <span class="tech-pill">ESP32</span>
+            <span class="tech-pill">Wokwi</span>
+            <span class="tech-pill">Mosquitto</span>
+            <span class="tech-pill">Supabase RT</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">REST APIs</span>
+          </div>
+          <div style="margin-top:10px; font-size:12px; color:var(--text2);">Teams may adopt alternatives after feasibility review and Operations approval.</div>
+          <div style="margin-top:20px;">
+            <div class="team-col-title">Integration Dependencies</div>
+            <ul class="scope-list">
+              <li style="color:var(--t1)">→ AI Team: streams sensor data as ML model inputs</li>
+              <li style="color:var(--t3)">↑ Cloud Team: data stored via cloud API gateway</li>
+              <li style="color:var(--t2)">🔒 Cyber Team: encrypts all device communications</li>
+              <li style="color:var(--t5)">→ SE Team: WebSocket feeds to live dashboard</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TEAM 05: SE ─────────────────────────────────────── -->
+<section id="team-se" style="padding-top:0; border:none;">
+  <div class="wrap" style="padding-top:48px;">
+    <div class="section-eyebrow" style="color:var(--t5)">Team 05</div>
+    <h2 class="section-title">Software Engineering &amp; ICT Governance</h2>
+    <p class="section-desc">AgriPlatform — The unified web &amp; mobile platform that ties all five teams together.</p>
+
+    <div class="team-section" style="border-color:var(--t5); border-top:3px solid var(--t5);">
+      <div class="team-header" style="background:var(--t5b);">
+        <div class="team-num" style="color:var(--t5);">05</div>
+        <div class="team-header-text">
+          <div class="team-tag" style="color:var(--t5);">Sub-Project · AgriPlatform</div>
+          <div class="team-name">Software Engineering &amp; ICT Governance</div>
+          <div class="team-sub">Angular frontend · Node.js backend · Full system integration · API docs · Testing</div>
+        </div>
+      </div>
+      <div class="team-body">
+        <div class="team-col">
+          <div class="team-col-title">Team Members</div>
+          <div class="member-list">
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(240,180,41,0.15); color:var(--t5);">BR</div>
+              <div class="member-info"><div class="member-name">Bright</div><div class="member-role">Frontend Dev</div></div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(240,180,41,0.15); color:var(--t5);">SB</div>
+              <div class="member-info">
+                <div class="member-name">Sbusiso</div>
+                <div class="member-role">Backend Dev <span class="intern-badge badge-inservice" style="margin-left:4px">in-service</span></div>
+              </div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(240,180,41,0.15); color:var(--t5);">BA</div>
+              <div class="member-info">
+                <div class="member-name">Basil</div>
+                <div class="member-role">Full-Stack Dev <span class="intern-badge badge-new" style="margin-left:4px">new</span></div>
+              </div>
+            </div>
+            <div class="member-row">
+              <div class="member-avatar" style="background:rgba(240,180,41,0.15); color:var(--t5);">NQ</div>
+              <div class="member-info">
+                <div class="member-name">Nqubeko</div>
+                <div class="member-role">QA / Testing <span class="intern-badge badge-inservice" style="margin-left:4px">in-service</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-col">
+          <div class="team-col-title">Scope &amp; Deliverables</div>
+          <ul class="scope-list">
+            <li>Build full Node.js/Express backend — all business logic and APIs</li>
+            <li>Develop Angular web/mobile responsive frontend — dashboard &amp; marketplace</li>
+            <li>Design and implement full database schema in Supabase (PostgreSQL)</li>
+            <li>Integrate all team modules: AI APIs, IoT feeds, Blockchain, Cloud</li>
+            <li>Build produce marketplace — listings, offers, buyer-seller transactions</li>
+            <li>Establish ICT governance: coding standards, Git branching, code reviews</li>
+            <li>Produce Swagger/OpenAPI 3.0 documentation for all endpoints</li>
+            <li>Lead full test suite: unit (Jest), E2E (Cypress), UAT</li>
+          </ul>
+        </div>
+        <div class="team-col">
+          <div class="team-col-title">Recommended Technology Stack (Not Compulsory)</div>
+          <div class="tech-list">
+            <span class="tech-pill" style="border-color:rgba(240,180,41,0.3); color:var(--t5);">Angular 17+</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Express</span>
+            <span class="tech-pill">Supabase</span>
+            <span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">Swagger</span>
+            <span class="tech-pill">Jest</span>
+            <span class="tech-pill">Cypress</span>
+            <span class="tech-pill">GitHub</span>
+            <span class="tech-pill">MS Planner</span>
+          </div>
+          <div style="margin-top:10px; font-size:12px; color:var(--text2);">Teams may adopt alternatives after feasibility review and Operations approval.</div>
+          <div style="margin-top:20px;">
+            <div class="team-col-title">Integration Dependencies</div>
+            <ul class="scope-list">
+              <li style="color:var(--t1)">← AI Team: consumes prediction APIs for dashboard</li>
+              <li style="color:var(--t4)">← IoT Team: WebSocket live sensor data display</li>
+              <li style="color:var(--t2)">🔑 Cyber Team: auth middleware + smart contract UI</li>
+              <li style="color:var(--t3)">↑ Cloud Team: deployed via CI/CD pipeline</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MASTER TIMELINE ─────────────────────────────────── -->
+<section id="timeline">
+  <div class="wrap">
+    <div class="section-eyebrow">All Teams</div>
+    <h2 class="section-title">Master Project Timeline</h2>
+    <p class="section-desc">Kickoff starts on 06 May 2026, then phased delivery across all teams with feasibility reviews, Operations approvals, and cross-team integration checkpoints.</p>
+
+    <div class="matrix-wrap">
+      <div class="mtl-grid">
+        <!-- Header row -->
+        <div class="mtl-cell mtl-header" style="color:var(--muted); font-size:9px; letter-spacing:2px; text-transform:uppercase;">PHASE / DATE</div>
+        <div class="mtl-cell mtl-header"><span class="nav-dot" style="background:var(--t1); display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;"></span>Team 01 · AI</div>
+        <div class="mtl-cell mtl-header"><span class="nav-dot" style="background:var(--t2); display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;"></span>Team 02 · Cyber</div>
+        <div class="mtl-cell mtl-header"><span class="nav-dot" style="background:var(--t3); display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;"></span>Team 03 · Cloud</div>
+        <div class="mtl-cell mtl-header"><span class="nav-dot" style="background:var(--t4); display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;"></span>Team 04 · IoT</div>
+        <div class="mtl-cell mtl-header"><span class="nav-dot" style="background:var(--t5); display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;"></span>Team 05 · SE</div>
+
+        <!-- Phase 0 -->
+        <div class="mtl-cell mtl-phase" style="border-left:3px solid var(--green); background:rgba(56,189,248,0.05);">
+          <div>Phase 0</div>
+          <div class="mtl-phase-date">06 May 2026</div>
+        </div>
+        <div class="mtl-cell mtl-content">Project brief, role clearance, AI work split, and technology research kickoff</div>
+        <div class="mtl-cell mtl-content">Project brief, role clearance, security scope alignment, and research kickoff</div>
+        <div class="mtl-cell mtl-content">Project brief, role clearance, infra scope alignment, and research kickoff</div>
+        <div class="mtl-cell mtl-content">Project brief, role clearance, simulation strategy kickoff, and research kickoff</div>
+        <div class="mtl-cell mtl-content">Project brief, role clearance, integration scope alignment, and research kickoff</div>
+
+        <!-- Phase 1 -->
+        <div class="mtl-cell mtl-phase" style="border-left:3px solid var(--green);">
+          <div>Phase 1</div>
+          <div class="mtl-phase-date">11 May 2026</div>
+        </div>
+        <div class="mtl-cell mtl-content">Feasibility findings + recommended AI stack presented to Operations for approval</div>
+        <div class="mtl-cell mtl-content">Feasibility findings + recommended security stack presented to Operations</div>
+        <div class="mtl-cell mtl-content">Feasibility findings + recommended cloud stack presented to Operations</div>
+        <div class="mtl-cell mtl-content">Feasibility findings + simulation/tooling choices presented to Operations</div>
+        <div class="mtl-cell mtl-content">Feasibility findings + integration architecture presented to Operations</div>
+
+        <!-- Phase 2 -->
+        <div class="mtl-cell mtl-phase" style="border-left:3px solid var(--t1);">
+          <div>Phase 2</div>
+          <div class="mtl-phase-date">20 May 2026</div>
+        </div>
+        <div class="mtl-cell mtl-content">Baseline ML models trained with initial accuracy metrics</div>
+        <div class="mtl-cell mtl-content">JWT auth system live; user roles &amp; RBAC implemented</div>
+        <div class="mtl-cell mtl-content">Core cloud environment live — DB, storage, networking</div>
+        <div class="mtl-cell mtl-content">IoT sensor simulator generating realistic data streams</div>
+        <div class="mtl-cell mtl-content">Node.js backend running; Angular scaffolded; DB connected</div>
+
+        <!-- Phase 3 -->
+        <div class="mtl-cell mtl-phase" style="border-left:3px solid var(--t3);">
+          <div>Phase 3</div>
+          <div class="mtl-phase-date">29 May 2026</div>
+        </div>
+        <div class="mtl-cell mtl-content">FastAPI endpoints live, disease detector &gt;70% accuracy</div>
+        <div class="mtl-cell mtl-content">Solidity contracts deployed on Ethereum test network</div>
+        <div class="mtl-cell mtl-content">GitHub Actions CI/CD pipelines active for all teams</div>
+        <div class="mtl-cell mtl-content">Data pipeline: sensor → Supabase live every 60s</div>
+        <div class="mtl-cell mtl-content">Farmer dashboard prototype live; IoT data displayed</div>
+
+        <!-- Phase 4 -->
+        <div class="mtl-cell mtl-phase" style="border-left:3px solid var(--t4);">
+          <div>Phase 4</div>
+          <div class="mtl-phase-date">10 Jun 2026</div>
+        </div>
+        <div class="mtl-cell mtl-content">Full AI suite: prediction, disease, price forecast &amp; chatbot</div>
+        <div class="mtl-cell mtl-content">All security layers &amp; blockchain ledger active</div>
+        <div class="mtl-cell mtl-content">All modules deployed to production cloud environment</div>
+        <div class="mtl-cell mtl-content">LoRaWAN, irrigation control &amp; alerts all operational</div>
+        <div class="mtl-cell mtl-content">All modules integrated end-to-end; marketplace functional</div>
+
+        <!-- Phase 5 -->
+        <div class="mtl-cell mtl-phase" style="border-left:3px solid var(--t2);">
+          <div>Phase 5</div>
+          <div class="mtl-phase-date">19 Jun 2026</div>
+        </div>
+        <div class="mtl-cell mtl-content">Model accuracy validated; API stress-tested by SE team</div>
+        <div class="mtl-cell mtl-content">Penetration test done; OWASP Top 10 checked &amp; fixed</div>
+        <div class="mtl-cell mtl-content">Load test verified; auto-scaling confirmed working</div>
+        <div class="mtl-cell mtl-content">End-to-end test: sensor→cloud→AI→irrigation→dashboard</div>
+        <div class="mtl-cell mtl-content">Full test suite: unit, integration &amp; UAT completed</div>
+
+        <!-- Phase 6 -->
+        <div class="mtl-cell mtl-phase" style="border-left:3px solid var(--amber); background:rgba(240,180,41,0.06);">
+          <div style="color:var(--amber)">Phase 6 🎯</div>
+          <div class="mtl-phase-date">30 Jun 2026</div>
+        </div>
+        <div class="mtl-cell mtl-content" style="background:rgba(240,180,41,0.04);">Models, API, datasets &amp; teaching materials submitted</div>
+        <div class="mtl-cell mtl-content" style="background:rgba(240,180,41,0.04);">Audit report, contracts, POPIA compliance doc submitted</div>
+        <div class="mtl-cell mtl-content" style="background:rgba(240,180,41,0.04);">Architecture docs, deployment guides &amp; cost analysis</div>
+        <div class="mtl-cell mtl-content" style="background:rgba(240,180,41,0.04);">IoT docs, simulator code &amp; teaching guide submitted</div>
+        <div class="mtl-cell mtl-content" style="background:rgba(240,180,41,0.04);">Full platform, API docs, test report &amp; user manual</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEARNING OUTCOMES ───────────────────────────────── -->
+<section id="learning">
+  <div class="wrap">
+    <div class="section-eyebrow">Student Development</div>
+    <h2 class="section-title">What Students Will Learn</h2>
+    <p class="section-desc">Each team builds real skills by contributing to a live integrated product — not isolated exercises.</p>
+
+    <div class="outcomes-grid">
+      <div class="outcome-card" style="border-top:3px solid var(--t1);">
+        <div class="outcome-card-title" style="color:var(--t1);">AI &amp; ML Team</div>
+        <ul class="outcome-list">
+          <li>Supervised &amp; unsupervised machine learning</li>
+          <li>CNN image classification for disease detection</li>
+          <li>Data wrangling and exploratory data analysis</li>
+          <li>Working with Gemini &amp; OpenAI APIs</li>
+          <li>Model evaluation metrics and bias analysis</li>
+          <li>Building and consuming REST APIs in Python</li>
+          <li>Real-world agricultural data science</li>
+        </ul>
+      </div>
+      <div class="outcome-card" style="border-top:3px solid var(--t2);">
+        <div class="outcome-card-title" style="color:var(--t2);">Cyber &amp; Blockchain</div>
+        <ul class="outcome-list">
+          <li>Solidity smart contract development</li>
+          <li>Web3 security &amp; wallet management</li>
+          <li>JWT and OAuth2 authentication flows</li>
+          <li>POPIA compliance in South African context</li>
+          <li>Penetration testing with OWASP methodology</li>
+          <li>Encryption standards: AES, TLS, hashing</li>
+          <li>Role-based access control design</li>
+        </ul>
+      </div>
+      <div class="outcome-card" style="border-top:3px solid var(--t3);">
+        <div class="outcome-card-title" style="color:var(--t3);">Cloud &amp; Networks</div>
+        <ul class="outcome-list">
+          <li>Cloud architecture design on AWS/GCP</li>
+          <li>Docker &amp; Kubernetes orchestration</li>
+          <li>Building CI/CD with GitHub Actions</li>
+          <li>REST API design &amp; API Gateway patterns</li>
+          <li>Database scalability &amp; replication</li>
+          <li>System monitoring and observability</li>
+          <li>VPCs, security groups &amp; firewall config</li>
+        </ul>
+      </div>
+      <div class="outcome-card" style="border-top:3px solid var(--t4);">
+        <div class="outcome-card-title" style="color:var(--t4);">IoT &amp; Smart Tech</div>
+        <ul class="outcome-list">
+          <li>IoT architecture: sensors → gateway → cloud</li>
+          <li>LoRaWAN &amp; MQTT protocol networking</li>
+          <li>Hardware programming with ESP32/Arduino</li>
+          <li>Real-time data streaming &amp; event architecture</li>
+          <li>Sensor data normalisation &amp; time-series storage</li>
+          <li>Automated control systems from software triggers</li>
+          <li>Edge computing fundamentals</li>
+        </ul>
+      </div>
+      <div class="outcome-card" style="border-top:3px solid var(--t5);">
+        <div class="outcome-card-title" style="color:var(--t5);">Software Eng &amp; Gov</div>
+        <ul class="outcome-list">
+          <li>Full-stack: Angular frontend &amp; Node.js backend</li>
+          <li>REST API design &amp; Swagger/OpenAPI docs</li>
+          <li>Relational database schema design</li>
+          <li>Multi-team system integration patterns</li>
+          <li>Software testing: unit, integration, E2E</li>
+          <li>ICT governance, Git strategy &amp; code review</li>
+          <li>Agile sprint planning with MS Planner</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────── -->
+<footer class="footer" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="footer-logo">AgriChain AI</div>
+    <div class="footer-sub">Innovation Lab · Operations Plan · Confidential · v1.0 · 2025–2026</div>
+  </div>
+</footer>
+
+</body>
+</html>

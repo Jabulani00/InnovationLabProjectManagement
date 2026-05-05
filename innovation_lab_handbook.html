@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovation Lab – Operations & Delivery Framework</title>
+<meta name="description" content="Innovation Lab handbook defining governance, workflow, approvals, team accountability, and milestone delivery for a unified multi-team technology platform.">
+<meta name="keywords" content="Innovation Lab, operations handbook, delivery framework, governance, team workflow, approvals, project milestones">
+<meta name="author" content="Innovation Lab Operations Team">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#080c14">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Innovation Lab – Operations & Delivery Framework">
+<meta property="og:description" content="Internal handbook for command chain, execution standards, and coordinated team delivery.">
+<meta property="og:site_name" content="Innovation Lab">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Innovation Lab – Operations & Delivery Framework">
+<meta name="twitter:description" content="Operations handbook for team roles, approvals, and milestone delivery.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080c14'/%3E%3Cpath d='M16 48V16h7l18 20V16h7v32h-7L23 28v20z' fill='%2338bdf8'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='32' fill='%23080c14'/%3E%3Cpath d='M44 132V48h18l44 52V48h18v84h-18L62 80v52z' fill='%2338bdf8'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080c14;
+    --surface: #0d1524;
+    --surface2: #111d30;
+    --border: rgba(99,179,237,0.12);
+    --accent: #38bdf8;
+    --accent2: #f59e0b;
+    --accent3: #34d399;
+    --red: #f87171;
+    --text: #e2eaf4;
+    --muted: #7a94b0;
+    --heading: #Syne, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 80px 60px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 80% 20%, rgba(56,189,248,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 10% 80%, rgba(245,158,11,0.08) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  .cover-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(56,189,248,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(56,189,248,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .cover-eyebrow {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .cover-eyebrow::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .cover h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(48px, 7vw, 88px);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -2px;
+    position: relative;
+    margin-bottom: 24px;
+    max-width: 700px;
+  }
+
+  .cover h1 span {
+    color: var(--accent);
+  }
+
+  .cover-sub {
+    font-size: 18px;
+    color: var(--muted);
+    font-weight: 300;
+    max-width: 520px;
+    line-height: 1.6;
+    position: relative;
+    margin-bottom: 28px;
+  }
+
+  .cover-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(56,189,248,0.1);
+    border: 1px solid rgba(56,189,248,0.35);
+    color: var(--accent);
+    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border-radius: 999px;
+    margin-bottom: 64px;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .cover-link-btn:hover {
+    background: rgba(56,189,248,0.18);
+    border-color: rgba(56,189,248,0.5);
+    color: #9ee6ff;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 48px;
+    position: relative;
+  }
+
+  .cover-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cover-meta-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .cover-meta-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .corner-decoration {
+    position: absolute;
+    bottom: 60px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+  }
+
+  .corner-bar {
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    opacity: 0.5;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 60px;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h2.section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    margin-bottom: 48px;
+    color: var(--text);
+  }
+
+  h2.section-title em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  /* ── INTRO ── */
+  .intro-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 12px;
+    padding: 36px 40px;
+    margin-bottom: 64px;
+  }
+
+  .intro-block p {
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .intro-block p:last-child { margin-bottom: 0; }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .tag {
+    background: rgba(56,189,248,0.08);
+    border: 1px solid rgba(56,189,248,0.2);
+    color: var(--accent);
+    font-size: 12px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+
+  /* ── PAGE BREAK ── */
+  .page-break { page-break-before: always; padding-top: 60px; }
+
+  /* ── LAYER CARDS ── */
+  .layers-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 72px;
+  }
+
+  .layer-card {
+    border-radius: 16px;
+    padding: 40px 44px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+  }
+
+  .layer-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    pointer-events: none;
+  }
+
+  .layer-card.ops {
+    background: linear-gradient(135deg, rgba(248,113,113,0.06) 0%, rgba(13,21,36,0.8) 60%);
+    border-color: rgba(248,113,113,0.18);
+  }
+
+  .layer-card.leads {
+    background: linear-gradient(135deg, rgba(245,158,11,0.06) 0%, rgba(13,21,36,0.8) 60%);
+    border-color: rgba(245,158,11,0.18);
+  }
+
+  .layer-card.interns {
+    background: linear-gradient(135deg, rgba(52,211,153,0.06) 0%, rgba(13,21,36,0.8) 60%);
+    border-color: rgba(52,211,153,0.18);
+  }
+
+  .layer-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+    position: absolute;
+    top: 20px;
+    right: 36px;
+    opacity: 0.05;
+    line-height: 1;
+    letter-spacing: -4px;
+    color: var(--text);
+  }
+
+  .layer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+
+  .layer-card.ops .layer-badge { color: var(--red); background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.2); }
+  .layer-card.leads .layer-badge { color: var(--accent2); background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2); }
+  .layer-card.interns .layer-badge { color: var(--accent3); background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.2); }
+
+  .layer-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .layer-subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+
+  .layer-members {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+
+  .member-chip {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .member-chip .role {
+    font-size: 10px;
+    color: var(--muted);
+    display: block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .responsibilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .resp-item {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+
+  .resp-item-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .layer-card.ops .resp-item-title { color: var(--red); }
+  .layer-card.leads .resp-item-title { color: var(--accent2); }
+  .layer-card.interns .resp-item-title { color: var(--accent3); }
+
+  .resp-item p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ── FLOW ── */
+  .flow-section { margin-bottom: 72px; }
+
+  .flow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+
+  .flow-step {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 24px;
+    position: relative;
+  }
+
+  .flow-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 29px;
+    top: 60px;
+    bottom: -10px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--border), transparent);
+  }
+
+  .flow-num {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    flex-shrink: 0;
+    border: 2px solid;
+    margin-bottom: 10px;
+  }
+
+  .flow-step:nth-child(1) .flow-num { color: var(--red); border-color: var(--red); background: rgba(248,113,113,0.08); }
+  .flow-step:nth-child(2) .flow-num { color: var(--accent2); border-color: var(--accent2); background: rgba(245,158,11,0.08); }
+  .flow-step:nth-child(3) .flow-num { color: var(--accent); border-color: var(--accent); background: rgba(56,189,248,0.08); }
+  .flow-step:nth-child(4) .flow-num { color: var(--accent3); border-color: var(--accent3); background: rgba(52,211,153,0.08); }
+
+  .flow-content { padding-top: 12px; padding-bottom: 32px; }
+
+  .flow-content h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .flow-content p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .flow-example {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .flow-example strong {
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  /* ── MILESTONES ── */
+  .milestones-section { margin-bottom: 72px; }
+
+  .milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .milestone-card {
+    border-radius: 14px;
+    padding: 32px 28px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .milestone-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .milestone-card.phase1::before { background: var(--accent3); }
+  .milestone-card.phase2::before { background: var(--accent2); }
+  .milestone-card.phase3::before { background: var(--accent); }
+
+  .milestone-phase {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .milestone-card.phase1 .milestone-phase { color: var(--accent3); }
+  .milestone-card.phase2 .milestone-phase { color: var(--accent2); }
+  .milestone-card.phase3 .milestone-phase { color: var(--accent); }
+
+  .milestone-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  .milestone-items { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  .milestone-items li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .milestone-items li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  .milestone-card.phase1 .milestone-items li::before { background: var(--accent3); }
+  .milestone-card.phase2 .milestone-items li::before { background: var(--accent2); }
+  .milestone-card.phase3 .milestone-items li::before { background: var(--accent); }
+
+  /* ── MEETINGS ── */
+  .meetings-section { margin-bottom: 72px; }
+
+  .meeting-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 36px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .meeting-info h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+
+  .meeting-info p { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+
+  .meeting-schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .schedule-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .schedule-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .schedule-label { color: var(--muted); }
+  .schedule-val { color: var(--text); font-weight: 500; margin-left: auto; font-family: 'Syne', sans-serif; font-size: 13px; }
+
+  .standup-format h5 {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .standup-qs { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  .standup-qs li {
+    background: var(--surface2);
+    border-left: 2px solid var(--accent);
+    padding: 10px 16px;
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* ── ACCOUNTABILITY ── */
+  .accountability-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 72px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .accountability-table thead tr {
+    background: var(--surface2);
+  }
+
+  .accountability-table th {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .accountability-table td {
+    padding: 16px 20px;
+    font-size: 13px;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(99,179,237,0.05);
+    vertical-align: middle;
+  }
+
+  .accountability-table tr:last-child td { border-bottom: none; }
+
+  .accountability-table tr:nth-child(even) td { background: rgba(255,255,255,0.01); }
+
+  .role-pill {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .role-ops { color: var(--red); background: rgba(248,113,113,0.1); }
+  .role-lead { color: var(--accent2); background: rgba(245,158,11,0.1); }
+  .role-team { color: var(--accent); background: rgba(56,189,248,0.1); }
+  .role-intern { color: var(--accent3); background: rgba(52,211,153,0.1); }
+
+  /* ── POLICY ── */
+  .policy-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 36px 40px;
+    margin-bottom: 72px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .policy-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .policy-card p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+
+  .policy-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+  .policy-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .policy-list li::before {
+    content: '→';
+    color: var(--accent2);
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── PLANNER ── */
+  .planner-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 36px 40px;
+    margin-bottom: 72px;
+  }
+
+  .planner-block h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+
+  .task-fields {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .task-field {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .task-field-icon {
+    font-size: 22px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .task-field-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1px;
+  }
+
+  .task-field-desc {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* ── PRINCIPLE ── */
+  .principle-block {
+    background: linear-gradient(135deg, rgba(56,189,248,0.06) 0%, rgba(13,21,36,0.6) 100%);
+    border: 1px solid rgba(56,189,248,0.18);
+    border-radius: 20px;
+    padding: 60px 56px;
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .principle-block::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(56,189,248,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(56,189,248,0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .principle-quote {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: -0.5px;
+    position: relative;
+    color: var(--text);
+  }
+
+  .principle-quote span { color: var(--accent); }
+
+  .principle-arrow {
+    color: var(--muted);
+    font-size: 20px;
+    margin: 0 16px;
+  }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .footer-brand {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--accent);
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 72px 0;
+  }
+
+  @media (max-width: 1024px) {
+    .cover { padding: 64px 48px 52px; }
+    .container { padding: 64px 40px; }
+    .cover-meta { gap: 28px; flex-wrap: wrap; }
+    .milestone-grid { grid-template-columns: 1fr; }
+    .task-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .doc-footer { padding: 24px 40px; }
+  }
+
+  @media (max-width: 720px) {
+    body { font-size: 14px; line-height: 1.6; }
+    .cover { min-height: auto; padding: 48px 20px 42px; }
+    .cover-eyebrow { letter-spacing: 2px; margin-bottom: 18px; }
+    .cover h1 { font-size: clamp(36px, 14vw, 56px); margin-bottom: 16px; }
+    .cover-sub { font-size: 16px; margin-bottom: 16px; }
+    .cover-link-btn { width: 100%; justify-content: center; margin-bottom: 28px; }
+    .cover-meta { gap: 14px; }
+    .cover-meta-item { min-width: 130px; }
+    .corner-decoration { display: none; }
+    .container { padding: 44px 20px; }
+    h2.section-title { font-size: 30px; margin-bottom: 28px; }
+    .intro-block, .layer-card, .meeting-card, .planner-block, .policy-card, .principle-block { padding: 22px 18px; }
+    .layer-card { border-radius: 12px; }
+    .responsibilities { grid-template-columns: 1fr; }
+    .meeting-card, .policy-card { grid-template-columns: 1fr; gap: 18px; }
+    .standup-qs { padding-left: 0; }
+    .task-fields { grid-template-columns: 1fr; }
+    .divider { margin: 48px 0; }
+    .doc-footer { padding: 18px 20px; flex-direction: column; gap: 8px; align-items: flex-start; }
+  }
+
+  @media print {
+    body { font-size: 13px; }
+    .cover { page-break-after: always; }
+    .page-break { page-break-before: always; }
+    .milestone-grid { grid-template-columns: repeat(3, 1fr); }
+    .task-fields { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════ COVER PAGE ══════════════════════ -->
+<div class="cover">
+  <div class="cover-grid"></div>
+
+  <div class="cover-eyebrow">Internal Operations Document · Confidential</div>
+
+  <h1>Innovation<br><span>Lab</span></h1>
+
+  <p class="cover-sub">
+    Operations &amp; Delivery Framework — defining how we build, lead, and deliver a unified technology platform across all domains.
+  </p>
+  <a class="cover-link-btn" href="agrichain.html">Open AgriChain Plan -></a>
+
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <span class="cover-meta-label">Document Type</span>
+      <span class="cover-meta-value">Operations Handbook</span>
+    </div>
+    <div class="cover-meta-item">
+      <span class="cover-meta-label">Audience</span>
+      <span class="cover-meta-value">All Members</span>
+    </div>
+    <div class="cover-meta-item">
+      <span class="cover-meta-label">Version</span>
+      <span class="cover-meta-value">1.0</span>
+    </div>
+    <div class="cover-meta-item">
+      <span class="cover-meta-label">Year</span>
+      <span class="cover-meta-value">2025</span>
+    </div>
+  </div>
+
+  <div class="corner-decoration">
+    <div class="corner-bar" style="width:80px"></div>
+    <div class="corner-bar" style="width:50px; opacity:.3"></div>
+    <div class="corner-bar" style="width:30px; opacity:.15"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════ SECTION 1: INTRO ══════════════════════ -->
+<div class="container">
+
+  <div class="section-label">01 · Introduction</div>
+  <h2 class="section-title">What is the<br><em>Innovation Lab?</em></h2>
+
+  <div class="intro-block">
+    <p>
+      The Innovation Lab is a <strong>multi-disciplinary software and technology development environment</strong>. It is not a collection of separate mini-projects — it is a <strong>single, long-term integrated platform</strong> built across multiple technology domains simultaneously.
+    </p>
+    <p>
+      Every team, every intern, every lead contributes to <strong>one unified product</strong>. The platform connects AI, security, cloud infrastructure, IoT devices, and a software frontend into a coherent, working system.
+    </p>
+    <div class="tag-row">
+      <span class="tag">Artificial Intelligence &amp; Data Science</span>
+      <span class="tag">Cybersecurity &amp; Blockchain</span>
+      <span class="tag">Cloud &amp; Distributed Systems</span>
+      <span class="tag">IoT &amp; Smart Technologies</span>
+      <span class="tag">Software Engineering &amp; ICT Governance</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════ SECTION 2: STRUCTURE ══════════════════════ -->
+  <div class="section-label">02 · Organisational Structure</div>
+  <h2 class="section-title">Three Layers of<br><em>Leadership</em></h2>
+
+  <div class="layers-grid">
+
+    <!-- Layer 1 -->
+    <div class="layer-card ops">
+      <div class="layer-number">1</div>
+      <div class="layer-badge">● Layer 1</div>
+      <div class="layer-title">Operations Team</div>
+      <div class="layer-subtitle">Long-term strategic control &amp; system integration</div>
+
+      <div class="layer-members">
+        <div class="member-chip">
+          <span class="role">Project Manager</span>
+          Jabu
+        </div>
+        <div class="member-chip">
+          <span class="role">Operations Lead</span>
+          Ntokozo
+        </div>
+      </div>
+
+      <div class="responsibilities">
+        <div class="resp-item">
+          <div class="resp-item-title">Long-Term Milestones</div>
+          <p>Defining project phases, setting major deliverables, and ensuring system integration across all squads.</p>
+        </div>
+        <div class="resp-item">
+          <div class="resp-item-title">System Coordination</div>
+          <p>Ensuring all squads work toward one unified platform, preventing duplication of work.</p>
+        </div>
+        <div class="resp-item">
+          <div class="resp-item-title">Performance Control</div>
+          <p>Monitoring progress across all teams, identifying delays, and reassigning resources when needed.</p>
+        </div>
+        <div class="resp-item">
+          <div class="resp-item-title">Integration Oversight</div>
+          <p>Ensuring AI, Security, Cloud, IoT, and Frontend modules connect into a working whole.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 2 -->
+    <div class="layer-card leads">
+      <div class="layer-number">2</div>
+      <div class="layer-badge">● Layer 2</div>
+      <div class="layer-title">Project &amp; Team Leads</div>
+      <div class="layer-subtitle">Mid-level execution — the bridge between vision and delivery</div>
+
+      <div class="layer-members">
+        <div class="member-chip">
+          <span class="role">Scope</span>
+          One lead per major system/module
+        </div>
+        <div class="member-chip">
+          <span class="role">Sub-leads</span>
+          Assigned within each project
+        </div>
+      </div>
+
+      <div class="responsibilities">
+        <div class="resp-item">
+          <div class="resp-item-title">Task Management</div>
+          <p>Creating and assigning tasks in Microsoft Planner, tracking progress daily.</p>
+        </div>
+        <div class="resp-item">
+          <div class="resp-item-title">Sprint Execution</div>
+          <p>Managing 1–2 week development cycles and ensuring features are completed incrementally.</p>
+        </div>
+        <div class="resp-item">
+          <div class="resp-item-title">Milestone Delivery</div>
+          <p>Breaking down milestones into actionable weekly tasks and ensuring sprint completion.</p>
+        </div>
+        <div class="resp-item">
+          <div class="resp-item-title">Reporting</div>
+          <p>Reporting progress to Operations Team during stand-up meetings.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 3 -->
+    <div class="layer-card interns">
+      <div class="layer-number">3</div>
+      <div class="layer-badge">● Layer 3</div>
+      <div class="layer-title">Interns</div>
+      <div class="layer-subtitle">Short-term execution — the building force that ships the product</div>
+
+      <div class="responsibilities">
+        <div class="resp-item">
+          <div class="resp-item-title">Task Execution</div>
+          <p>Completing clearly defined assigned tasks and following instructions from Team Leads.</p>
+        </div>
+        <div class="resp-item">
+          <div class="resp-item-title">Feature Delivery</div>
+          <p>Building UI components, API endpoints, tests, documentation, and research outputs.</p>
+        </div>
+        <div class="resp-item">
+          <div class="resp-item-title">Daily Contribution</div>
+          <p>Delivering small, focused outputs on a daily basis as defined by their assigned tasks.</p>
+        </div>
+        <div class="resp-item">
+          <div class="resp-item-title">Feedback Loop</div>
+          <p>Submitting outputs through Planner and receiving structured feedback from Team Leads.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /layers-grid -->
+
+</div><!-- /container -->
+
+<!-- ══════════════════════ SECTION 3: WORK FLOW ══════════════════════ -->
+<div class="container page-break">
+
+  <div class="section-label">03 · Work Model</div>
+  <h2 class="section-title">How Work<br><em>Flows</em></h2>
+
+  <div class="flow-section">
+    <div class="flow-steps">
+
+      <div class="flow-step">
+        <div class="flow-num">1</div>
+        <div class="flow-content">
+          <h4>Operations Team Sets Direction</h4>
+          <p>The Operations Team defines the long-term milestone — what the system must achieve and by when.</p>
+          <div class="flow-example">
+            <strong>Example:</strong> "Build an AI-powered smart platform with a secure cloud backend and real-time IoT data feeds."
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-num">2</div>
+        <div class="flow-content">
+          <h4>Teams Clarify Roles &amp; Research Options</h4>
+          <p>At kickoff, each team clears role ownership, then researches technology and simulation options for its domain before implementation begins.</p>
+          <div class="flow-example">
+            <strong>Rule:</strong> Technology stacks are recommended guidance, not compulsory. Alternatives are allowed with justification.
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-num">3</div>
+        <div class="flow-content">
+          <h4>Feasibility Review &amp; Operations Approval</h4>
+          <p>Each team runs an internal feasibility discussion, then presents findings to Operations for approval on architecture, tooling, and integration impacts.</p>
+          <div class="flow-example">
+            <strong>Approval Gate:</strong> Team Members -> Team Leads -> Operations Lead -> Project Manager
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-num">4</div>
+        <div class="flow-content">
+          <h4>Teams Execute, Collaborate &amp; Submit</h4>
+          <p>After approval, teams execute tasks in Planner and collaborate across domains for shared APIs, data contracts, security controls, and deployment readiness.</p>
+          <div class="flow-example">
+            <strong>Output:</strong> Code commits, design files, test reports, documentation — all tracked in Planner.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════ SECTION 4: MILESTONES ══════════════════════ -->
+  <div class="section-label">04 · Milestones</div>
+  <h2 class="section-title">Delivery in<br><em>Three Phases + Kickoff</em></h2>
+
+  <div style="margin: 0 0 24px; padding: 14px 16px; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.18); border-radius: 10px; color: var(--muted); font-size: 13px;">
+    Kickoff starts on <strong style="color: var(--text);">06 May 2026 (Wednesday)</strong> with project brief, role clearance, and technology research planning.
+    Milestone checkpoints below use weekday-only dates (Mon-Fri).
+  </div>
+
+  <div class="milestones-section">
+    <div class="milestone-grid">
+
+      <div class="milestone-card phase1">
+        <div class="milestone-phase">Phase 1 · Foundation</div>
+        <h4>Build the Base</h4>
+        <ul class="milestone-items">
+          <li><strong>Date:</strong> 11 May 2026 (Monday)</li>
+          <li>Feasibility findings presented to Operations for approval</li>
+          <li>System architecture defined and documented</li>
+          <li>Core backend services running</li>
+          <li>Basic frontend UI framework live</li>
+          <li>Development environments configured for all teams</li>
+          <li>Repository &amp; Planner structure established</li>
+        </ul>
+      </div>
+
+      <div class="milestone-card phase2">
+        <div class="milestone-phase">Phase 2 · Integration</div>
+        <h4>Connect the Modules</h4>
+        <ul class="milestone-items">
+          <li><strong>Date:</strong> 29 May 2026 (Friday)</li>
+          <li>AI module integrated with platform</li>
+          <li>Security layer protecting all endpoints</li>
+          <li>Cloud deployment pipeline active</li>
+          <li>IoT data feeding into backend</li>
+          <li>Inter-module APIs tested and stable</li>
+        </ul>
+      </div>
+
+      <div class="milestone-card phase3">
+        <div class="milestone-phase">Phase 3 · Expansion</div>
+        <h4>Scale &amp; Refine</h4>
+        <ul class="milestone-items">
+          <li><strong>Date:</strong> 19 Jun 2026 (Friday)</li>
+          <li>Advanced IoT features and dashboards</li>
+          <li>Full analytics and reporting suite</li>
+          <li>Performance optimisation across all services</li>
+          <li>Governance and audit compliance</li>
+          <li>Final system demo and documentation</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════ SECTION 5: MEETINGS ══════════════════════ -->
+<div class="container">
+
+  <div class="section-label">05 · Meeting Structure</div>
+  <h2 class="section-title">Stand-up<br><em>Meetings</em></h2>
+
+  <div class="meetings-section">
+    <div class="meeting-card">
+
+      <div class="meeting-info">
+        <h4>Team Stand-ups</h4>
+        <p>Stand-ups are the heartbeat of the Innovation Lab. All members — interns, leads, and operations — participate to maintain alignment and surface blockers early.</p>
+
+        <div class="meeting-schedule">
+          <div class="schedule-row">
+            <div class="schedule-dot"></div>
+            <span class="schedule-label">Frequency</span>
+            <span class="schedule-val">Mon · Wed · Fri</span>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-dot"></div>
+            <span class="schedule-label">Time</span>
+            <span class="schedule-val">10:00 AM</span>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-dot"></div>
+            <span class="schedule-label">Led by</span>
+            <span class="schedule-val">Project Leads</span>
+          </div>
+          <div class="schedule-row">
+            <div class="schedule-dot"></div>
+            <span class="schedule-label">Overseen by</span>
+            <span class="schedule-val">Operations Team</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="standup-format">
+        <h5>Each Member Answers</h5>
+        <ul class="standup-qs">
+          <li>✦ &nbsp;What did I complete since the last stand-up?</li>
+          <li>✦ &nbsp;What am I currently working on?</li>
+          <li>✦ &nbsp;What blockers or issues am I facing?</li>
+        </ul>
+
+        <div style="margin-top: 24px; padding: 16px; background: rgba(56,189,248,0.05); border: 1px solid rgba(56,189,248,0.12); border-radius: 10px;">
+          <div style="font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">Purpose</div>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">Progress tracking · Task distribution · Milestone updates · Early problem resolution</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════ SECTION 6: FLEXIBILITY ══════════════════════ -->
+  <div class="section-label">06 · Flexibility Policy</div>
+  <h2 class="section-title">Adjusted<br><em>Expectations</em></h2>
+
+  <div class="policy-card">
+    <div>
+      <h4>Who Qualifies?</h4>
+      <p>Some interns are in-service training, enrolled as full-time students, or have limited availability due to external commitments.</p>
+      <p>These members remain active contributors, but with adjusted expectations tailored to their situation.</p>
+    </div>
+    <div>
+      <h4>What Changes?</h4>
+      <ul class="policy-list">
+        <li>Tasks are scoped to fit available hours</li>
+        <li>Deadlines are extended where appropriate</li>
+        <li>Work is completed asynchronously</li>
+        <li>Contribution is still tracked and valued</li>
+        <li>Communication with Team Lead is expected regularly</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════ SECTION 7: TASK MANAGEMENT ══════════════════════ -->
+  <div class="section-label">07 · Task Management</div>
+  <h2 class="section-title">Microsoft<br><em>Planner</em></h2>
+
+  <div class="planner-block">
+    <h4>All work MUST be tracked in Microsoft Planner — no exceptions.</h4>
+    <p style="color: var(--muted); font-size: 14px; margin-bottom: 28px;">
+      Every task that exists must exist in Planner. No verbal assignments. No unofficial to-do lists. If it isn't in Planner, it doesn't officially exist.
+    </p>
+
+    <div class="task-fields">
+      <div class="task-field">
+        <span class="task-field-icon">📝</span>
+        <div class="task-field-name">Description</div>
+        <div class="task-field-desc">Clear scope of what must be built or delivered</div>
+      </div>
+      <div class="task-field">
+        <span class="task-field-icon">👤</span>
+        <div class="task-field-name">Assignee</div>
+        <div class="task-field-desc">The specific person responsible for completion</div>
+      </div>
+      <div class="task-field">
+        <span class="task-field-icon">📅</span>
+        <div class="task-field-name">Deadline</div>
+        <div class="task-field-desc">A fixed, agreed-upon completion date</div>
+      </div>
+      <div class="task-field">
+        <span class="task-field-icon">📤</span>
+        <div class="task-field-name">Expected Output</div>
+        <div class="task-field-desc">What the deliverable looks like when done</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════ SECTION 8: ACCOUNTABILITY ══════════════════════ -->
+  <div class="section-label">08 · Accountability</div>
+  <h2 class="section-title">Who Owns<br><em>What</em></h2>
+
+  <table class="accountability-table">
+    <thead>
+      <tr>
+        <th>Role</th>
+        <th>Layer</th>
+        <th>Accountable For</th>
+        <th>Reports To</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="role-pill role-ops">Project Manager</span></td>
+        <td>Layer 1 – Operations</td>
+        <td>Overall project success and strategic direction</td>
+        <td>Stakeholders / Management</td>
+      </tr>
+      <tr>
+        <td><span class="role-pill role-ops">Operations Lead</span></td>
+        <td>Layer 1 – Operations</td>
+        <td>System integration, milestone control, resource allocation</td>
+        <td>Project Manager</td>
+      </tr>
+      <tr>
+        <td><span class="role-pill role-lead">Project Lead</span></td>
+        <td>Layer 2 – Leads</td>
+        <td>Milestone delivery within their module</td>
+        <td>Operations Team</td>
+      </tr>
+      <tr>
+        <td><span class="role-pill role-team">Team Lead</span></td>
+        <td>Layer 2 – Leads</td>
+        <td>Task completion, sprint management, intern support</td>
+        <td>Project Lead</td>
+      </tr>
+      <tr>
+        <td><span class="role-pill role-intern">Intern</span></td>
+        <td>Layer 3 – Execution</td>
+        <td>Assigned task outputs, daily contribution</td>
+        <td>Team Lead</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ══════════════════════ PRINCIPLE ══════════════════════ -->
+  <div class="section-label">09 · Core Principle</div>
+
+  <div class="principle-block">
+    <div class="principle-quote">
+      <span>Operations</span> define direction
+      <span class="principle-arrow">→</span>
+      <span>Leads</span> execute structure
+      <span class="principle-arrow">→</span>
+      <span>Interns</span> deliver output
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="doc-footer">
+  <span class="footer-brand">Innovation Lab</span>
+  <span>Operations &amp; Delivery Framework · v1.0 · Confidential</span>
+  <span>All members — treat this as your operating manual.</span>
+</div>
+
+</body>
+</html>
