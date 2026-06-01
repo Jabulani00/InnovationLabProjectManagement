@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Innovation Lab – Operations & Delivery Framework</title>
-<meta name="description" content="Innovation Lab handbook defining governance, workflow, approvals, team accountability, and milestone delivery for a unified multi-team technology platform.">
+<meta name="description" content="Innovation Lab handbook for the AgriChain Smart System: six-phase 24-week roadmap, governance, workflow, approvals, and milestone delivery.">
 <meta name="keywords" content="Innovation Lab, operations handbook, delivery framework, governance, team workflow, approvals, project milestones">
 <meta name="author" content="Innovation Lab Operations Team">
 <meta name="robots" content="index, follow">
@@ -122,6 +122,14 @@
     margin-bottom: 28px;
   }
 
+  .cover-link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 64px;
+    position: relative;
+  }
+
   .cover-link-btn {
     display: inline-flex;
     align-items: center;
@@ -137,8 +145,6 @@
     text-transform: uppercase;
     padding: 10px 16px;
     border-radius: 999px;
-    margin-bottom: 64px;
-    position: relative;
     transition: all 0.2s ease;
   }
 
@@ -520,6 +526,9 @@
   .milestone-card.phase1::before { background: var(--accent3); }
   .milestone-card.phase2::before { background: var(--accent2); }
   .milestone-card.phase3::before { background: var(--accent); }
+  .milestone-card.phase4::before { background: #60a5fa; }
+  .milestone-card.phase5::before { background: #f59e0b; }
+  .milestone-card.phase6::before { background: #34d399; }
 
   .milestone-phase {
     font-size: 10px;
@@ -533,6 +542,9 @@
   .milestone-card.phase1 .milestone-phase { color: var(--accent3); }
   .milestone-card.phase2 .milestone-phase { color: var(--accent2); }
   .milestone-card.phase3 .milestone-phase { color: var(--accent); }
+  .milestone-card.phase4 .milestone-phase { color: #60a5fa; }
+  .milestone-card.phase5 .milestone-phase { color: #f59e0b; }
+  .milestone-card.phase6 .milestone-phase { color: #34d399; }
 
   .milestone-card h4 {
     font-family: 'Syne', sans-serif;
@@ -564,6 +576,41 @@
   .milestone-card.phase1 .milestone-items li::before { background: var(--accent3); }
   .milestone-card.phase2 .milestone-items li::before { background: var(--accent2); }
   .milestone-card.phase3 .milestone-items li::before { background: var(--accent); }
+  .milestone-card.phase4 .milestone-items li::before { background: #60a5fa; }
+  .milestone-card.phase5 .milestone-items li::before { background: #f59e0b; }
+  .milestone-card.phase6 .milestone-items li::before { background: #34d399; }
+
+  .milestone-grid.six-phase {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .roadmap-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0 32px;
+    font-size: 13px;
+  }
+
+  .roadmap-table th,
+  .roadmap-table td {
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .roadmap-table th {
+    background: var(--surface);
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .roadmap-table td strong {
+    color: var(--text);
+  }
 
   /* ── MEETINGS ── */
   .meetings-section { margin-bottom: 72px; }
@@ -843,7 +890,8 @@
     .cover { padding: 64px 48px 52px; }
     .container { padding: 64px 40px; }
     .cover-meta { gap: 28px; flex-wrap: wrap; }
-    .milestone-grid { grid-template-columns: 1fr; }
+    .milestone-grid,
+    .milestone-grid.six-phase { grid-template-columns: 1fr; }
     .task-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .doc-footer { padding: 24px 40px; }
   }
@@ -854,7 +902,8 @@
     .cover-eyebrow { letter-spacing: 2px; margin-bottom: 18px; }
     .cover h1 { font-size: clamp(36px, 14vw, 56px); margin-bottom: 16px; }
     .cover-sub { font-size: 16px; margin-bottom: 16px; }
-    .cover-link-btn { width: 100%; justify-content: center; margin-bottom: 28px; }
+    .cover-link-row { flex-direction: column; margin-bottom: 28px; }
+    .cover-link-btn { width: 100%; justify-content: center; }
     .cover-meta { gap: 14px; }
     .cover-meta-item { min-width: 130px; }
     .corner-decoration { display: none; }
@@ -892,7 +941,10 @@
   <p class="cover-sub">
     Operations &amp; Delivery Framework — defining how we build, lead, and deliver a unified technology platform across all domains.
   </p>
-  <a class="cover-link-btn" href="agrichain.html">Open AgriChain Plan -></a>
+  <div class="cover-link-row">
+    <a class="cover-link-btn" href="agrichain.html">Open AgriChain Plan →</a>
+    <a class="cover-link-btn" href="new.html">Submit Progress Report →</a>
+  </div>
 
   <div class="cover-meta">
     <div class="cover-meta-item">
@@ -931,14 +983,16 @@
       The Innovation Lab is a <strong>multi-disciplinary software and technology development environment</strong>. It is not a collection of separate mini-projects — it is a <strong>single, long-term integrated platform</strong> built across multiple technology domains simultaneously.
     </p>
     <p>
-      Every team, every intern, every lead contributes to <strong>one unified product</strong>. The platform connects AI, security, cloud infrastructure, IoT devices, and a software frontend into a coherent, working system.
+      Every team, every intern, every lead contributes to <strong>one unified product</strong> — the <strong>AgriChain Smart System</strong>, the Innovation Lab flagship project. The platform connects AI, cybersecurity, cloud infrastructure, IoT (including drone monitoring), software engineering, and optional blockchain traceability into a coherent, working system over <strong>6 months (24 weeks)</strong>.
     </p>
     <div class="tag-row">
-      <span class="tag">Artificial Intelligence &amp; Data Science</span>
-      <span class="tag">Cybersecurity &amp; Blockchain</span>
-      <span class="tag">Cloud &amp; Distributed Systems</span>
-      <span class="tag">IoT &amp; Smart Technologies</span>
-      <span class="tag">Software Engineering &amp; ICT Governance</span>
+      <span class="tag">Artificial Intelligence &amp; Machine Learning</span>
+      <span class="tag">Internet of Things (IoT)</span>
+      <span class="tag">Drone Technology (IoT sub-stream)</span>
+      <span class="tag">Cloud Computing</span>
+      <span class="tag">Software Engineering</span>
+      <span class="tag">Cybersecurity</span>
+      <span class="tag">Blockchain &amp; Traceability</span>
     </div>
   </div>
 
@@ -983,7 +1037,7 @@
         </div>
         <div class="resp-item">
           <div class="resp-item-title">Integration Oversight</div>
-          <p>Ensuring AI, Security, Cloud, IoT, and Frontend modules connect into a working whole.</p>
+          <p>Ensuring AI, Security, Cloud, IoT (including Drone Technology), and Software Engineering modules connect into one AgriChain Smart System.</p>
         </div>
       </div>
     </div>
@@ -1117,58 +1171,204 @@
 
   <!-- ══════════════════════ SECTION 4: MILESTONES ══════════════════════ -->
   <div class="section-label">04 · Milestones</div>
-  <h2 class="section-title">Delivery in<br><em>Three Phases + Kickoff</em></h2>
+  <h2 class="section-title">Six-Phase<br><em>AgriChain Roadmap</em></h2>
 
   <div style="margin: 0 0 24px; padding: 14px 16px; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.18); border-radius: 10px; color: var(--muted); font-size: 13px;">
-    Kickoff starts on <strong style="color: var(--text);">06 May 2026 (Wednesday)</strong> with project brief, role clearance, and technology research planning.
-    Milestone checkpoints below use weekday-only dates (Mon-Fri).
+  <strong style="color: var(--text);">Project duration:</strong> 6 months (24 weeks).
+  <strong style="color: var(--text);">Kickoff:</strong> 06 May 2026 — project brief, role clearance, and technology research planning.
+  Phases follow the publication-quality AgriChain Smart System Full Roadmap; Operations approves each milestone gate before teams advance.
   </div>
 
+  <table class="roadmap-table">
+    <thead>
+      <tr>
+        <th>Phase</th>
+        <th>Duration</th>
+        <th>Focus</th>
+        <th>Milestone Gate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Phase 1</strong></td>
+        <td>Week 1</td>
+        <td>Research, Discovery, and Planning</td>
+        <td>Milestone 1: Research and stream contribution approved</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 2</strong></td>
+        <td>Weeks 2–5</td>
+        <td>Applied Technical Skills Development</td>
+        <td>Milestone 2: Functional stream prototypes completed</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 3</strong></td>
+        <td>Weeks 6–9</td>
+        <td>Innovation and Prototype Enhancement</td>
+        <td>Milestone 3: Enhanced prototypes approved</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 4</strong></td>
+        <td>Weeks 10–16</td>
+        <td>System Integration</td>
+        <td>Milestone 4: Integrated AgriChain Smart System completed</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 5</strong></td>
+        <td>Weeks 17–20</td>
+        <td>Testing and Validation</td>
+        <td>Milestone 5: Validation passed</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 6</strong></td>
+        <td>Weeks 21–24</td>
+        <td>Showcase and Deployment</td>
+        <td>Milestone 6: AgriChain Smart System Version 1.0 released</td>
+      </tr>
+    </tbody>
+  </table>
+
   <div class="milestones-section">
-    <div class="milestone-grid">
+    <div class="milestone-grid six-phase">
 
       <div class="milestone-card phase1">
-        <div class="milestone-phase">Phase 1 · Foundation</div>
-        <h4>Build the Base</h4>
+        <div class="milestone-phase">Phase 1 · Week 1</div>
+        <h4>Research &amp; Discovery</h4>
         <ul class="milestone-items">
-          <li><strong>Date:</strong> 11 May 2026 (Monday)</li>
-          <li>Feasibility findings presented to Operations for approval</li>
-          <li>System architecture defined and documented</li>
-          <li>Core backend services running</li>
-          <li>Basic frontend UI framework live</li>
-          <li>Development environments configured for all teams</li>
-          <li>Repository &amp; Planner structure established</li>
+          <li>Common problem-domain literature review (all streams)</li>
+          <li>Stream research &amp; discovery reports</li>
+          <li>Stream presentations to Operations</li>
+          <li>Proposed stream contributions approved</li>
         </ul>
       </div>
 
       <div class="milestone-card phase2">
-        <div class="milestone-phase">Phase 2 · Integration</div>
-        <h4>Connect the Modules</h4>
+        <div class="milestone-phase">Phase 2 · Weeks 2–5</div>
+        <h4>Applied Technical Skills</h4>
         <ul class="milestone-items">
-          <li><strong>Date:</strong> 29 May 2026 (Friday)</li>
-          <li>AI module integrated with platform</li>
-          <li>Security layer protecting all endpoints</li>
-          <li>Cloud deployment pipeline active</li>
-          <li>IoT data feeding into backend</li>
-          <li>Inter-module APIs tested and stable</li>
+          <li>Stream implementation progress reports</li>
+          <li>Stream demonstrations</li>
+          <li>Preliminary AgriChain components per stream</li>
+          <li>IoT: smart irrigation &amp; monitoring; Drone: aerial monitoring prototype</li>
         </ul>
       </div>
 
       <div class="milestone-card phase3">
-        <div class="milestone-phase">Phase 3 · Expansion</div>
-        <h4>Scale &amp; Refine</h4>
+        <div class="milestone-phase">Phase 3 · Weeks 6–9</div>
+        <h4>Innovation &amp; Enhancement</h4>
         <ul class="milestone-items">
-          <li><strong>Date:</strong> 19 Jun 2026 (Friday)</li>
-          <li>Advanced IoT features and dashboards</li>
-          <li>Full analytics and reporting suite</li>
-          <li>Performance optimisation across all services</li>
-          <li>Governance and audit compliance</li>
-          <li>Final system demo and documentation</li>
+          <li>Enhanced stream prototypes</li>
+          <li>Innovation enhancement reports</li>
+          <li>Prototype demonstrations</li>
+          <li>Value-add beyond Phase 2 explained per stream</li>
+        </ul>
+      </div>
+
+      <div class="milestone-card phase4">
+        <div class="milestone-phase">Phase 4 · Weeks 10–16</div>
+        <h4>System Integration</h4>
+        <ul class="milestone-items">
+          <li>Integrated AgriChain Smart System</li>
+          <li>Integration documentation</li>
+          <li>API, database, cloud &amp; security integration</li>
+          <li>End-to-end system demonstration</li>
+        </ul>
+      </div>
+
+      <div class="milestone-card phase5">
+        <div class="milestone-phase">Phase 5 · Weeks 17–20</div>
+        <h4>Testing &amp; Validation</h4>
+        <ul class="milestone-items">
+          <li>Functional, security &amp; performance testing</li>
+          <li>Testing and validation reports</li>
+          <li>User acceptance testing</li>
+          <li>Updated AgriChain Smart System</li>
+        </ul>
+      </div>
+
+      <div class="milestone-card phase6">
+        <div class="milestone-phase">Phase 6 · Weeks 21–24</div>
+        <h4>Showcase &amp; Deployment</h4>
+        <ul class="milestone-items">
+          <li>AgriChain Smart System Version 1.0</li>
+          <li>Final project report &amp; showcase presentation</li>
+          <li>Student technical portfolios</li>
+          <li>Industry engagement &amp; research dissemination</li>
         </ul>
       </div>
 
     </div>
   </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">04b · Governance</div>
+  <h2 class="section-title">Phase Entry &amp;<br><em>Exit Criteria</em></h2>
+
+  <table class="roadmap-table">
+    <thead>
+      <tr>
+        <th>Phase</th>
+        <th>Entry</th>
+        <th>Exit (Operations approval required)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Phase 1</strong></td>
+        <td>Briefing complete; streams assigned</td>
+        <td>Research reports &amp; stream contributions approved</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 2</strong></td>
+        <td>Phase 1 approved; technologies selected</td>
+        <td>Preliminary functional component per stream</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 3</strong></td>
+        <td>Initial prototypes available</td>
+        <td>Enhanced prototypes &amp; innovation reports</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 4</strong></td>
+        <td>Enhanced prototypes ready</td>
+        <td>Integrated system demonstrated with docs</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 5</strong></td>
+        <td>Integrated system ready for test</td>
+        <td>Validation complete; defects corrected</td>
+      </tr>
+      <tr>
+        <td><strong>Phase 6</strong></td>
+        <td>Validated system ready</td>
+        <td>Version 1.0 released; portfolios &amp; showcase done</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"></div>
+
+  <div class="section-label">04c · Success Measures</div>
+  <h2 class="section-title">Performance<br><em>Indicators</em></h2>
+  <p style="color: var(--muted); font-size: 14px; margin-bottom: 20px;">Key targets from the publication roadmap (streams may document evidence in progress reports).</p>
+
+  <table class="roadmap-table">
+    <thead>
+      <tr>
+        <th>Area</th>
+        <th>Success Indicator (examples)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>AI</strong></td><td>Crop ID ≥80%; disease diagnosis ≥75%; recommendation satisfaction ≥80%</td></tr>
+      <tr><td><strong>IoT</strong></td><td>Sensor data loss ≤10%; irrigation automation; ≥15% reduction in scheduled water output</td></tr>
+      <tr><td><strong>Drone</strong></td><td>Full field map coverage; ≥5 cm/px resolution; ≥75% health-zone accuracy; ≥5% AI accuracy gain from drone imagery</td></tr>
+      <tr><td><strong>Cloud</strong></td><td>≥95% uptime; main page &lt;5s on simulated 3G; &lt;3s response under load test</td></tr>
+      <tr><td><strong>Cybersecurity</strong></td><td>AES-256 at rest; HTTPS enforced; 100% RBAC block rate on unauthorised tests</td></tr>
+      <tr><td><strong>Software Engineering</strong></td><td>Usable farmer dashboard; role-specific access; integrated modules; stakeholder feedback</td></tr>
+    </tbody>
+  </table>
 
 </div>
 
@@ -1353,7 +1553,7 @@
 <!-- FOOTER -->
 <div class="doc-footer">
   <span class="footer-brand">Innovation Lab</span>
-  <span>Operations &amp; Delivery Framework · v1.0 · Confidential</span>
+  <span>AgriChain Smart System Roadmap · v1.0 · Confidential</span>
   <span>All members — treat this as your operating manual.</span>
 </div>
 

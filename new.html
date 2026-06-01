@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AgriChain Smart System — Innovation Lab Reporting</title>
+<meta name="theme-color" content="#080c14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Literata:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/new-report.css">
+</head>
+<body class="report-page">
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â• HERO â•â•â•â•â•â•â•â•â•â•â•â• -->
+<header class="hero">
+  <div class="hero-top">
+    <div class="hero-brand">
+      <div class="hero-icon" aria-hidden="true">🌱</div>
+      <div>
+        <div class="hero-title">AgriChain Smart System</div>
+        <div class="hero-sub">Quality Innovation Lab · Flagship Project Development Roadmap</div>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-badge">6 Months · 24 Weeks</div>
+    </div>
+  </div>
+  <p class="hero-desc">
+    Integrated phase-based and milestone-driven model for research, learning, innovation, technical development, system integration, testing, validation, showcase and deployment.
+    Interns submit weekly progress reports aligned to their stream, phase, and milestone gate.
+  </p>
+</header>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â• PHASE RIBBON â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="phase-ribbon">
+  <div class="phase-ribbon-inner">
+    <div class="pr-step" id="pr1"><div class="pr-num">1</div><div class="pr-label">Research &amp; Discovery</div><div class="pr-arrow"></div></div>
+    <div class="pr-step" id="pr2"><div class="pr-num">2</div><div class="pr-label">Technical Skills Dev</div><div class="pr-arrow"></div></div>
+    <div class="pr-step" id="pr3"><div class="pr-num">3</div><div class="pr-label">Innovation &amp; Enhancement</div><div class="pr-arrow"></div></div>
+    <div class="pr-step" id="pr4"><div class="pr-num">4</div><div class="pr-label">System Integration</div><div class="pr-arrow"></div></div>
+    <div class="pr-step" id="pr5"><div class="pr-num">5</div><div class="pr-label">Testing &amp; Validation</div><div class="pr-arrow"></div></div>
+    <div class="pr-step" id="pr6"><div class="pr-num">6</div><div class="pr-label">Showcase &amp; Deployment</div></div>
+  </div>
+</div>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â• TABS â•â•â•â•â•â•â•â•â•â•â•â• -->
+<nav class="tabs-bar">
+  <button class="tab-btn active" data-tab="form">Submit Progress Report</button>
+  <button class="tab-btn" data-tab="dashboard">Reports Dashboard</button>
+</nav>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     FORM TAB
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div id="form" class="tab-pane active">
+<div class="wrap">
+<form id="reportForm" novalidate>
+
+  <!-- BLOCK 1: INTERN IDENTITY -->
+  <div class="form-block">
+    <div class="block-header">
+      <div class="block-num">1</div>
+      <div class="block-title">Intern Identity &amp; Verification</div>
+      <div class="block-hint">Select your name, then complete your email</div>
+    </div>
+    <div class="block-body">
+      <div class="fg">
+
+        <div class="f">
+          <label class="lbl">Your Full Name <span class="req">*</span></label>
+          <select id="internName">
+            <option value="">&#8212; select your name &#8212;</option>
+          </select>
+          <span class="err" id="nameErr">Please select your name.</span>
+        </div>
+
+        <div class="f">
+          <label class="lbl">Email Verification <span class="req">*</span></label>
+          <div class="email-verify-wrap">
+            <div class="email-segments" id="emailSegments">
+              <span style="color:var(--muted);font-size:.78rem">Select your name first</span>
+            </div>
+            <div class="email-input-row">
+              <input type="text" id="emailMiddle" placeholder="Type the hidden portion here"
+                autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" disabled/>
+            </div>
+            <div class="verify-hint" id="verifyHint"></div>
+          </div>
+          <span class="err" id="emailErr">Email does not match. Type the missing portion exactly.</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 2: PROJECT CONTEXT -->
+  <div class="form-block">
+    <div class="block-header">
+      <div class="block-num">2</div>
+      <div class="block-title">Project Context</div>
+      <div class="block-hint">Stream · Phase · Milestone · Week</div>
+    </div>
+    <div class="block-body">
+      <div class="fg3">
+        <div class="f">
+          <label class="lbl">Technical Stream <span class="req">*</span></label>
+          <select id="stream">
+            <option value="">&#8212; select stream &#8212;</option>
+            <option>Artificial Intelligence &amp; Machine Learning</option>
+            <optgroup label="Internet of Things (IoT)">
+              <option value="Internet of Things (IoT)">IoT &#8212; Sensors &amp; Smart Devices</option>
+              <option value="Internet of Things (IoT) &#8212; Drone Technology">IoT &#8212; Drone Technology</option>
+            </optgroup>
+            <option>Cloud Computing</option>
+            <option>Software Engineering</option>
+            <option>Cybersecurity</option>
+            <option>Blockchain &amp; Traceability</option>
+          </select>
+          <span class="err" id="streamErr">Please select your stream.</span>
+        </div>
+        <div class="f">
+          <label class="lbl">Current Phase <span class="req">*</span></label>
+          <select id="phase">
+            <option value="">&#8212; select phase &#8212;</option>
+            <option value="1">Phase 1 &#8211; Research, Discovery &amp; Planning (Week 1)</option>
+            <option value="2">Phase 2 &#8211; Applied Technical Skills Development (Weeks 2&#8211;5)</option>
+            <option value="3">Phase 3 &#8211; Innovation &amp; Prototype Enhancement (Weeks 6&#8211;9)</option>
+            <option value="4">Phase 4 &#8211; System Integration (Weeks 10&#8211;16)</option>
+            <option value="5">Phase 5 &#8211; Testing &amp; Validation (Weeks 17&#8211;20)</option>
+            <option value="6">Phase 6 &#8211; Showcase &amp; Deployment (Weeks 21&#8211;24)</option>
+          </select>
+          <span class="err" id="phaseErr">Please select the current phase.</span>
+        </div>
+        <div class="f">
+          <label class="lbl">Milestone Gate <span class="req">*</span></label>
+          <select id="milestone">
+            <option value="">&#8212; select phase first &#8212;</option>
+          </select>
+          <span class="err" id="milestoneErr">Please select a milestone.</span>
+        </div>
+      </div>
+      <div class="fg" style="margin-top:1rem">
+        <div class="f">
+          <label class="lbl">Current Week (1 &#8211; 24) <span class="req">*</span></label>
+          <input type="number" id="week" min="1" max="24" placeholder="e.g. 3"/>
+          <span class="err" id="weekErr">Please enter a week number between 1 and 24.</span>
+        </div>
+        <div class="f">
+          <label class="lbl">Overall Milestone Progress</label>
+          <div class="slider-row">
+            <input type="range" id="progress" min="0" max="100" step="5" value="0"/>
+            <span class="slider-val" id="progressVal">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 3: DELIVERABLES -->
+  <div class="form-block">
+    <div class="block-header">
+      <div class="block-num">3</div>
+      <div class="block-title">Phase Deliverables Status</div>
+      <div class="block-hint">Tick all that apply to this reporting period</div>
+    </div>
+    <div class="block-body">
+      <div id="delivCheckWrap">
+        <p style="font-size:.78rem;color:var(--muted)">Select your phase above to see deliverables.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 4: PROGRESS DETAILS -->
+  <div class="form-block">
+    <div class="block-header">
+      <div class="block-num">4</div>
+      <div class="block-title">Progress Details</div>
+    </div>
+    <div class="block-body">
+      <div class="fg">
+        <div class="f span2">
+          <label class="lbl">Work Completed This Period <span class="req">*</span></label>
+          <textarea id="workDone" placeholder="Describe what you have accomplished — include technologies used, components built, experiments run, or research completed…"></textarea>
+          <span class="err" id="workErr">Please describe your work completed.</span>
+        </div>
+        <div class="f">
+          <label class="lbl">Challenges &amp; Blockers</label>
+          <textarea id="challenges" placeholder="Any technical issues, blockers, missing resources, or difficulties faced…"></textarea>
+        </div>
+        <div class="f">
+          <label class="lbl">Next Steps</label>
+          <textarea id="nextSteps" placeholder="What are you working on next? What milestones or sub-tasks are coming up?"></textarea>
+        </div>
+        <div class="f">
+          <label class="lbl">Support or Resources Needed</label>
+          <textarea id="support" style="min-height:66px" placeholder="Any specific guidance, tools, datasets, hardware, or collaboration needed?"></textarea>
+        </div>
+        <div class="f">
+          <label class="lbl">Cross-Stream Collaboration</label>
+          <textarea id="collab" style="min-height:66px" placeholder="Any integration work or collaboration with other streams this period?"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCK 5: STATUS -->
+  <div class="form-block">
+    <div class="block-header">
+      <div class="block-num">5</div>
+      <div class="block-title">Overall Deliverable Status <span style="color:var(--accent);font-size:.72rem;margin-left:6px">*</span></div>
+    </div>
+    <div class="block-body">
+      <div class="status-grid" id="statusPills">
+        <div class="status-pill" data-val="On Track">On Track</div>
+        <div class="status-pill" data-val="Behind Schedule">Behind Schedule</div>
+        <div class="status-pill" data-val="Blocked">Blocked</div>
+        <div class="status-pill" data-val="Completed">Completed</div>
+        <div class="status-pill" data-val="Not Started">Not Started</div>
+      </div>
+      <input type="hidden" id="statusHidden"/>
+      <span class="err" id="statusErr" style="display:none;margin-top:6px">Please select a status.</span>
+    </div>
+  </div>
+
+  <div class="submit-row">
+    <button type="submit" class="btn-submit" id="submitBtn">Submit Progress Report →</button>
+    <div class="submit-note">Your report is saved to the Innovation Lab database.<br>Only your registered email is accepted for verification.</div>
+  </div>
+
+</form>
+</div>
+</div><!-- end form tab -->
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     DASHBOARD TAB
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div id="dashboard" class="tab-pane">
+<div class="wrap">
+
+  <div class="kpi-row" id="kpiRow">
+    <div class="kpi"><div class="kpi-num">—</div><div class="kpi-lbl">Total Reports</div></div>
+    <div class="kpi"><div class="kpi-num">—</div><div class="kpi-lbl">Streams Reporting</div></div>
+    <div class="kpi"><div class="kpi-num">—</div><div class="kpi-lbl">Avg Progress</div></div>
+    <div class="kpi"><div class="kpi-num">—</div><div class="kpi-lbl">On Track</div></div>
+  </div>
+
+  <div class="dash-card">
+    <div class="dash-top">
+      <h2>Intern Progress Reports</h2>
+      <button class="btn-ref" onclick="loadDash()">↻ Refresh</button>
+    </div>
+    <div class="spin-wrap" id="dashSpin"><div class="spinner"></div> Loading reports…</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Intern</th>
+            <th>Stream</th>
+            <th>Phase</th>
+            <th>Milestone</th>
+            <th>Wk</th>
+            <th>Progress</th>
+            <th>Status</th>
+            <th>Work Summary</th>
+            <th>Submitted</th>
+          </tr>
+        </thead>
+        <tbody id="dashBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+</div><!-- end dashboard tab -->
+
+<div id="toast"></div>
+
+<script type="module" src="js/new-report.js"></script>
+</body>
+</html>

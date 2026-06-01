@@ -1,0 +1,637 @@
+﻿AGRICHAIN SMART SYSTEM
+FLAGSHIP PROJECT DEVELOPMENT ROADMAP
+Quality Innovation Lab Roadmap
+Project Duration: 6 Months (24 Weeks)
+Integrated phase-based and milestone-driven model for research, learning, innovation, technical development, system integration, testing, validation, showcase and deployment.
+1. PROJECT OVERVIEW
+The AgriChain Smart System is the flagship project of the Innovation Lab Learning Ecosystem. The project serves as both a learning and development platform and a technology development initiative for Interns. Through this project, participants develop research capabilities, technical competencies, innovation skills, and practical experience while contributing to the design and development of a real-world intelligent agricultural solution.
+The project adopts a project-based learning approach where research, learning, innovation, and technology development occur simultaneously. Participants are expected to learn through investigation, experimentation, implementation, collaboration, and continuous improvement while contributing to the AgriChain Smart System.
+The project integrates contributions from all Innovation Lab technical streams:
+Technical Theme / Learning Stream
+Core Role in AgriChain
+Artificial Intelligence and Machine Learning
+Crop intelligence, crop identification, crop disease detection, data-driven recommendations and intelligent analytics.
+Internet of Things (IoT)
+Sensor-based environmental monitoring, smart irrigation, real-time field data capture and pest alerting.
+Cloud Computing
+Cloud infrastructure, storage, APIs, data management, scalable deployment and platform availability.
+Software Engineering
+User platform, farmer-facing interfaces, dashboards, system logic, API integration and user experience.
+Cybersecurity
+Security controls, access management, encryption, secure communications, data protection and resilience.
+Drone Technology
+Aerial monitoring, field mapping, crop-health zone mapping, GIS outputs and drone imagery for AI improvement.
+2. PROJECT DEVELOPMENT MODEL
+The development model follows a left-to-right learning and project-development progression:
+1
+2
+3
+4
+5
+6
+Research & Discovery
+Applied Technical Skills Development
+Innovation & Prototype Enhancement
+System Integration
+Testing & Validation
+Showcase & Deployment
+This model ensures that the Innovation Lab is not limited to building a single system. It creates a structured learning ecosystem where students learn technical skills by implementing a flagship project, improving prototypes, integrating stream outputs and validating a working real-world solution.
+3. PROJECT PHASES
+Phase
+Duration
+Focus Area
+Milestone Gate
+Phase 1
+Week 1
+Research, Discovery, and Planning
+Milestone 1: Research and stream contribution approved
+Phase 2
+Weeks 2-5
+Applied Technical Skills Development
+Milestone 2: Functional stream prototypes completed
+Phase 3
+Weeks 6-9
+Innovation and Prototype Enhancement
+Milestone 3: Enhanced prototypes approved
+Phase 4
+Weeks 10-16
+System Integration
+Milestone 4: Integrated AgriChain Smart System completed
+Phase 5
+Weeks 17-20
+Testing and Validation
+Milestone 5: Validation passed
+Phase 6
+Weeks 21-24
+Showcase and Deployment
+Milestone 6: AgriChain Smart System Version 1.0 released
+PHASE 1: RESEARCH, DISCOVERY AND PLANNING
+Duration: Week 1
+1.1 Phase Overview
+The Research, Discovery and Planning Phase serves as the foundation of the AgriChain Smart System flagship project. During this phase, participants investigate the agricultural problem domain, existing agricultural solutions, relevant technologies, applicable methods and tools, available datasets, and opportunities for improvement.
+The purpose of this phase is to establish a research-informed foundation for the project and to ensure that all future technical, innovation, and development activities are guided by evidence and an understanding of the problem being addressed.
+By the end of this phase, participants should understand the agricultural challenges relevant to AgriChain, the technologies available within their stream, the strengths and limitations of existing solutions, and how their stream can contribute to the successful development of the AgriChain Smart System.
+1.2 Phase Objectives
+Develop a common understanding of the AgriChain Smart System vision and purpose.
+Understand the agricultural challenges being addressed.
+Investigate existing agricultural technology solutions.
+Identify technologies relevant to each technical stream.
+Investigate applicable methods, algorithms, frameworks, tools, sensors, and architectures.
+Identify datasets suitable for experimentation, simulation, and testing.
+Identify limitations within existing solutions.
+Identify opportunities for improvement and innovation.
+Define the contribution of each stream to AgriChain.
+Establish a research-informed foundation for future project activities.
+1.3 Expected Deliverables and Outcomes
+1.3.1 Common Project Investigation (All Streams)
+Research Question: What problem are we solving?
+Students should investigate:
+Agricultural challenges relevant to AgriChain.
+Current approaches used to address these challenges.
+Existing limitations and challenges.
+Opportunities where technology can provide improvements.
+Deliverable: Common Problem-Domain Understanding and Literature Review
+1.3.2 Artificial Intelligence and Machine Learning Stream
+Research Questions
+Technologies
+What AI and Machine Learning technologies are available?
+Methods and Algorithms
+What AI and Machine Learning algorithms are available?
+Which algorithms are most suitable for agricultural applications?
+Datasets
+What agricultural datasets are available?
+Existing Solutions
+What AI-enabled agricultural solutions already exist?
+Opportunities
+What limitations exist within current AI solutions?
+What improvements can be introduced?
+Stream Contribution
+How can AI and Machine Learning contribute to AgriChain?
+Expected Output
+Recommended AI contribution to AgriChain.
+1.3.3 Internet of Things (IoT) Stream
+Research Questions
+Technologies
+What IoT technologies are available?
+Sensors and Devices
+What agricultural sensors and monitoring devices are available?
+Datasets
+What IoT and sensor datasets are available?
+Existing Solutions
+What IoT-enabled agricultural solutions already exist?
+Opportunities
+What limitations exist within current IoT solutions?
+What improvements can be introduced?
+Stream Contribution
+How can IoT contribute to AgriChain?
+Expected Output
+Recommended IoT contribution to AgriChain.
+1.3.4 Cloud Computing Stream
+Research Questions
+Technologies
+What cloud technologies and platforms are available?
+Architectures
+What cloud architectures and deployment models are available?
+Existing Solutions
+What cloud-based agricultural solutions already exist?
+Data Requirements
+What cloud services, storage solutions, APIs, and data management capabilities will AgriChain require?
+Opportunities
+What limitations exist within current cloud solutions?
+What improvements can be introduced?
+Stream Contribution
+How can Cloud Computing contribute to AgriChain?
+Expected Output
+Recommended Cloud contribution to AgriChain.
+1.3.5 Software Engineering Stream
+Research Questions
+Technologies
+What software development technologies are available?
+Architectures
+What software architectures and development approaches are available?
+Existing Solutions
+What agricultural information systems, mobile applications, and farm management systems already exist?
+Functional Requirements
+What features and capabilities should AgriChain provide?
+Opportunities
+What limitations exist within current software solutions?
+What improvements can be introduced?
+Stream Contribution
+How can Software Engineering contribute to AgriChain?
+Expected Output
+Recommended Software contribution to AgriChain.
+1.3.6 Cybersecurity Stream
+Research Questions
+Technologies
+What cybersecurity technologies are available?
+Frameworks and Security Models
+What cybersecurity frameworks, standards, and security models are available?
+Existing Solutions
+How are existing agricultural systems secured?
+Threats and Vulnerabilities
+What security threats and vulnerabilities exist within agricultural technology environments?
+Opportunities
+What improvements can be introduced?
+Stream Contribution
+How can Cybersecurity contribute to AgriChain?
+Expected Output
+Recommended Cybersecurity contribution to AgriChain.
+1.3.7 Drone Technology Stream
+Research Questions
+Technologies
+What drone technologies are available?
+Platforms and Tools
+What drone platforms, imaging systems, GIS technologies, and mapping tools are available?
+Datasets
+What drone and remote-sensing datasets are available?
+Existing Solutions
+What drone-enabled agricultural solutions already exist?
+Opportunities
+What limitations exist within current drone solutions?
+What improvements can be introduced?
+Stream Contribution
+How can Drone Technology contribute to AgriChain?
+Expected Output
+Recommended Drone contribution to AgriChain.
+1.4 Phase Deliverables
+Deliverable
+Description
+Deliverable 1
+Common Problem-Domain Understanding and Literature Review (All Streams)
+Deliverable 2
+Stream Research and Discovery Report
+Deliverable 3
+Stream Presentation
+1.5 Expected Outcome
+All streams should have a common understanding of the AgriChain Smart System problem domain.
+Each stream should have identified relevant technologies, methods, tools, frameworks, sensors, architectures, and datasets.
+Each stream should have investigated existing solutions and identified opportunities for improvement.
+Each stream should have defined and justified its proposed contribution to AgriChain.
+The outputs from this phase will provide the research and planning foundation required for Phase 2.
+Milestone Gate: Phase 1 is completed when all stream research reports, presentations, problem-domain findings and proposed stream contributions have been reviewed and approved.
+PHASE 2: APPLIED TECHNICAL SKILLS DEVELOPMENT
+Duration: Weeks 2-5
+2.1 Phase Overview
+The Applied Technical Skills Development Phase focuses on developing technical competencies through the implementation of AgriChain Smart System components.
+Participants begin implementing the components proposed during Phase 1 while simultaneously learning the technologies, tools, frameworks, methods, and techniques required to successfully complete their tasks.
+Learning takes place through implementation, experimentation, problem-solving, collaboration, and continuous improvement.
+The philosophy guiding this phase is: Research -> Implementation & Skills Development -> Improved Implementation
+2.2 Phase Objectives
+Develop technical competencies through implementation.
+Apply findings from Phase 1.
+Gain practical experience with selected technologies.
+Develop foundational AgriChain components.
+Strengthen problem-solving abilities.
+Promote collaborative learning.
+Establish the technical foundation of AgriChain.
+2.3 Applied Technical Skills Development by Stream
+Stream
+Proposed Component
+Expected Output
+Artificial Intelligence and Machine Learning
+Crop Disease Detection and Recommendation Module
+Initial Crop Disease Detection Prototype
+Internet of Things (IoT)
+Smart Irrigation and Environmental Monitoring Module
+Environmental Monitoring Prototype
+Cloud Computing
+Cloud Infrastructure and Data Management Platform
+Initial AgriChain Cloud Environment
+Software Engineering
+AgriChain User Platform
+Initial User Interface Prototype
+Cybersecurity
+Security and Access Management Framework
+Initial Security Framework Prototype
+Drone Technology
+Drone-Based Agricultural Monitoring Module
+Drone Monitoring Prototype
+2.4 Phase Deliverables
+Deliverable
+Description
+Deliverable 1
+Stream Implementation Progress Report
+Deliverable 2
+Stream Demonstration
+Deliverable 3
+Preliminary AgriChain Component
+2.5 Expected Outcome
+Participants should have developed practical technical competencies through implementation.
+Each stream should have produced an initial AgriChain component.
+Participants should understand the technologies selected during Phase 1 through practical application.
+Each stream should have established a foundation for future innovation and enhancement activities.
+The Innovation Lab should possess the first functional building blocks of the AgriChain Smart System.
+The outputs from this phase will provide the foundation for Phase 3: Innovation and Prototype Enhancement.
+2.6 Detailed Stream Milestone Guide for Phase 2 and Phase 3 Development
+The following milestones strengthen the roadmap by giving each stream measurable development checkpoints. They do not replace the phase structure; they sit inside the phases as implementation targets and evidence of progress.
+Artificial Intelligence and Machine Learning Stream
+Milestone 1: Build a System That Can Identify Crop Types From a Photo
+Build a simple AI tool that can look at a photo of a crop and identify the type of crop.
+Use a ready-made AI model such as MobileNet or ResNet and train it to recognise at least 5 different crops commonly grown in South Africa.
+Test the model using a sufficient dataset of crop photos to confirm it gives the correct answer at least 80% of the time.
+Build a simple app screen where a farmer can take or upload a photo and instantly see the crop name as the result.
+Document every step of the process so the work can be reviewed and built upon in Milestone 2.
+Milestone 2: Teach the System to Spot Diseases in Crops
+Download and prepare a free crop disease image dataset such as PlantVillage containing photos of both healthy and diseased crops for training.
+Train the model to identify at least 10 different crop diseases, pest damage signs, or nutrient problems.
+Test the model using at least 300 photos and confirm it gives the correct diagnosis at least 75% of the time.
+Display the diagnosis result together with a confidence percentage so the farmer knows how certain the system is.
+Present the result in plain, simple language that a farmer with no technical background can understand.
+Milestone 3: Add a Treatment Recommendation Feature
+Use the disease diagnosis result from Milestone 2 as the starting point for generating treatment advice.
+For each diagnosis, display at least 3 treatment options ranked from most to least recommended.
+Each treatment option must include whether it is organic or chemical, how much to use, and how to prevent the disease in future.
+Test the recommendations using at least 50 different diagnosis scenarios and have an agriculture expert review and approve the results.
+Share the system with at least 10 small-scale farmers, collect their feedback using a simple survey, and achieve a satisfaction score of at least 80%.
+Internet of Things (IoT) Stream
+Milestone 1: Build a System That Collects and Displays Farm Sensor Data
+Set up at least 3 IoT sensors such as a Raspberry Pi or Arduino kit to measure soil moisture, soil temperature, and nutrient levels in a test field or simulated environment.
+Connect the sensors to a central system that collects and stores readings automatically every 30 minutes.
+Build a simple dashboard that displays the live sensor readings in a clear, easy-to-read format for the farmer.
+Test the system over a period of at least 2 weeks to confirm that data is being captured consistently and accurately with no more than 10% data loss.
+Document the hardware setup and software configuration so the work can be reviewed and built upon in Milestone 2.
+Milestone 2: Track Weather Changes and Automate Irrigation Schedules
+Integrate a weather data source such as a local weather API or an additional weather sensor to track real-time temperature, humidity, and rainfall in the farm area.
+Use the combined soil and weather data to generate an automated daily irrigation schedule that adjusts based on current conditions.
+Send the farmer a notification via SMS or app alert at least once a day with the recommended irrigation schedule and the reason for the recommendation.
+Test the automated scheduling system over at least 3 weeks and confirm that irrigation recommendations respond correctly to at least 5 different simulated weather and soil conditions.
+Measure water usage before and after automation is applied and demonstrate a reduction in scheduled water output of at least 15%.
+Milestone 3: Add Automated Pest Detection Alerts
+Research and identify at least 5 environmental conditions such as humidity thresholds, temperature ranges, or soil changes that are known to indicate pest activity for the selected crop types.
+Programme the sensor system to continuously monitor for these conditions and trigger an alert when two or more indicators are detected at the same time.
+Deliver the alert to the farmer within 15 minutes of detection via SMS, email, or app notification, clearly stating the type of threat and the affected area.
+Test the alert system using at least 20 simulated pest condition scenarios and confirm that the correct alert is triggered in at least 85% of cases.
+Share the system with at least 10 small-scale farmers, collect feedback through a simple survey, and achieve a satisfaction score of at least 80%.
+Drone Technology Stream
+Milestone 1: Build a System that Captures and Displays Aerial Field Maps Using a Drone
+Use an available drone or drone simulator to fly a planned grid route over a test field of at least 1 hectare and capture a minimum of 50 overlapping aerial photographs.
+Use free photogrammetry software such as OpenDroneMap or WebODM to stitch the photographs into a single, georeferenced field map.
+Confirm the output map covers 100% of the planned flight area with a ground resolution of at least 5 cm per pixel.
+Display the completed field map on a simple dashboard where the farmer can zoom in and inspect different areas of the land.
+Document the flight plan, software settings, and map output so the process can be repeated and built upon in Milestone 2.
+Milestone 2: Use Drone Imagery to Identify Crop Health Zones and Generate Targeted Application Maps
+Process the aerial imagery from Milestone 1 using a vegetation index such as NDVI or a visible-light equivalent to classify field zones into at least 3 health categories: healthy, stressed, and critical.
+Generate a colour-coded crop health map that clearly marks which zones require treatment, displayed on the farmer dashboard.
+Produce a targeted application map that specifies which areas of the field require pesticide or fertiliser treatment, reducing the application area by at least 20% compared to a blanket-spray approach.
+Test the zone classification against at least 30 field sample points and confirm the health categorisation matches ground-truth observations in at least 75% of cases.
+Document the analysis method and outputs clearly so an intern with no prior GIS experience can reproduce the process.
+Milestone 3: Feed Drone Imagery into the AI Crop Disease Detection Model to Improve Accuracy
+Extract and label a minimum of 200 crop image patches from the drone field maps captured in Milestones 1 and 2, tagging each patch as healthy, diseased, or stressed.
+Add the labelled drone image patches to the existing AI training dataset and retrain the disease detection model using the combined dataset.
+Compare the retrained model detection accuracy against the original AI model using the same test dataset and demonstrate an improvement of at least 5% in detection accuracy.
+Build a simple automated pipeline that accepts a new drone field map as input and outputs a disease risk overlay map highlighting areas of concern across the entire field.
+Pilot the end-to-end system with at least 5 small-scale farmers, collect structured feedback using a simple survey, and achieve a satisfaction score of at least 80%.
+Cybersecurity Stream
+Milestone 1: Protect Farmer Data and Financial Transactions Using End-to-End Encryption
+Identify all data fields in the platform that contain sensitive information such as farmer personal details, bank details, transaction amounts, and harvest records, and produce a written data classification list before any encryption is applied.
+Implement AES-256 encryption for all sensitive data stored in the platform database, confirming that no sensitive field is saved in plain text.
+Enforce HTTPS across all platform pages and API endpoints using a valid SSL/TLS certificate, ensuring all data sent between the farmer device and the server is encrypted in transit.
+Test the encryption by attempting to read stored sensitive data directly from the database and confirming that the output is unreadable without the correct decryption key in at least 10 test cases.
+Document the encryption approach, key management process, and test results so the implementation can be reviewed and verified by a supervisor.
+Milestone 2: Build a Role-Based Access Control System Across All Platform Modules
+Define at least 4 distinct user roles for the platform such as farmer, buyer, administrator, and guest, and document exactly which platform features and data each role is allowed to access.
+Implement role-based access control so that each user account is assigned a role at registration and the system automatically restricts access to features and data outside that role.
+Test the access control system using at least 20 test cases covering both authorised and unauthorised access attempts and confirm that unauthorised access is blocked in 100% of test cases.
+Ensure that all failed access attempts are automatically logged with the user account, timestamp, and action attempted, and that these logs are visible to the administrator role only.
+Conduct a peer review where one intern attempts to access restricted areas of the platform using a lower-permission account and documents any gaps found, with all gaps resolved before sign-off.
+Milestone 3: Secure IoT Device Communications Against External Threats
+Implement mutual TLS or an equivalent secure communication protocol between the IoT sensors and the central platform server, ensuring all sensor data is encrypted in transit.
+Assign each IoT device a unique device identity such as a certificate or API key so the platform can verify that incoming data is coming from a known, trusted device and not a fake one.
+Set up an automated alert that notifies the platform administrator within 5 minutes if an unrecognised device attempts to connect to the sensor network or if a known device sends data outside its normal range.
+Simulate at least 5 common IoT attack scenarios such as a man-in-the-middle attack, a spoofed sensor, and an unauthorised connection attempt and confirm the system detects and blocks each one.
+Pilot the secured IoT communication system with at least 10 small-scale farmers, collect feedback using a simple survey, and achieve a satisfaction score of at least 80% on ease of use and perceived security.
+Cloud Computing Stream
+Milestone 1: Deploy the Platform on a Scalable Cloud Environment with Reliable Uptime
+Select and set up a free or low-cost cloud hosting environment such as AWS Free Tier, Google Cloud Free Tier, or Microsoft Azure for Students and deploy a working version of the platform to it.
+Configure the cloud server with automatic restart capabilities so that if the server crashes or restarts, the platform comes back online within 2 minutes without manual action.
+Set up a basic uptime monitoring tool such as UptimeRobot that checks whether the platform is online every 5 minutes and sends an alert to the team if it goes down.
+Run a 2-week uptime test and confirm the platform achieves an availability rate of at least 95%.
+Document the full deployment process step by step so that any intern can redeploy the platform on a new server by following the written instructions alone.
+Milestone 2: Optimise the Platform for Low-Bandwidth Conditions in Rural Areas
+Measure the current data usage of each main platform page or feature by recording the total page size in kilobytes before any optimisation is applied, creating a baseline to compare against.
+Apply at least 3 optimisation techniques such as image compression, lazy loading of images, minification of CSS and JavaScript files, caching of repeated content, and reduction of unnecessary API calls.
+After optimisation, confirm that the total data loaded on the main farmer-facing page is no more than 500 KB so that it loads comfortably on a 3G mobile connection.
+Test the platform load time by simulating a slow 3G connection using browser developer tools and confirm the main page loads fully within 5 seconds.
+Add an offline mode or basic caching feature using a service worker or equivalent that allows the farmer to view the last known dashboard data when internet connectivity is temporarily lost.
+Milestone 3: Make the Platform Scalable so it Can Grow as More Farmers Join
+Set up auto-scaling on the cloud environment so that additional server capacity is automatically added when the number of active users exceeds a defined threshold, for example when CPU usage goes above 70% for more than 2 minutes.
+Use a load testing tool such as Apache JMeter or Locust to simulate at least 200 simultaneous users accessing the platform and confirm the system maintains an average response time of under 3 seconds throughout the test.
+Set up a content delivery network to serve static platform files from a server location closest to the user, and confirm this reduces average load time by at least 20% compared to without a CDN.
+Configure automated daily database backups to a separate cloud storage location and test the restore process by successfully recovering the platform from a backup within 30 minutes.
+Pilot the fully deployed, optimised and scalable platform with at least 10 small-scale farmers across at least 2 different rural locations in South Africa, collect feedback using a simple survey, and achieve a satisfaction score of at least 80%.
+Blockchain and Traceability Extension Stream
+Milestone 1: Build a Crop Inventory and Harvest Record System on a Blockchain
+Set up a test blockchain environment using a free beginner-friendly platform such as Ethereum Testnet, Hyperledger Fabric, or Ganache that interns can run locally without real money.
+Build a simple data entry form where a farmer can log a harvest record including crop type, quantity harvested, harvest date, and farm location.
+Store each harvest record as a transaction on the blockchain so that once it is saved it cannot be edited or deleted.
+Display a clear history of all logged harvest records on a farmer dashboard, showing at least the last 10 entries with their blockchain transaction reference.
+Test the system by logging at least 20 harvest records and confirming that all entries are stored correctly and remain unchanged on the blockchain ledger.
+Document the setup and data structure so the work can be extended in Milestone 2.
+Milestone 2: Track Produce from Farm to Market Using the Blockchain Ledger
+Extend the Milestone 1 system to allow additional supply chain events to be recorded for each harvest batch, including produce packed, dispatched from farm, received by distributor, and delivered to market or buyer.
+Assign each harvest batch a unique tracking ID such as a QR code that links all supply chain events together on the blockchain from farm to final destination.
+Build a simple public-facing lookup page where a consumer can scan or enter the tracking ID and see the full journey of the produce displayed in a clear, easy-to-read timeline.
+Test the full tracking flow using at least 10 simulated produce batches, each passing through a minimum of 4 supply chain stages, and confirm all events are recorded correctly and in the correct order.
+Confirm that no previously recorded supply chain event can be altered or deleted once it has been added to the blockchain, demonstrating tamper-proof traceability.
+Milestone 3: Automate Buyer-Seller Payments Using Smart Contracts
+Write a basic smart contract using Solidity or an equivalent beginner-friendly language that holds a buyer payment in escrow and releases it to the farmer automatically when a confirmed delivery event is recorded on the blockchain.
+Test the smart contract using at least 15 simulated transactions covering successful delivery and payment release, failed delivery and payment refund, and partial delivery with proportional payment.
+Integrate the smart contract into the tracking system so that a confirmed delivered-to-buyer event automatically triggers payment release without manual action.
+Display the payment status as pending, released, or refunded on both the farmer dashboard and the buyer-facing view, updating in real time as blockchain events are recorded.
+Pilot the full system - inventory, traceability, and smart contract payment - with at least 10 small-scale farmers and achieve a user satisfaction score of at least 80% based on a simple structured survey.
+2.7 Beginner-Friendly Tool and Implementation Notes
+Area
+Recommended beginner-friendly support
+AI
+Interns do not need to build models from scratch. They can start with MobileNet, ResNet, and open datasets such as PlantVillage and many other
+IoT
+Interns can use Raspberry Pi or Arduino kits and simulated sensor environments when real fields are not available.
+Drone/GIS
+OpenDroneMap or WebODM can be used for photogrammetry, mapping and reproducible aerial analysis.
+Blockchain Extension
+Interns do not need to build a blockchain from scratch. Ganache, Ethereum Testnet, Hyperledger Fabric or browser-based tools such as Remix IDE can be used for learning and testing without real money.
+Cybersecurity
+Use built-in libraries such as Python cryptography or Node.js crypto modules, HTTPS certificates, framework RBAC plugins and Wireshark for educational testing.
+Cloud
+AWS Free Tier, Google Cloud Free Tier, Microsoft Azure for Students, UptimeRobot, Apache JMeter, Locust and CDN services such as Cloudflare can support testing and deployment.
+PHASE 3: INNOVATION AND PROTOTYPE ENHANCEMENT
+Duration: Weeks 6-9
+Purpose
+Enhance, optimise, refine, and innovate upon the prototypes developed during Phase 2.
+Participants evaluate initial implementations, identify weaknesses and opportunities, compare alternative approaches, improve functionality, and introduce innovative features that add value to AgriChain.
+Key Activities
+Prototype evaluation
+Feature enhancement
+Design improvement
+Algorithm optimisation
+User experience improvement
+Performance improvement
+Innovation workshops
+Collaborative problem-solving
+Expected Outputs
+AI Stream: Enhanced disease detection and recommendation capabilities.
+IoT Stream: Enhanced monitoring and automation capabilities.
+Cloud Stream: Improved scalability, storage, and service integration.
+Software Engineering Stream: Enhanced interfaces and functionality.
+Cybersecurity Stream: Enhanced security controls and protection mechanisms.
+Drone Stream: Enhanced aerial intelligence and monitoring capabilities.
+Deliverables
+Enhanced Stream Prototype
+Innovation Enhancement Report
+Prototype Demonstration
+Milestone Gate
+Phase 3 is completed when each stream demonstrates an enhanced prototype and explains the innovation, improvement, optimisation or user-value added beyond the Phase 2 prototype.
+PHASE 4: SYSTEM INTEGRATION
+Duration: Weeks 10-16
+Purpose
+Integrate all stream outputs into a single AgriChain Smart System.
+This phase focuses on ensuring that independently developed components can operate as a unified system.
+Key Activities
+Component integration
+API integration
+Database integration
+Cloud integration
+Security integration
+User interface integration
+System interoperability testing
+Expected Outputs
+Integrated AI Module
+Integrated IoT Module
+Integrated Cloud Platform
+Integrated Software Platform
+Integrated Security Framework
+Integrated Drone Monitoring Module
+Deliverables
+Integrated AgriChain Smart System
+Integration Documentation
+System Demonstration
+Milestone Gate
+Phase 4 is completed when all core stream components operate as one unified AgriChain Smart System and the integration can be demonstrated end-to-end.
+PHASE 5: TESTING AND VALIDATION
+Duration: Weeks 17-20
+Purpose
+Evaluate the functionality, reliability, usability, security, and performance of the integrated AgriChain Smart System.
+This phase confirms that the system performs as expected, satisfies user needs, protects data, supports real-world agricultural use and can be improved based on stakeholder feedback.
+Key Activities
+Functional testing
+User acceptance testing
+Security testing
+Performance testing
+Integration testing
+Prototype validation
+Defect identification and correction
+Expected Outputs
+Verified system functionality
+Improved system reliability
+Enhanced user experience
+Security assurance
+Deliverables
+Testing Report
+Validation Report
+Updated AgriChain Smart System
+Milestone Gate
+Phase 5 is completed when the system has passed functional, integration, usability, security and performance checks and the validation report confirms readiness for showcase and deployment.
+PHASE 6: SHOWCASE AND DEPLOYMENT
+Duration: Weeks 21-24
+Purpose
+Demonstrate project outcomes, disseminate knowledge, showcase innovations, and deploy AgriChain Smart System Version 1.0.
+This phase positions AgriChain as a strategic Innovation Lab output by linking system demonstration, student learning evidence, research dissemination, industry engagement and deployment readiness.
+Key Activities
+Project showcase
+Industry demonstrations
+Innovation exhibitions
+Research dissemination
+Technical demonstrations
+Stakeholder engagement
+Final deployment
+Expected Outputs
+AgriChain Smart System Version 1.0
+Research outputs
+Innovation outputs
+Student portfolios
+Industry engagement opportunities
+Deliverables
+Final AgriChain Smart System
+Final Project Report
+Project Showcase Presentation
+Innovation Demonstration
+Student Technical Portfolios
+Milestone Gate
+Phase 6 is completed when AgriChain Smart System Version 1.0 is packaged, demonstrated, documented and released as the Innovation Lab flagship project outcome.
+4. CROSS-STREAM COLLABORATION AND INTEGRATION LOGIC
+The AgriChain Smart System must not be treated as six isolated projects. The value of the Innovation Lab Learning Ecosystem is created when streams collaborate and their outputs become part of one intelligent agricultural solution.
+Source Stream
+Connected Stream(s)
+Integration Logic
+IoT
+AI, Cloud, Software Engineering, Cybersecurity
+Sensor data is captured, stored, secured, displayed on dashboards and used to support intelligent recommendations.
+Drone Technology
+AI, Software Engineering, Cloud
+Aerial images and field maps support crop-health mapping and improve disease detection models.
+AI
+Software Engineering, Cloud
+Models and recommendations are exposed through the user platform and cloud services.
+Cloud Computing
+All streams
+Cloud infrastructure stores data, hosts services, provides availability and enables integrated access.
+Cybersecurity
+All streams
+Security controls, encryption, role-based access and secure device communication protect the entire system.
+Software Engineering
+All streams
+The user platform becomes the integration layer through which farmers, administrators, buyers and other stakeholders interact with AgriChain.
+Blockchain Extension
+Software Engineering, Cybersecurity, Cloud
+If adopted as an extension, traceability and smart contracts can support harvest records, supply-chain transparency and payment automation.
+5. GOVERNANCE, ENTRY CRITERIA AND EXIT CRITERIA
+Phase
+Entry Criteria
+Exit Criteria
+Phase 1
+Project briefing completed; streams assigned; problem area introduced.
+Common problem-domain understanding, stream research report and stream contribution approved.
+Phase 2
+Phase 1 outputs approved; stream technologies selected.
+Each stream demonstrates a preliminary functional AgriChain component.
+Phase 3
+Initial stream prototypes available.
+Enhanced prototypes, innovation reports and demonstrations completed.
+Phase 4
+Enhanced stream prototypes ready for connection.
+Integrated AgriChain Smart System demonstrated with documentation.
+Phase 5
+Integrated system available for testing.
+Testing and validation reports completed; defects corrected; system updated.
+Phase 6
+Validated system ready for demonstration.
+Final AgriChain Smart System Version 1.0, final report, showcase presentation and student portfolios completed.
+6. PERFORMANCE INDICATORS AND SUCCESS MEASURES
+Area
+Possible Success Indicator
+AI
+Crop identification accuracy of at least 80%; crop disease diagnosis accuracy of at least 75%; recommendation satisfaction score of at least 80%.
+IoT
+Consistent sensor data capture with no more than 10% data loss; irrigation recommendation responsiveness; at least 15% reduction in scheduled water output.
+Drone
+100% planned-area map coverage; 5 cm per pixel ground resolution; crop-health categorisation agreement of at least 75%; at least 5% AI accuracy improvement when drone imagery is integrated.
+Cloud
+At least 95% availability during uptime testing; main page load within 5 seconds on simulated slow 3G; response time under 3 seconds under load testing.
+Cybersecurity
+Sensitive data not stored in plain text; HTTPS enforced; unauthorised access blocked in 100% of RBAC test cases; IoT attack simulations detected and blocked.
+Software Engineering
+Usable farmer-facing dashboard; role-specific access; integrated modules; stakeholder feedback incorporated.
+Innovation Lab Learning
+Research outputs, technical reports, prototype demonstrations, student portfolios, presentations, publication opportunities and industry readiness evidence.
+7. STUDENT LEARNING AND ASSESSMENT FRAMEWORK
+The Innovation Lab roadmap must assess both the technical product and the learning development of participants. Students should be evaluated through research evidence, implementation evidence, collaboration evidence, innovation evidence, documentation and demonstration.
+Assessment Area
+Evidence
+Research capability
+Problem-domain literature review, stream research report, technology comparison and dataset investigation.
+Technical competency
+Code, configuration files, working prototypes, demonstrations, deployment artefacts and logs.
+Innovation capability
+Prototype enhancement report, alternative design comparison, feature improvement and value-add explanation.
+Collaboration
+Cross-stream integration activities, peer reviews, meeting notes and joint demonstrations.
+Professional readiness
+Student technical portfolio, final presentation, documentation and stakeholder engagement.
+Research dissemination
+Technical reports, conference presentations, student research projects and publication opportunities.
+8. FINAL PROJECT DELIVERABLES
+8.1 Human Capital Development Deliverables
+Research Capability Development
+Applied Technical Skills Development
+Innovation and Prototype Development Experience
+Professional Portfolios
+Industry Readiness
+8.2 Research Deliverables
+Stream Research Reports
+Technical Reports
+Student Research Projects
+Conference Presentations
+Publication Opportunities
+8.3 Technology Deliverables
+AgriChain Smart System Version 1.0
+AI Module
+IoT Module
+Cloud Platform
+Software Platform
+Cybersecurity Framework
+Drone Monitoring Module
+8.4 Innovation Deliverables
+Enhanced Prototypes
+Innovation Concepts
+Future Project Opportunities
+Potential Commercialisation Opportunities
+9. COMPLETENESS MAPPING: ORIGINAL ROADMAP CONTENT PRESERVED
+The following mapping shows how the original roadmap content has been preserved and strengthened rather than removed.
+Original Roadmap Element
+Where Preserved in Revised Roadmap
+Project duration: 6 months / 24 weeks
+Title page and project phases table.
+Project overview and project-based learning philosophy
+Section 1: Project Overview.
+Technical streams
+Section 1 technical stream table.
+Project development model
+Section 2: Project Development Model.
+Project phases and week allocations
+Section 3: Project Phases.
+Full Phase 1 research questions and expected outputs
+Phase 1 full section.
+Phase 2 overview, objectives, stream components, deliverables and outcomes
+Phase 2 full section.
+Phase 3 purpose, activities, expected outputs and deliverables
+Phase 3 full section.
+Phase 4 integration purpose, activities, expected outputs and deliverables
+Phase 4 full section.
+Phase 5 testing and validation purpose, activities, expected outputs and deliverables
+Phase 5 full section.
+Phase 6 showcase and deployment purpose, activities, expected outputs and deliverables
+Phase 6 full section.
+Final project deliverables
+Section 8 final project deliverables.
+Milestone-based improvement from second document
+Section 2.6 detailed stream milestone guide and Section 6 performance indicators.

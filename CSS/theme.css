@@ -1,0 +1,75 @@
+/* Shared Innovation Lab / AgriChain theme */
+:root {
+  --bg:       #080c14;
+  --bg2:      #0d1524;
+  --bg3:      #111d30;
+  --surface:  #0d1524;
+  --surface2: #111d30;
+  --line:     rgba(99, 179, 237, 0.12);
+  --muted:    #7a94b0;
+  --text:     #e2eaf4;
+  --text2:    #9eb2c9;
+  --white:    #f4f8ff;
+
+  --green:    #38bdf8;
+  --green2:   #0ea5e9;
+  --lime:     #34d399;
+  --amber:    #f59e0b;
+  --red:      #f87171;
+  --blue:     #38bdf8;
+  --purple:   #60a5fa;
+  --orange:   #f59e0b;
+
+  --t1: #c084fc;
+  --t1b: #1e1530;
+  --t2: #f05252;
+  --t2b: #1e1010;
+  --t3: #60a5fa;
+  --t3b: #0f1a2a;
+  --t4: #3ddc84;
+  --t4b: #0e2018;
+  --t5: #f0b429;
+  --t5b: #1e1a0a;
+
+  /* Aliases for reporting / hub pages */
+  --card:     var(--bg3);
+  --border:   var(--line);
+  --accent:   var(--green);
+  --accent2:  var(--green2);
+  --gold:     var(--amber);
+  --danger:   var(--red);
+  --warn:     var(--amber);
+  --info:     var(--blue);
+  --radius:   14px;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'Literata', Georgia, serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
