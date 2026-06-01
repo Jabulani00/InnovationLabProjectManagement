@@ -1,0 +1,66 @@
+/* Shared Innovation Lab site navigation */
+.lab-site-nav {
+  position: relative;
+  z-index: 200;
+  background: var(--bg2, #0d1117);
+  border-bottom: 1px solid var(--border, #1e2d3d);
+}
+
+.lab-site-nav-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.lab-site-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.lab-site-nav-brand {
+  font-family: var(--font-head, 'Syne', sans-serif);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted, #4a6080);
+  padding: 12px 12px 12px 0;
+  margin-right: 8px;
+  white-space: nowrap;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.lab-site-nav-brand:hover {
+  color: var(--accent, #38bdf8);
+}
+
+.lab-site-nav a.lab-nav-link {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted, #4a6080);
+  text-decoration: none;
+  padding: 12px 12px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.lab-site-nav a.lab-nav-link:hover {
+  color: var(--text, #c8d8e8);
+}
+
+.lab-site-nav a.lab-nav-link[aria-current="page"] {
+  color: var(--accent, #38bdf8);
+  border-bottom-color: var(--accent, #38bdf8);
+}
+
+@media (max-width: 640px) {
+  .lab-site-nav-brand span { display: none; }
+}

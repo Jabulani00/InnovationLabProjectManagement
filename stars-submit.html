@@ -9,8 +9,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Literata:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/theme.css">
 <link rel="stylesheet" href="css/new-report.css">
+<link rel="stylesheet" href="css/site-nav.css">
 </head>
-<body class="report-page">
+<body class="report-page" data-lab-page="stars-submit">
+<div id="lab-site-nav"></div>
 
 <header class="hero">
   <div class="hero-top">
@@ -21,8 +23,10 @@
         <div class="hero-sub">Innovation Lab · Story &amp; JOB progress submissions</div>
       </div>
     </div>
-    <div class="hero-meta">
-      <a class="hero-link-btn" href="stars-supabase.html" style="margin:0">Integration guide &#8594;</a>
+    <div class="hero-meta" style="flex-wrap:wrap;gap:8px">
+      <a class="hero-link-btn" href="index.html">← Hub</a>
+      <a class="hero-link-btn" href="stars-supabase.html">STARS Docs →</a>
+      <a class="hero-link-btn" href="new.html">Progress Report →</a>
     </div>
   </div>
   <p class="hero-desc">
@@ -258,6 +262,7 @@
 </div>
 
 <div id="toast"></div>
+<script src="js/site-nav.js"></script>
 <script type="module" src="js/stars-story-report.js"></script>
 </body>
 </html>

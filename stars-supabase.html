@@ -10,8 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500&family=Literata:ital,wght@0,300;0,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/theme.css">
 <link rel="stylesheet" href="css/stars-supabase.css">
+<link rel="stylesheet" href="css/site-nav.css">
 </head>
-<body class="stars-page">
+<body class="stars-page" data-lab-page="stars-docs">
+<div id="lab-site-nav"></div>
 
 <header class="stars-hero">
   <div class="stars-hero-inner">
@@ -30,7 +32,10 @@
       <a class="stars-link-btn" href="#milestones-plain">Roadmap (simple)</a>
       <a class="stars-link-btn" href="#tech">Technical docs</a>
       <a class="stars-link-btn" href="stars-submit.html">Submit story progress →</a>
-      <a class="stars-link-btn secondary" href="index.html">← Innovation Lab hub</a>
+      <a class="stars-link-btn secondary" href="index.html">← Hub</a>
+      <a class="stars-link-btn secondary" href="innovation_lab_handbook.html">Handbook</a>
+      <a class="stars-link-btn secondary" href="agrichain.html">AgriChain</a>
+      <a class="stars-link-btn secondary" href="new.html">Progress Report</a>
     </div>
   </div>
 </header>
@@ -463,9 +468,13 @@ supabase/migrations/  ← schema, RLS, Edge Functions</div>
 
 <footer class="stars-footer">
   STARS · Smart Tracking &amp; Attendance Resource System · MUT Innovation Lab ·
-  <a href="stars-submit.html" style="color:var(--accent);text-decoration:none">Submit progress</a> ·
-  <a href="index.html" style="color:var(--accent);text-decoration:none">Hub</a>
+  <a href="index.html" style="color:var(--accent);text-decoration:none">Hub</a> ·
+  <a href="innovation_lab_handbook.html" style="color:var(--accent);text-decoration:none">Handbook</a> ·
+  <a href="agrichain.html" style="color:var(--accent);text-decoration:none">AgriChain</a> ·
+  <a href="stars-submit.html" style="color:var(--accent);text-decoration:none">STARS Submit</a> ·
+  <a href="new.html" style="color:var(--accent);text-decoration:none">Progress Report</a>
 </footer>
 
+<script src="js/site-nav.js"></script>
 </body>
 </html>

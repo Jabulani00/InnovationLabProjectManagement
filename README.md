@@ -4,9 +4,15 @@ This repository contains the Innovation Lab planning website for team operations
 
 ## What This Project Includes
 
-- `index.html` - Main landing page (choose Handbook or Project)
+- `index.html` - Main hub (links to all site pages)
 - `innovation_lab_handbook.html` - Operations handbook, workflow, accountability, and policy guidance
 - `agrichain.html` - AgriChain team plan, member assignments, approvals flow, and master timeline
+- `new.html` - AgriChain intern weekly progress report (Firebase)
+- `stars-supabase.html` - STARS project documentation (plain language + technical)
+- `stars-submit.html` - STARS integration story submissions (Firebase)
+- `css/` · `js/` - Shared styles and scripts (paths are lowercase for Vercel/Linux)
+
+Every page includes the top **Innovation Lab** nav bar (`js/site-nav.js`) linking Hub, Handbook, AgriChain, STARS Docs, STARS Submit, and Progress Report.
 
 ## Quick Start
 
