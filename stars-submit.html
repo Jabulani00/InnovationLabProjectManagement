@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>STARS — Submit Integration Story</title>
+<meta name="theme-color" content="#080c14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Literata:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/new-report.css">
+</head>
+<body class="report-page">
+
+<header class="hero">
+  <div class="hero-top">
+    <div class="hero-brand">
+      <div class="hero-icon" aria-hidden="true">&#9733;</div>
+      <div>
+        <div class="hero-title">STARS · Supabase Integration</div>
+        <div class="hero-sub">Innovation Lab · Story &amp; JOB progress submissions</div>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <a class="hero-link-btn" href="stars-supabase.html" style="margin:0">Integration guide &#8594;</a>
+    </div>
+  </div>
+  <p class="hero-desc">
+    Brightman, Gugulethu, and Basil submit progress on <strong>STORY-xxx</strong> and <strong>JOB-xxx</strong> work
+    (Auth + Postgres integration). Same verification flow as the AgriChain progress report.
+    Read <a href="stars-supabase.html" style="color:var(--accent)">STARS documentation</a> (milestones &amp; architecture) before claiming a story.
+  </p>
+</header>
+
+<div class="phase-ribbon">
+  <div class="phase-ribbon-inner">
+    <div class="pr-step" id="mr0"><div class="pr-num">M0</div><div class="pr-label">Integration</div><div class="pr-arrow"></div></div>
+    <div class="pr-step" id="mr1"><div class="pr-num">M1</div><div class="pr-label">Authentication</div><div class="pr-arrow"></div></div>
+    <div class="pr-step" id="mr2"><div class="pr-num">M2</div><div class="pr-label">Profiles</div><div class="pr-arrow"></div></div>
+    <div class="pr-step" id="mr3"><div class="pr-num">M3</div><div class="pr-label">Read paths</div><div class="pr-arrow"></div></div>
+    <div class="pr-step" id="mr4"><div class="pr-num">M4</div><div class="pr-label">Write paths</div><div class="pr-arrow"></div></div>
+    <div class="pr-step" id="mr5"><div class="pr-num">M5</div><div class="pr-label">Cutover</div><div class="pr-arrow"></div></div>
+    <div class="pr-step" id="mr6"><div class="pr-num">M6</div><div class="pr-label">Challenge backend</div></div>
+  </div>
+</div>
+
+<nav class="tabs-bar">
+  <button class="tab-btn active" data-tab="form">Submit Story Progress</button>
+  <button class="tab-btn" data-tab="dashboard">Submissions Dashboard</button>
+</nav>
+
+<div id="form" class="tab-pane active">
+<div class="wrap">
+<form id="storyForm" novalidate>
+
+  <div class="form-block">
+    <div class="block-header">
+      <div class="block-num">1</div>
+      <div class="block-title">Developer Identity &amp; Verification</div>
+      <div class="block-hint">Select your name, then complete your email</div>
+    </div>
+    <div class="block-body">
+      <div class="fg">
+        <div class="f">
+          <label class="lbl">Your Full Name <span class="req">*</span></label>
+          <select id="devName">
+            <option value="">&#8212; select your name &#8212;</option>
+          </select>
+          <span class="err" id="nameErr">Please select your name.</span>
+        </div>
+        <div class="f">
+          <label class="lbl">Email Verification <span class="req">*</span></label>
+          <div class="email-verify-wrap">
+            <div class="email-segments" id="emailSegments">
+              <span style="color:var(--muted);font-size:.78rem">Select your name first</span>
+            </div>
+            <div class="email-input-row">
+              <input type="text" id="emailMiddle" placeholder="Type the hidden portion here"
+                autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" disabled/>
+            </div>
+            <div class="verify-hint" id="verifyHint"></div>
+          </div>
+          <span class="err" id="emailErr">Email does not match. Type the missing portion exactly.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-block">
+    <div class="block-header">
+      <div class="block-num">2</div>
+      <div class="block-title">Story / JOB Context</div>
+      <div class="block-hint">Milestone &#183; Lane &#183; STORY or JOB reference</div>
+    </div>
+    <div class="block-body">
+      <div class="fg3">
+        <div class="f">
+          <label class="lbl">Milestone <span class="req">*</span></label>
+          <select id="milestone">
+            <option value="">&#8212; select milestone &#8212;</option>
+            <option value="0">M0 &#8211; Integration sprint (start here)</option>
+            <option value="1">M1 &#8211; Authentication</option>
+            <option value="2">M2 &#8211; Profiles &amp; roles</option>
+            <option value="3">M3 &#8211; Read paths</option>
+            <option value="4">M4 &#8211; Write paths</option>
+            <option value="5">M5 &#8211; Cutover &amp; hardening</option>
+            <option value="6">M6 &#8211; Challenge backend</option>
+          </select>
+          <span class="err" id="milestoneErr">Please select a milestone.</span>
+        </div>
+        <div class="f">
+          <label class="lbl">Integration lane</label>
+          <select id="lane">
+            <option value="">&#8212; auto from name &#8212;</option>
+            <option value="A">Lane A &#8211; Platform &amp; attendance (Brightman)</option>
+            <option value="B">Lane B &#8211; Auth, reads, enrolment (Gugulethu)</option>
+            <option value="C">Lane C &#8211; Governance, analytics (Basil)</option>
+            <option value="team">Team / shared</option>
+          </select>
+        </div>
+        <div class="f">
+          <label class="lbl">Story or JOB <span class="req">*</span></label>
+          <select id="storyRef">
+            <option value="">&#8212; select STORY or JOB &#8212;</option>
+          </select>
+          <span class="err" id="storyRefErr">Please select a story or job.</span>
+        </div>
+      </div>
+      <div class="fg" style="margin-top:1rem">
+        <div class="f">
+          <label class="lbl">Start after (dependencies)</label>
+          <input type="text" id="startAfter" placeholder="e.g. STORY-004 merged, JOB-006 complete"/>
+        </div>
+        <div class="f">
+          <label class="lbl">Branch / PR link</label>
+          <input type="text" id="prLink" placeholder="feature/JOB-019-create-session or GitHub PR URL"/>
+        </div>
+        <div class="f">
+          <label class="lbl">Story progress</label>
+          <div class="slider-row">
+            <input type="range" id="progress" min="0" max="100" step="5" value="0"/>
+            <span class="slider-val" id="progressVal">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-block">
+    <div class="block-header">
+      <div class="block-num">3</div>
+      <div class="block-title">PR &amp; integration checklist</div>
+      <div class="block-hint">Tick all that apply for this submission</div>
+    </div>
+    <div class="block-body">
+      <div class="check-grid" id="prChecklist">
+        <label class="check-item"><input type="checkbox" name="prcheck" value="PR title [JOB-00X] or [STORY-xxx]"/> PR title follows convention</label>
+        <label class="check-item"><input type="checkbox" name="prcheck" value="Only lane files changed"/> Only files in my lane changed</label>
+        <label class="check-item"><input type="checkbox" name="prcheck" value="mock regression"/> <code>EXPO_PUBLIC_DATA_SOURCE=mock</code> still works</label>
+        <label class="check-item"><input type="checkbox" name="prcheck" value="supabase path tested"/> <code>supabase</code> flag: my flow uses Postgres</label>
+        <label class="check-item"><input type="checkbox" name="prcheck" value="no dummy on supabase"/> No new dummy data on supabase branch</label>
+        <label class="check-item"><input type="checkbox" name="prcheck" value="no secrets"/> No secrets in git</label>
+        <label class="check-item"><input type="checkbox" name="prcheck" value="start after merged"/> Start-after stories merged on main</label>
+        <label class="check-item"><input type="checkbox" name="prcheck" value="acceptance criteria"/> Acceptance criteria met (or noted in work summary)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-block">
+    <div class="block-header">
+      <div class="block-num">4</div>
+      <div class="block-title">Progress details</div>
+    </div>
+    <div class="block-body">
+      <div class="fg">
+        <div class="f span2">
+          <label class="lbl">Work completed this period <span class="req">*</span></label>
+          <textarea id="workDone" placeholder="What you integrated: services, migrations, repositories, tests. Include file paths (e.g. src/services/...)…"></textarea>
+          <span class="err" id="workErr">Please describe work completed.</span>
+        </div>
+        <div class="f span2">
+          <label class="lbl">Files touched (optional)</label>
+          <textarea id="filesTouched" style="min-height:66px" placeholder="e.g. attendanceSessionRepository.ts, 0004_attendance_challenge.sql"></textarea>
+        </div>
+        <div class="f">
+          <label class="lbl">Blockers &amp; dependencies</label>
+          <textarea id="challenges" placeholder="Waiting on migration merge, RLS, env keys, review…"></textarea>
+        </div>
+        <div class="f">
+          <label class="lbl">Next steps</label>
+          <textarea id="nextSteps" placeholder="Next JOB, PR to open, tests to run…"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-block">
+    <div class="block-header">
+      <div class="block-num">5</div>
+      <div class="block-title">Story status <span style="color:var(--accent);font-size:.72rem;margin-left:6px">*</span></div>
+    </div>
+    <div class="block-body">
+      <div class="status-grid" id="statusPills">
+        <div class="status-pill" data-val="In Progress">In Progress</div>
+        <div class="status-pill" data-val="Ready for PR">Ready for PR</div>
+        <div class="status-pill" data-val="In Review">In Review</div>
+        <div class="status-pill" data-val="Merged">Merged</div>
+        <div class="status-pill" data-val="Blocked">Blocked</div>
+        <div class="status-pill" data-val="Not Started">Not Started</div>
+      </div>
+      <input type="hidden" id="statusHidden"/>
+      <span class="err" id="statusErr" style="display:none;margin-top:6px">Please select a status.</span>
+    </div>
+  </div>
+
+  <div class="submit-row">
+    <button type="submit" class="btn-submit" id="submitBtn">Submit Story Progress &#8594;</button>
+    <div class="submit-note">Saved to the Innovation Lab database.<br>Only your registered email is accepted.</div>
+  </div>
+
+</form>
+</div>
+</div>
+
+<div id="dashboard" class="tab-pane">
+<div class="wrap">
+  <div class="kpi-row" id="kpiRow">
+    <div class="kpi"><div class="kpi-num">&#8212;</div><div class="kpi-lbl">Total Submissions</div></div>
+    <div class="kpi"><div class="kpi-num">&#8212;</div><div class="kpi-lbl">Stories in progress</div></div>
+    <div class="kpi"><div class="kpi-num">&#8212;</div><div class="kpi-lbl">Avg progress</div></div>
+    <div class="kpi"><div class="kpi-num">&#8212;</div><div class="kpi-lbl">Merged / complete</div></div>
+  </div>
+  <div class="dash-card">
+    <div class="dash-top">
+      <h2>STARS integration submissions</h2>
+      <button class="btn-ref" type="button" onclick="loadDash()">&#8635; Refresh</button>
+    </div>
+    <div class="spin-wrap" id="dashSpin"><div class="spinner"></div> Loading submissions&#8230;</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Developer</th>
+            <th>Story / JOB</th>
+            <th>Milestone</th>
+            <th>Lane</th>
+            <th>Progress</th>
+            <th>Status</th>
+            <th>Work summary</th>
+            <th>Submitted</th>
+          </tr>
+        </thead>
+        <tbody id="dashBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="toast"></div>
+<script type="module" src="js/stars-story-report.js"></script>
+</body>
+</html>

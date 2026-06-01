@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STARS — Documentation</title>
+<meta name="description" content="STARS at MUT — plain-language guide to what we are trying to achieve: fair attendance, less admin, trusted reports. Plus technical documentation for developers.">
+<meta name="theme-color" content="#080c14">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23006281'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='22' font-weight='bold' fill='%23E8E8E8' font-family='sans-serif'%3ES%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500&family=Literata:ital,wght@0,300;0,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/stars-supabase.css">
+</head>
+<body class="stars-page">
+
+<header class="stars-hero">
+  <div class="stars-hero-inner">
+    <div class="stars-hero-label">MUT Innovation Lab · Flagship Product</div>
+    <div class="stars-acronym">Smart Tracking &amp; Attendance Resource System</div>
+    <h1><span>STARS</span> Documentation</h1>
+    <p class="stars-hero-sub">
+      A university attendance app built by the <strong>MUT Innovation Lab</strong> — so marking class is fair, fast, and visible to the right people. This page explains <strong>what we are trying to achieve</strong> in plain language; technical detail is further down.
+    </p>
+    <div class="stars-audience">
+      <span class="stars-pill"><strong>For everyone</strong> — managers, lecturers, students</span>
+      <span class="stars-pill"><strong>Developers</strong> — tech sections below</span>
+    </div>
+    <div class="stars-hero-links">
+      <a class="stars-link-btn" href="#plain-language">What we're achieving</a>
+      <a class="stars-link-btn" href="#milestones-plain">Roadmap (simple)</a>
+      <a class="stars-link-btn" href="#tech">Technical docs</a>
+      <a class="stars-link-btn" href="stars-submit.html">Submit story progress →</a>
+      <a class="stars-link-btn secondary" href="index.html">← Innovation Lab hub</a>
+    </div>
+  </div>
+</header>
+
+<nav class="stars-nav" aria-label="Documentation sections">
+  <div class="stars-nav-inner">
+    <a href="#plain-language">For everyone</a>
+    <a href="#milestones-plain">Simple roadmap</a>
+    <a href="#overview">Overview</a>
+    <a href="#tech">Tech stack</a>
+    <a href="#process">Process</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#attendance">Attendance</a>
+    <a href="#brand">Brand</a>
+    <a href="#milestones">Milestones</a>
+    <a href="#paths">Key paths</a>
+    <a href="#supabase">Supabase</a>
+    <a href="#troubleshooting">Troubleshooting</a>
+  </div>
+</nav>
+
+<main class="stars-main">
+
+<!-- ═══ PLAIN LANGUAGE (non-technical) ═══ -->
+<section class="stars-section stars-plain" id="plain-language">
+  <div class="stars-eyebrow">Start here · no technical background needed</div>
+  <h2>What we are trying to achieve</h2>
+  <p class="stars-lead">
+    STARS exists to make <strong>class attendance at MUT trustworthy and simple</strong> — for students who check in, for staff who run classes, and for leaders who need accurate reports without chasing paper registers.
+  </p>
+
+  <div class="stars-goal-grid">
+    <article class="stars-goal-card">
+      <div class="stars-goal-icon" aria-hidden="true">1</div>
+      <h3>Fair attendance</h3>
+      <p>Students prove they are in the right place at the right time — not just asking a friend to sign a sheet. Short codes, location checks, and quick on-screen challenges reduce “proxy” signing.</p>
+    </article>
+    <article class="stars-goal-card">
+      <div class="stars-goal-icon" aria-hidden="true">2</div>
+      <h3>Less admin for lecturers</h3>
+      <p>Lecturers and tutors start a class session on their phone; students check in during that window. Registers and history build automatically instead of manual tallies after every class.</p>
+    </article>
+    <article class="stars-goal-card">
+      <div class="stars-goal-icon" aria-hidden="true">3</div>
+      <h3>Clear visibility for leadership</h3>
+      <p>Deans, HODs, and administrators see attendance patterns for their faculty or department — not the whole university unless their role allows it. Decisions are based on live data, not outdated spreadsheets.</p>
+    </article>
+    <article class="stars-goal-card">
+      <div class="stars-goal-icon" aria-hidden="true">4</div>
+      <h3>One system, many roles</h3>
+      <p>The same app serves students, lecturers, tutors, and management — each person only sees what their job requires. That keeps privacy and responsibility aligned with MUT’s structure.</p>
+    </article>
+  </div>
+
+  <h3>The problem today</h3>
+  <ul class="stars-plain-list">
+    <li>Paper registers are easy to lose, slow to summarise, and hard to audit.</li>
+    <li>Manual sign-in does not prove the student was actually in class.</li>
+    <li>Faculty and central offices wait weeks for attendance figures that may already be out of date.</li>
+    <li>Different modules and campuses use inconsistent processes.</li>
+  </ul>
+
+  <h3>What success looks like</h3>
+  <div class="stars-success-box">
+    <p>When STARS is fully rolled out, a typical class looks like this:</p>
+    <ol class="stars-plain-steps">
+      <li><strong>Lecturer starts class</strong> — opens STARS, starts an attendance session for that module (often with a location boundary around campus or the venue).</li>
+      <li><strong>Students check in</strong> — enter the session code or follow the on-screen steps; the app confirms they are eligible and present.</li>
+      <li><strong>Record is saved</strong> — attendance is stored securely; students can view their own history; lecturers can close the session and produce a register.</li>
+      <li><strong>Leaders review trends</strong> — authorised staff see summaries for their scope (module, department, or faculty) without accessing unrelated personal data.</li>
+    </ol>
+  </div>
+
+  <h3>Who benefits</h3>
+  <div class="stars-table-wrap">
+    <table class="stars-table stars-table-plain">
+      <thead><tr><th>Who</th><th>What they get</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Students</strong></td><td>Clear record of classes attended; simple check-in on phone; transparency if something is disputed later.</td></tr>
+        <tr><td><strong>Lecturers &amp; tutors</strong></td><td>Fast session setup; live view of who has checked in; less time on admin after teaching.</td></tr>
+        <tr><td><strong>HODs &amp; deans</strong></td><td>Attendance insight for their department or faculty to support students and quality improvement.</td></tr>
+        <tr><td><strong>University admin</strong></td><td>Consistent, auditable data across modules; foundation for policy and reporting.</td></tr>
+        <tr><td><strong>Innovation Lab</strong></td><td>A flagship product that demonstrates real-world software delivery for MUT — built to production standards, not a one-off demo.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Where we are now (honest picture)</h3>
+  <p>
+    The <strong>app screens and user journeys are largely built</strong> — students, lecturers, and leadership dashboards exist and can be demonstrated. The team is now connecting the app to a <strong>secure online database</strong> so data is real, shared, and backed up — not only stored temporarily for demos on a single device.
+  </p>
+  <p>
+    Until that connection is finished, some demonstrations use <strong>sample data</strong> so the Innovation Lab can show flows and gather feedback. That is normal in product development: experience first, then live data.
+  </p>
+
+  <div class="stars-callout stars-callout-plain">
+    <strong>In one sentence:</strong> We are building STARS so MUT can run modern, fair attendance — on phones students already carry — with reports leaders can trust.
+  </div>
+</section>
+
+<section class="stars-section stars-plain" id="milestones-plain">
+  <div class="stars-eyebrow">Roadmap · plain language</div>
+  <h2>How we get there (step by step)</h2>
+  <p>Work is planned in phases. You do not need to remember code names — this is the story of the rollout.</p>
+
+  <div class="stars-timeline">
+    <div class="stars-timeline-item stars-timeline-now">
+      <div class="stars-timeline-badge">Now</div>
+      <h3>Connect the app to live data</h3>
+      <p>Set up secure logins, store attendance in a central database, and prove that the screens already built work end-to-end with real accounts — still the same app students and lecturers will use.</p>
+    </div>
+    <div class="stars-timeline-item">
+      <div class="stars-timeline-badge">Next</div>
+      <h3>Trustworthy sign-in</h3>
+      <p>Every user signs in with their own account; the system knows whether they are a student, lecturer, or manager and shows only the right menus.</p>
+    </div>
+    <div class="stars-timeline-item">
+      <div class="stars-timeline-badge">Then</div>
+      <h3>Dashboards from real records</h3>
+      <p>Module lists, attendance history, and leadership charts read from the database — not placeholder numbers.</p>
+    </div>
+    <div class="stars-timeline-item">
+      <div class="stars-timeline-badge">Then</div>
+      <h3>Full class lifecycle</h3>
+      <p>Starting class, checking in, closing class, and official registers — all saved and permission-controlled.</p>
+    </div>
+    <div class="stars-timeline-item">
+      <div class="stars-timeline-badge">Finally</div>
+      <h3>Strongest anti-fraud checks</h3>
+      <p>Server-side verification of challenge check-ins so results cannot be faked from a modified app.</p>
+    </div>
+  </div>
+
+  <p class="stars-plain-note">
+    Developers map these steps to milestones <strong>M0–M6</strong> in the <a href="#milestones">technical roadmap</a> below.
+    Integration progress is tracked on <a href="stars-submit.html">Submit story progress</a> (Innovation Lab team only).
+  </p>
+</section>
+
+<div class="stars-tech-divider" id="technical-docs">
+  <span>Technical documentation</span>
+  <p>For developers and technical reviewers</p>
+</div>
+
+<section class="stars-section" id="overview">
+  <div class="stars-eyebrow">What is STARS?</div>
+  <h2>Project overview</h2>
+  <p>
+    STARS replaces paper registers and ad-hoc check-ins with a single app: students mark attendance via session codes and challenge verification; lecturers and tutors run live sessions with GPS bounds; deans, HODs, and admins see scoped analytics. The UI and navigation are largely complete in the Expo repo — the current phase connects real identity and data through Supabase without rewriting screens.
+  </p>
+
+  <h3>Who uses it</h3>
+  <div class="stars-role-grid">
+    <div class="stars-role-card"><strong>Student</strong>Dashboard, join modules, mark attendance, challenge check-in, history</div>
+    <div class="stars-role-card"><strong>Lecturer / tutor</strong>Create sessions, rotating codes, class registers, module hub</div>
+    <div class="stars-role-card"><strong>HOD / Dean / Admin</strong>Faculty- or university-scoped analytics, audit logs, governance views</div>
+  </div>
+
+  <div class="stars-callout">
+    <strong>Today vs tomorrow:</strong> <code>src/mockDB/</code> + JSON seeds power demos and local dev. <code>EXPO_PUBLIC_DATA_SOURCE=supabase</code> switches services to Postgres + Auth when integration milestones are complete. Same <code>app/</code> routes either way.
+  </div>
+</section>
+
+<section class="stars-section" id="tech">
+  <div class="stars-eyebrow">Stack</div>
+  <h2>Tech stack</h2>
+  <div class="stars-table-wrap">
+    <table class="stars-table">
+      <thead><tr><th>Layer</th><th>Technology</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Runtime</strong></td><td>Node.js <strong>20.19+</strong> recommended (Expo SDK 54 minimum)</td></tr>
+        <tr><td><strong>Framework</strong></td><td><a href="https://expo.dev/" style="color:var(--accent)">Expo</a> SDK <strong>54</strong> (managed workflow, EAS-ready)</td></tr>
+        <tr><td><strong>Language</strong></td><td><strong>TypeScript</strong> (strict)</td></tr>
+        <tr><td><strong>Routing</strong></td><td><a href="https://docs.expo.dev/router/introduction/" style="color:var(--accent)">Expo Router</a> — file-based, deep links, web + native</td></tr>
+        <tr><td><strong>UI</strong></td><td>React Native, <strong>NativeWind v4</strong> + Tailwind tokens, custom theme</td></tr>
+        <tr><td><strong>Motion</strong></td><td><strong>react-native-reanimated</strong></td></tr>
+        <tr><td><strong>Forms</strong></td><td><strong>react-hook-form</strong> + <strong>Zod</strong> (where used)</td></tr>
+        <tr><td><strong>State</strong></td><td><strong>Zustand</strong> — auth, toasts, mock DB version, session selection</td></tr>
+        <tr><td><strong>Persistence (native)</strong></td><td><strong>expo-secure-store</strong></td></tr>
+        <tr><td><strong>Persistence (web dev)</strong></td><td><code>localStorage</code> via <code>authStorage</code> helper</td></tr>
+        <tr><td><strong>Location</strong></td><td><strong>expo-location</strong> — one-shot capture for attendance</td></tr>
+        <tr><td><strong>Crypto</strong></td><td><strong>expo-crypto</strong> — session seed (mock sessions)</td></tr>
+        <tr><td><strong>Data (current)</strong></td><td>In-memory <strong>mock DB</strong> (<code>src/mockDB/</code>) + JSON seeds</td></tr>
+        <tr><td><strong>Data (target)</strong></td><td><strong>Supabase</strong> — Auth, Postgres, Storage; services swap behind same signatures</td></tr>
+        <tr><td><strong>Offline-first</strong></td><td><strong>PouchDB</strong> + mutation outbox + sync (<code>src/services/offline/</code>)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="stars-section" id="process">
+  <div class="stars-eyebrow">How we build &amp; run</div>
+  <h2>Process</h2>
+
+  <h3>1. Local setup</h3>
+<pre class="stars-code">cd ATTANDANCE
+npm install
+npx expo start -c</pre>
+  <ul>
+    <li>Use <code>npx expo start</code>, then <strong>Expo Go</strong> (device) or <strong>w</strong> for web.</li>
+    <li><strong>Web favicon:</strong> <code>public/favicon.svg</code> at <code>/favicon.svg</code>; <code>app/+html.tsx</code> sets title and meta; <code>app.json</code> → <code>expo.web.favicon</code> for export.</li>
+    <li><strong>SEO (web):</strong> No separate <code>public/index.html</code> (breaks SPA routing). <code>app/+html.tsx</code> provides description, OG, Twitter Card, robots, theme-color; optional <code>EXPO_PUBLIC_SITE_URL</code> for canonical when deployed.</li>
+  </ul>
+
+  <h3>2. Architecture principles</h3>
+  <ol>
+    <li><strong>Repository-style services</strong> — <code>mockDB</code> mimics collections; <code>attendanceSimulationService</code> and <code>moduleEnrollmentService</code> sit above it so Supabase replaces storage without rewriting screens.</li>
+    <li><strong>Role-based routes</strong> — <code>/admin/*</code>, <code>/dean/*</code>, <code>/hod/*</code>, <code>/lecturer/*</code>, <code>/tutor/*</code>, <code>/student/*</code>, plus <code>/notifications</code>, <code>/settings</code>. See <code>INSTITUTION_HIERARCHY.md</code> in the repo.</li>
+    <li><strong>Route groups</strong> — <code>(auth)</code> organizes files only; URLs are <code>/onboarding</code>, <code>/login</code>, <code>/register-student</code> (parentheses are not in the path).</li>
+    <li><strong>UI system</strong> — <code>ScreenShell</code> + tokens in <code>src/theme/</code>; Innovation Lab footer pinned below scroll content.</li>
+  </ol>
+
+  <h3>2.1 DRY rules</h3>
+  <ul>
+    <li><strong>Screens are thin</strong> — data fetching and writes live in <code>src/services/</code>.</li>
+    <li><strong>One component per concept</strong> — shared UI is parameterized, not copied.</li>
+    <li><strong>One helper per repeated rule</strong> — validation/formatting in <code>src/utils/</code>.</li>
+    <li><strong>Offline-first mindset</strong> — actions enqueue mutations that retry; do not block UX on network.</li>
+  </ul>
+
+  <h3>2.2 Offline-first + sync (PouchDB)</h3>
+  <div class="stars-table-wrap">
+    <table class="stars-table">
+      <thead><tr><th>Path</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td><code>src/services/offline/pouchDb.ts</code></td><td>PouchDB config (AsyncStorage / IndexedDB) + doc types</td></tr>
+        <tr><td><code>src/services/offline/offlineRepository.ts</code></td><td>Generic upsert/get/list — no business logic</td></tr>
+        <tr><td><code>src/services/offline/offlineSync.ts</code></td><td>Mutation outbox + background push to Supabase</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Pattern:</strong> service writes to PouchDB (offline UI) → enqueues mutation → background sync marks <code>acked</code> or <code>failed</code> for retry.</p>
+</section>
+
+<section class="stars-section" id="architecture">
+  <div class="stars-eyebrow">Structure</div>
+  <h2>Architecture (layers)</h2>
+  <div class="stars-flow">app/ screens          ← role routes (student · lecturer · admin · dean · hod)
+src/components/       ← UI shell, charts, challenge grid
+src/services/         ← business logic; mock vs supabase branch
+src/services/supabase/← repositories (Auth, Postgres)
+src/mockDB/           ← JSON seeds (mock mode only)
+src/pipelines/        ← multi-step flows (auth hydration, register)
+supabase/migrations/  ← schema, RLS, Edge Functions</div>
+  <div class="stars-callout warn"><strong>Golden rule (integration):</strong> screens import <code>src/services/</code> only — never the Supabase client directly in <code>app/</code>.</div>
+</section>
+
+<section class="stars-section" id="attendance">
+  <div class="stars-eyebrow">Core product flow</div>
+  <h2>Attendance (mock today)</h2>
+  <ol>
+    <li>Lecturer, <strong>tutor</strong>, or <strong>delegated registrar</strong> starts a session → one GPS read → row records <code>startedByRole</code>, <code>startedById</code>, <code>algorithmSeed</code>, expiry.</li>
+    <li>Rotating <strong>6-digit code</strong> (and QR) derived locally from seed + 5s window — no per-tick DB writes.</li>
+    <li>Student submits code → GPS read → Haversine vs session radius → record in mock DB (Postgres when integrated).</li>
+    <li><strong>Challenge path (M6):</strong> visual gate + <code>attendance_records</code> with device id, time bucket, GPS hash, tapped index — see <code>full-challenge-mechanism.md</code> in repo.</li>
+  </ol>
+</section>
+
+<section class="stars-section" id="brand">
+  <div class="stars-eyebrow">Design</div>
+  <h2>Design &amp; brand</h2>
+  <ul>
+    <li><strong>Product name:</strong> STARS — <code>StarsWordmark</code>, splash, onboarding, student home.</li>
+    <li><strong>Credit:</strong> Created by the <strong>MUT Innovation Lab</strong> — <code>InnovationLabFooter</code> in-app.</li>
+  </ul>
+  <div class="stars-brand-swatches">
+    <div class="stars-swatch">
+      <div class="stars-swatch-chip" style="background:#E8E8E8"></div>
+      <div class="stars-swatch-label">Surface <code>#E8E8E8</code></div>
+    </div>
+    <div class="stars-swatch">
+      <div class="stars-swatch-chip" style="background:#006281"></div>
+      <div class="stars-swatch-label">Accent <code>#006281</code></div>
+    </div>
+    <div class="stars-swatch">
+      <div class="stars-swatch-chip" style="background:#4F1A1D"></div>
+      <div class="stars-swatch-label">Primary <code>#4F1A1D</code></div>
+    </div>
+  </div>
+  <p>This documentation site uses the Innovation Lab dark theme for consistency with AgriChain ops pages; the in-app STARS UI uses the palette above.</p>
+</section>
+
+<section class="stars-section" id="milestones">
+  <div class="stars-eyebrow">Roadmap</div>
+  <h2>Project milestones (M0 → M6)</h2>
+  <p>Delivery is organized in milestones. <strong>M0</strong> is the active integration sprint: same UI, real data via Supabase. Later milestones deepen auth, reads, writes, cutover, and server-side challenge verification.</p>
+
+  <div class="stars-milestones">
+    <article class="stars-milestone m-current" id="m0">
+      <div class="stars-milestone-id">M0</div>
+      <div>
+        <h3>Integration sprint <span class="stars-owner-tag team">Start here</span></h3>
+        <p>Supabase project, <code>dataSource</code> flag, SQL migrations, seed, RLS stub, service wiring. Remove mock/dummy paths when <code>supabase</code> is on. UI in <code>app/</code> stays unchanged.</p>
+        <div class="stars-milestone-meta">Foundation · STORY-000–010 · JOB-001–005</div>
+      </div>
+    </article>
+    <article class="stars-milestone" id="m1">
+      <div class="stars-milestone-id">M1</div>
+      <div>
+        <h3>Authentication</h3>
+        <p>Email/password Supabase Auth; session observable across restarts; mapped login errors.</p>
+        <div class="stars-milestone-meta">JOB-006 · JOB-007 · JOB-008</div>
+      </div>
+    </article>
+    <article class="stars-milestone" id="m2">
+      <div class="stars-milestone-id">M2</div>
+      <div>
+        <h3>Profiles &amp; roles</h3>
+        <p><code>user_profiles</code> maps Auth UID → STARS role + institutional links; registration pipeline; live route guards.</p>
+        <div class="stars-milestone-meta">JOB-009 · JOB-010 · JOB-011</div>
+      </div>
+    </article>
+    <article class="stars-milestone" id="m3">
+      <div class="stars-milestone-id">M3</div>
+      <div>
+        <h3>Read paths</h3>
+        <p>Dashboards, module lists, attendance history, leadership analytics and audit logs from Postgres — no fake chart slopes.</p>
+        <div class="stars-milestone-meta">JOB-012 – JOB-018</div>
+      </div>
+    </article>
+    <article class="stars-milestone" id="m4">
+      <div class="stars-milestone-id">M4</div>
+      <div>
+        <h3>Write paths</h3>
+        <p>Sessions, active session pointer, challenge submit, enrolment, class registers, delegations; RLS v1 enforced server-side.</p>
+        <div class="stars-milestone-meta">JOB-019 – JOB-026 · JOB-023</div>
+      </div>
+    </article>
+    <article class="stars-milestone" id="m5">
+      <div class="stars-milestone-id">M5</div>
+      <div>
+        <h3>Cutover &amp; hardening</h3>
+        <p><code>mock | supabase</code> flag stable; seed/migration ops; observability without leaking secrets; web + native parity checklist.</p>
+        <div class="stars-milestone-meta">JOB-027 – JOB-030</div>
+      </div>
+    </article>
+    <article class="stars-milestone" id="m6">
+      <div class="stars-milestone-id">M6</div>
+      <div>
+        <h3>Challenge backend</h3>
+        <p>Edge Function verifies seed + <code>tapped_index</code> on insert; uniqueness per device/session; failed attempts never persist.</p>
+        <div class="stars-milestone-meta">JOB-031 – JOB-034</div>
+      </div>
+    </article>
+  </div>
+
+  <h3>Integration team lanes (M0)</h3>
+  <div class="stars-table-wrap">
+    <table class="stars-table">
+      <thead><tr><th>Lane</th><th>Owner</th><th>Focus</th></tr></thead>
+      <tbody>
+        <tr class="lane-a"><td><strong>A</strong></td><td>Brightman</td><td>Sessions, challenge submit, attendance SQL, Edge stub</td></tr>
+        <tr class="lane-b"><td><strong>B</strong></td><td>Gugulethu</td><td>Auth, <code>dataSource</code>, student reads, enrolment, offline sync</td></tr>
+        <tr class="lane-c"><td><strong>C</strong></td><td>Basil (Lungelo)</td><td>Schema sign-off, seed, RLS, analytics, guards</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Track progress per STORY/JOB on
+    <a href="stars-submit.html" style="color:var(--accent)">Submit story progress</a>.
+    Full integration checklists and workboards live in the STARS repo as <code>SUPABASE_INTEGRATION.md</code>.
+  </p>
+</section>
+
+<section class="stars-section" id="paths">
+  <div class="stars-eyebrow">Repository</div>
+  <h2>Key paths</h2>
+  <div class="stars-table-wrap">
+    <table class="stars-table">
+      <thead><tr><th>Path</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td><code>app/(auth)/onboarding</code></td><td>STARS marketing home</td></tr>
+        <tr><td><code>app/student/(tabs)/dashboard</code></td><td>Student home — STARS hero + modules</td></tr>
+        <tr><td><code>app/lecturer/(tabs)/dashboard</code></td><td>Lecturer hub</td></tr>
+        <tr><td><code>app/admin/(tabs)/dashboard</code></td><td>Admin university-wide analytics</td></tr>
+        <tr><td><code>app/admin/(tabs)/seed</code></td><td>Admin simulation utilities (re-seed mock)</td></tr>
+        <tr><td><code>app/dean/*</code> · <code>app/hod/*</code></td><td>Faculty / department scoped dashboards</td></tr>
+        <tr><td><code>src/mockDB/</code></td><td>JSON seeds + <code>mockDBService</code></td></tr>
+        <tr><td><code>src/services/</code></td><td>Auth, attendance, enrollment, analytics</td></tr>
+        <tr><td><code>src/components/ui/</code></td><td>Buttons, shell, InnovationLabFooter, StarsWordmark</td></tr>
+        <tr><td><code>src/supabase/</code></td><td>Client, TABLES, mappers</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="stars-section" id="supabase">
+  <div class="stars-eyebrow">Backend cutover</div>
+  <h2>Supabase cutover (planned)</h2>
+  <p><strong>One-line goal:</strong> keep every <code>app/</code> route; replace <code>mockDB</code> / dummy charts / <code>mockAuthService</code> with repositories so <code>EXPO_PUBLIC_DATA_SOURCE=supabase</code> runs the full demo on Postgres.</p>
+  <ol>
+    <li>Add <code>.env</code> / EAS secrets: <code>EXPO_PUBLIC_SUPABASE_URL</code>, <code>EXPO_PUBLIC_SUPABASE_ANON_KEY</code>, <code>EXPO_PUBLIC_DATA_SOURCE</code>.</li>
+    <li>Use <code>src/supabase/client.ts</code> + <code>TABLES</code> mirroring mock entity names.</li>
+    <li>Branch inside <code>src/services/*</code> — mock path stays for local dev without cloud.</li>
+  </ol>
+  <div class="stars-table-wrap">
+    <table class="stars-table">
+      <thead><tr><th>Supabase piece</th><th>STARS use</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Auth</strong></td><td>Login all roles; <code>user_profiles.id</code> = <code>auth.users.id</code></td></tr>
+        <tr><td><strong>Postgres</strong></td><td>All entities in <code>TABLES</code>; migrations + <code>seed.sql</code></td></tr>
+        <tr><td><strong>RLS</strong></td><td>Role scope enforced server-side (not client-only guards)</td></tr>
+        <tr><td><strong>Edge Functions</strong></td><td>Verify challenge rows on insert (M6)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="stars-callout">
+    <strong>Related docs (in STARS repo):</strong>
+    <code>DATABASE_SCHEMA.md</code> ·
+    <code>SUPABASE_INTEGRATION.md</code> ·
+    <code>full-challenge-mechanism.md</code> ·
+    <code>INSTITUTION_HIERARCHY.md</code> ·
+    <code>FILE_STRUCTURE.md</code>
+  </div>
+</section>
+
+<section class="stars-section" id="troubleshooting">
+  <div class="stars-eyebrow">Support</div>
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>Metro / Node issues</strong> — Node 20 LTS; delete <code>node_modules</code>; reinstall.</li>
+    <li><strong>Expo Go stuck on “Loading your space…”</strong> — verify <code>app.json</code> assets; <code>npx expo start -c --lan</code>; try hotspot if campus Wi‑Fi blocks devices.</li>
+    <li><strong>NativeWind preset error</strong> — <code>tailwind.config.js</code> must include <code>presets: [require("nativewind/preset")]</code>.</li>
+    <li><strong>SecureStore on web</strong> — use <code>src/utils/authStorage.ts</code> (wired in <code>authStore</code>).</li>
+  </ul>
+  <p>For codebase questions, contact the <strong>MUT Innovation Lab</strong> (see in-app footer).</p>
+</section>
+
+</main>
+
+<footer class="stars-footer">
+  STARS · Smart Tracking &amp; Attendance Resource System · MUT Innovation Lab ·
+  <a href="stars-submit.html" style="color:var(--accent);text-decoration:none">Submit progress</a> ·
+  <a href="index.html" style="color:var(--accent);text-decoration:none">Hub</a>
+</footer>
+
+</body>
+</html>

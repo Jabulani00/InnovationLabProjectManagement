@@ -47,6 +47,17 @@ background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.3);
 color:var(--accent);padding:5px 14px;border-radius:20px;
 font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
 }
+.hero-link-btn{
+display:inline-flex;align-items:center;gap:8px;
+background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.35);
+color:var(--accent);text-decoration:none;
+font-family:var(--font-head);font-size:11px;font-weight:700;letter-spacing:1px;
+text-transform:uppercase;padding:8px 14px;border-radius:999px;
+transition:background .2s,border-color .2s,color .2s;
+}
+.hero-link-btn:hover{
+background:rgba(56,189,248,.18);border-color:rgba(56,189,248,.5);color:#9ee6ff;
+}
 .hero-desc{
 max-width:1300px;margin:1.5rem auto 0;width:100%;
 font-size:.82rem;color:var(--muted);line-height:1.7;
