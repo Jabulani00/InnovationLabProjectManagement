@@ -4,297 +4,130 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Innovation Lab Hub</title>
-<meta name="description" content="Innovation Lab project hub with quick access to the Operations Handbook, AgriChain plan, intern progress reporting, and team structure.">
-<meta name="keywords" content="Innovation Lab, project hub, operations handbook, AgriChain AI, team structure">
-<meta name="author" content="Innovation Lab Operations Team">
-<meta name="robots" content="index, follow">
+<meta name="description" content="Innovation Lab project hub — handbook, AgriChain plan, STARS documentation, intern progress reporting.">
 <meta name="theme-color" content="#080c14">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080c14'/%3E%3Cpath d='M16 48V16h7l18 20V16h7v32h-7L23 28v20z' fill='%2338bdf8'/%3E%3C/svg%3E">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/theme.css">
 <link rel="stylesheet" href="css/site-nav.css">
-<style>
-  :root {
-    --bg: #080c14;
-    --surface: #0d1524;
-    --surface2: #111d30;
-    --border: rgba(99,179,237,0.18);
-    --accent: #38bdf8;
-    --accent2: #34d399;
-    --text: #e2eaf4;
-    --muted: #8ea6bf;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: radial-gradient(circle at 80% 10%, rgba(56,189,248,0.12), transparent 35%), var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    min-height: 100vh;
-  }
-
-  .wrap {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 36px 22px 56px;
-  }
-
-  .hero {
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px 28px;
-    background: linear-gradient(150deg, rgba(56,189,248,0.07), rgba(17,29,48,0.9));
-    margin-bottom: 24px;
-    min-height: 68vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .eyebrow {
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 10px;
-  }
-
-  h1 {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(34px, 6vw, 52px);
-    line-height: 1.05;
-    letter-spacing: -1px;
-    margin-bottom: 10px;
-  }
-
-  .sub {
-    color: var(--muted);
-    max-width: 720px;
-    margin-bottom: 22px;
-  }
-
-  .actions {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 14px;
-    max-width: 100%;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    padding: 16px 18px;
-    border-radius: 12px;
-    font-size: 13px;
-    letter-spacing: 1.1px;
-    font-weight: 700;
-    text-transform: uppercase;
-    border: 1px solid transparent;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.28);
-  }
-
-  .btn-primary {
-    background: linear-gradient(180deg, rgba(56,189,248,0.28), rgba(56,189,248,0.14));
-    border-color: rgba(56,189,248,0.55);
-    color: #bfefff;
-  }
-
-  .btn-secondary {
-    background: linear-gradient(180deg, rgba(52,211,153,0.24), rgba(52,211,153,0.12));
-    border-color: rgba(52,211,153,0.5);
-    color: #b8ffe2;
-  }
-
-  .btn-report {
-    background: linear-gradient(180deg, rgba(167,139,250,0.28), rgba(167,139,250,0.12));
-    border-color: rgba(167,139,250,0.5);
-    color: #e9ddff;
-  }
-
-  .btn-stars {
-    background: linear-gradient(180deg, rgba(56,189,248,0.22), rgba(56,189,248,0.08));
-    border-color: rgba(56,189,248,0.45);
-    color: #b8ecff;
-  }
-
-  .btn:hover {
-    filter: brightness(1.08);
-    transform: translateY(-2px) scale(1.01);
-    box-shadow: 0 12px 22px rgba(0,0,0,0.35);
-  }
-
-  .btn:active {
-    transform: translateY(0);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.28);
-  }
-
-  .section {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 22px 20px;
-    margin-bottom: 16px;
-  }
-
-  .team-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 8px;
-  }
-
-  .tap-hint {
-    margin-top: 10px;
-    font-size: 12px;
-    color: var(--muted);
-    letter-spacing: 0.4px;
-  }
-
-  .section h2 {
-    font-family: 'Syne', sans-serif;
-    font-size: 24px;
-    margin-bottom: 12px;
-  }
-
-  .section p {
-    color: var(--muted);
-    margin-bottom: 14px;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .card {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 14px;
-  }
-
-  .card h3 {
-    font-family: 'Syne', sans-serif;
-    font-size: 16px;
-    margin-bottom: 6px;
-    color: var(--accent);
-  }
-
-  .card ul {
-    list-style: none;
-    color: var(--muted);
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .footer-note {
-    margin-top: 12px;
-    font-size: 12px;
-    color: var(--muted);
-    letter-spacing: 0.4px;
-  }
-
-  @media (max-width: 760px) {
-    .wrap { padding: 24px 16px 40px; }
-    .hero {
-      padding: 24px 18px;
-      min-height: 86vh;
-      justify-content: flex-start;
-    }
-    .sub { font-size: 14px; margin-bottom: 16px; }
-    .actions { grid-template-columns: 1fr; width: 100%; gap: 10px; }
-    .grid { grid-template-columns: 1fr; }
-    .btn { width: 100%; min-height: 54px; font-size: 14px; }
-    .section { padding: 18px 14px; }
-  }
-</style>
+<link rel="stylesheet" href="css/index-hub.css">
 </head>
-<body data-lab-page="index">
+<body class="hub-page" data-lab-page="index">
   <div id="lab-site-nav"></div>
-  <main class="wrap">
-    <section class="hero">
-      <div class="eyebrow">Innovation Lab · Project Hub</div>
-      <h1>Innovation Lab Command Center</h1>
-      <p class="sub">Open the handbook, AgriChain plan, STARS documentation (including a plain-language guide for non-technical readers), story submissions, or the weekly progress report.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="innovation_lab_handbook.html">Handbook — Click to Open</a>
-        <a class="btn btn-secondary" href="agrichain.html">Project — Click to Open</a>
-        <a class="btn btn-stars" href="stars-supabase.html">STARS Documentation — Click to Open</a>
-        <a class="btn btn-stars" href="stars-submit.html" style="background:linear-gradient(180deg,rgba(52,211,153,0.22),rgba(52,211,153,0.08));border-color:rgba(52,211,153,0.45);color:#b8f5d8">STARS Submit Story →</a>
-        <a class="btn btn-report" href="new.html">Progress Report — Click to Open</a>
+
+  <header class="hub-hero">
+    <div class="hub-hero-inner">
+      <div class="hub-hero-grid">
+        <div>
+          <div class="hub-eyebrow">Mangosuthu University of Technology</div>
+          <h1>Innovation Lab<br><span>Command Center</span></h1>
+          <p class="hub-tagline">Your single entry point for lab operations, AgriChain delivery, and the STARS attendance platform. Pick a document to read or a form to submit.</p>
+        </div>
+        <div class="hub-stats" aria-hidden="true">
+          <div class="hub-stat">
+            <div class="hub-stat-num"><em>5</em></div>
+            <div class="hub-stat-label">Hub destinations</div>
+          </div>
+          <div class="hub-stat">
+            <div class="hub-stat-num"><em>16</em></div>
+            <div class="hub-stat-label">AgriChain interns</div>
+          </div>
+          <div class="hub-stat">
+            <div class="hub-stat-num"><em>2</em></div>
+            <div class="hub-stat-label">Flagship projects</div>
+          </div>
+        </div>
       </div>
-      <p class="tap-hint">Tap or click any button above to continue.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="hub-portals" aria-labelledby="portals-heading">
+      <div class="hub-section-head">
+        <h2 id="portals-heading">Where do you need to go?</h2>
+        <p>Documents open in a new page · forms require your registered email</p>
+      </div>
+
+      <div class="hub-portal-grid">
+        <div class="hub-block-label">Read — documents &amp; plans</div>
+
+        <a class="hub-card hub-card--read hub-card--handbook" href="innovation_lab_handbook.html">
+          <span class="hub-card-icon" aria-hidden="true">📋</span>
+          <div>
+            <div class="hub-card-title">Operations Handbook</div>
+            <div class="hub-card-desc">Policies, roles, approvals, and how the Innovation Lab runs day to day.</div>
+          </div>
+        </a>
+
+        <a class="hub-card hub-card--read hub-card--agri" href="agrichain.html">
+          <span class="hub-card-icon" aria-hidden="true">🌱</span>
+          <div>
+            <div class="hub-card-title">AgriChain Project Plan</div>
+            <div class="hub-card-desc">24-week roadmap, stream teams, milestones, and integration gates.</div>
+          </div>
+        </a>
+
+        <a class="hub-card hub-card--read hub-card--stars" href="stars-supabase.html">
+          <span class="hub-card-icon" aria-hidden="true">★</span>
+          <div>
+            <div class="hub-card-title">STARS — About the app</div>
+            <div class="hub-card-desc">What we are building at MUT — plain-language goals and technical overview.</div>
+          </div>
+        </a>
+
+        <div class="hub-block-label">Submit — weekly progress</div>
+
+        <a class="hub-card hub-card--submit hub-card--report" href="new.html">
+          <span class="hub-card-icon" aria-hidden="true">✎</span>
+          <div>
+            <div class="hub-card-title">AgriChain weekly report</div>
+            <div class="hub-card-desc">All AgriChain interns — log stream, phase, and work completed this week.</div>
+          </div>
+        </a>
+
+        <a class="hub-card hub-card--submit hub-card--stars-submit" href="stars-submit.html">
+          <span class="hub-card-icon" aria-hidden="true">⚡</span>
+          <div>
+            <div class="hub-card-title">STARS integration update</div>
+            <div class="hub-card-desc">Brightman, Gugulethu &amp; Basil — STORY / JOB progress on Supabase work.</div>
+          </div>
+        </a>
+      </div>
     </section>
 
-    <section class="section">
-      <div class="team-title">Innovation Lab Team</div>
-      <h2>Innovation Lab Team</h2>
-      <p>Core operations leadership and domain teams working together under one delivery command chain.</p>
-      <div class="grid">
-        <article class="card">
-          <h3>Operations Team</h3>
-          <ul>
-            <li>Jabu — Project Manager</li>
-            <li>Ntokozo — Operations Lead</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>AI, ML &amp; Data Science</h3>
-          <ul>
-            <li>Neliswa</li>
-            <li>Mesuli</li>
-            <li>Thandazani</li>
-            <li>Nkanyiso</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Cyber Security &amp; Blockchain</h3>
-          <ul>
-            <li>Mpendulo</li>
-            <li>Nompilo</li>
-            <li>Ndumiso</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Cloud, Distributed Systems &amp; Networks</h3>
-          <ul>
-            <li>Nkosinathi</li>
-            <li>Nkululeko</li>
-            <li>Nokwanda</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>IoT &amp; Smart Technologies</h3>
-          <ul>
-            <li>Ntando</li>
-            <li>Gugulethu</li>
-            <li>Yudi</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Software Engineering &amp; ICT Governance</h3>
-          <ul>
-            <li>Bright</li>
-            <li>Sbusiso</li>
-            <li>Basil</li>
-            <li>Nqubeko</li>
-          </ul>
-        </article>
+    <section class="hub-team" aria-labelledby="team-heading">
+      <div class="hub-team-inner">
+        <div class="hub-team-header">
+          <div>
+            <div class="hub-eyebrow" style="margin-bottom:0.5rem">Team roster</div>
+            <h2 id="team-heading">AgriChain interns</h2>
+          </div>
+          <p>Names match the <a href="new.html">weekly progress report</a> sign-in list.</p>
+        </div>
+        <ul class="hub-name-grid">
+          <li class="hub-name-chip">Bongokuhle Brightman Hlongwane</li>
+          <li class="hub-name-chip">Gugulethu Mbambo</li>
+          <li class="hub-name-chip">Lungelo Dladla</li>
+          <li class="hub-name-chip">Mbekezeli Sibusiso Mthethwa</li>
+          <li class="hub-name-chip">Mesuli Nduluko</li>
+          <li class="hub-name-chip">Ndumiso Mndaweni</li>
+          <li class="hub-name-chip">Neliswa Ngcobo</li>
+          <li class="hub-name-chip">Nkanyiso Dlamini</li>
+          <li class="hub-name-chip">Nkosinathi Mlambo</li>
+          <li class="hub-name-chip">Nkululeko Nkomo</li>
+          <li class="hub-name-chip">Nokwanda Ndlovu</li>
+          <li class="hub-name-chip">Nompilo Mnguni</li>
+          <li class="hub-name-chip">Nqubeko Snenhlanhla Nhlumayo</li>
+          <li class="hub-name-chip">Ntokozo Shamase</li>
+          <li class="hub-name-chip">Ntando Khumalo</li>
+          <li class="hub-name-chip">Thandazani Mbutho</li>
+        </ul>
       </div>
-      <p class="footer-note">For role details, approval flow, and timeline milestones, use the handbook and project plan. Interns submit weekly updates via Progress Report.</p>
     </section>
   </main>
-<script src="js/site-nav.js"></script>
+
+  <footer class="hub-footer">MUT Innovation Lab · Project Management Hub</footer>
+
+  <script src="js/site-nav.js"></script>
 </body>
 </html>
