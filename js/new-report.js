@@ -35,6 +35,7 @@ const INTERNS = [
   { name: "Ntokozo Shamase", email: "ntokozoshamase2015@gmail.com" },
   { name: "Nkanyiso Dlamini", email: "nkanyisod1252@gmail.com" },
   { name: "Gugulethu Mbambo", email: "gmbambo228@gmail.com" },
+  { name: "Mpendulo Ncayiyane", email: "answermthombe@gmail.com" },
   { name: "Mbekezeli Sibusiso Mthethwa", email: "mbekezelimthethwa@gmail.com" },
   { name: "Yudishthir Ramanand", email: "yudishthir1234@gmail.com" }
 ];
