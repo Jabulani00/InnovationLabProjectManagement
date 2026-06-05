@@ -1,6 +1,6 @@
 /**
  * Injects shared Innovation Lab navigation on every page.
- * Set <body data-lab-page="index|handbook|agrichain|stars-docs|stars-submit|report">
+ * Set <body data-lab-page="index|handbook|agrichain|stars-docs|stars-submit|report|dashboard">
  */
 (function () {
   const PAGES = [
@@ -9,7 +9,8 @@
     { id: "agrichain", href: "agrichain.html", label: "AgriChain" },
     { id: "stars-docs", href: "stars-supabase.html", label: "STARS Docs" },
     { id: "stars-submit", href: "stars-submit.html", label: "STARS Submit" },
-    { id: "report", href: "new.html", label: "Progress Report" }
+    { id: "report", href: "new.html", label: "Progress Report" },
+    { id: "dashboard", href: "dashboard-full.html", label: "Full Dashboard" }
   ];
 
   const mount = document.getElementById("lab-site-nav");

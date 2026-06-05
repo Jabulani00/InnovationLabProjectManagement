@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovation Lab — Full Submissions Dashboard</title>
+  <meta name="description" content="View each intern's full progress submissions in one dashboard.">
+  <meta name="theme-color" content="#080c14">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080c14'/%3E%3Cpath d='M16 48V16h7l18 20V16h7v32h-7L23 28v20z' fill='%2338bdf8'/%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/site-nav.css">
+  <link rel="stylesheet" href="css/new-report.css">
+</head>
+<body class="report-page dashboard-light" data-lab-page="dashboard">
+  <div id="lab-site-nav"></div>
+
+  <header class="hero">
+    <div class="hero-top">
+      <div class="hero-brand">
+        <div class="hero-icon" aria-hidden="true">📊</div>
+        <div>
+          <div class="hero-sub">Innovation Lab · submissions view</div>
+          <h1 class="hero-title">Full submissions dashboard</h1>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <span class="hero-badge">Full report details</span>
+        <a class="hero-link-btn" href="new.html">Back to report form →</a>
+      </div>
+    </div>
+    <p class="hero-desc">This page groups every saved progress submission by intern and shows the full narrative content, status, deliverables, and progress notes for each entry.</p>
+  </header>
+
+  <main class="wrap dashboard-shell">
+    <aside class="dashboard-sidepanel">
+      <div class="sidepanel-card">
+        <p class="eyebrow">Panels</p>
+        <h2>Submission views</h2>
+        <p class="muted-copy">Switch between the AgriChain reports and STARS integration updates on the same page.</p>
+        <button class="panel-btn active" data-panel="agri" type="button">AgriChain reports</button>
+        <button class="panel-btn" data-panel="stars" type="button">STARS submissions</button>
+      </div>
+      <div class="sidepanel-card">
+        <p class="eyebrow">Filters</p>
+        <label class="filter-label" for="searchInput">Search</label>
+        <input id="searchInput" class="mini-input" type="search" placeholder="Search by name, story or work summary" />
+        <label class="filter-label" for="statusFilter">Status</label>
+        <select id="statusFilter" class="mini-input">
+          <option value="all">All statuses</option>
+        </select>
+        <label class="filter-label" for="tagFilter">Stream / lane</label>
+        <select id="tagFilter" class="mini-input">
+          <option value="all">All streams / lanes</option>
+        </select>
+        <button id="refreshBtn" class="btn-ref full-width" type="button">Refresh data</button>
+      </div>
+    </aside>
+
+    <section class="dashboard-main">
+      <section id="kpiRow" class="kpi-row" aria-live="polite"></section>
+
+      <section id="panel-agri" class="panel-panel active">
+        <div class="dash-card">
+          <div class="dash-top">
+            <h2>AgriChain progress reports</h2>
+            <span class="badge bg">Dropdown details</span>
+          </div>
+          <div id="agriCards" class="block-body"></div>
+        </div>
+      </section>
+
+      <section id="panel-stars" class="panel-panel">
+        <div class="dash-card">
+          <div class="dash-top">
+            <h2>STARS integration submissions</h2>
+            <span class="badge bb">Dropdown details</span>
+          </div>
+          <div id="starsCards" class="block-body"></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div id="toast"></div>
+
+  <script src="js/site-nav.js"></script>
+  <script type="module" src="js/dashboard-full.js"></script>
+  <style>
+    body.dashboard-light {
+      --bg: #ffffff;
+      --bg2: #f7faff;
+      --bg3: #ffffff;
+      --surface: #ffffff;
+      --surface2: #f5f9ff;
+      --line: rgba(15, 23, 42, 0.08);
+      --muted: #5b6b83;
+      --text: #0f172a;
+      --text2: #334155;
+      --card: #ffffff;
+      --border: rgba(15, 23, 42, 0.08);
+      --accent: #2563eb;
+      --accent2: #38bdf8;
+      --green: #2563eb;
+      --green2: #38bdf8;
+      --red: #dc2626;
+      --amber: #d97706;
+      --danger: #dc2626;
+      --warn: #d97706;
+      --info: #2563eb;
+      background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+      color: var(--text);
+    }
+
+    body.dashboard-light .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f7faff 45%, #edf4ff 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    body.dashboard-light .lab-site-nav {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    body.dashboard-light .sidepanel-card,
+    body.dashboard-light .dash-card,
+    body.dashboard-light .detail-box,
+    body.dashboard-light .submission-card {
+      background: #ffffff;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    body.dashboard-light .submission-card {
+      background: #ffffff;
+    }
+
+    body.dashboard-light .panel-btn.active {
+      background: rgba(37, 99, 235, 0.08);
+      color: #1d4ed8;
+      border-color: rgba(37, 99, 235, 0.25);
+    }
+
+    .dashboard-shell { display:grid; grid-template-columns: 320px 1fr; gap: 1.2rem; align-items:start; }
+    .dashboard-sidepanel { display:grid; gap: 1rem; position: sticky; top: 1rem; }
+    .sidepanel-card { background: var(--surface); border:1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .18em; color: var(--accent); font-size: .68rem; font-weight: 700; }
+    .muted-copy { color: var(--muted); font-size: .82rem; line-height: 1.5; }
+    .panel-btn { width:100%; border:1px solid var(--border); background: var(--card); color: var(--text); border-radius: 10px; padding: .75rem .9rem; text-align:left; margin-top:.55rem; cursor:pointer; font-weight:600; }
+    .panel-btn.active { border-color: rgba(56,189,248,.45); background: rgba(56,189,248,.08); color: var(--accent); }
+    .dashboard-main { display:grid; gap:1rem; }
+    .full-width { width:100%; justify-content:center; }
+    .mini-input { width:100%; background: var(--card); border:1px solid var(--border); color: var(--text); border-radius: 8px; padding: 9px 10px; font-size: .88rem; }
+    .filter-label { font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-top:.4rem; display:block; }
+    .panel-panel { display:none; }
+    .panel-panel.active { display:block; }
+    .submission-card { border:1px solid var(--border); border-radius: 12px; background: rgba(8,12,20,.55); margin-bottom: 1rem; overflow:hidden; }
+    .submission-card summary { list-style:none; cursor:pointer; padding: 1rem; display:grid; gap:.35rem; }
+    .submission-card summary::-webkit-details-marker { display:none; }
+    .submission-card summary:hover { background: rgba(56,189,248,.04); }
+    .summary-row { display:flex; flex-wrap:wrap; gap:.45rem; align-items:center; }
+    .summary-meta { color:var(--muted); font-size:.82rem; }
+    .submission-body { padding: 0 1rem 1rem; display:grid; gap:.9rem; color:var(--text); }
+    .detail-grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .9rem; }
+    .detail-box { border:1px solid var(--border); border-radius: 10px; background: var(--surface); padding: .85rem; }
+    .detail-label { color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-size: .68rem; margin-bottom: .25rem; }
+    .detail-value { white-space:pre-wrap; line-height:1.5; font-size:.92rem; }
+    @media (max-width: 1080px) { .dashboard-shell { grid-template-columns: 1fr; } .dashboard-sidepanel { position: static; } }
+    @media (max-width: 780px) { .detail-grid { grid-template-columns: 1fr; } }
+  </style>
+</body>
+</html>
