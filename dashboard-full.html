@@ -169,9 +169,39 @@
     .panel-panel { display:none; }
     .panel-panel.active { display:block; }
     .submission-card { border:1px solid var(--border); border-radius: 12px; background: rgba(8,12,20,.55); margin-bottom: 1rem; overflow:hidden; }
-    .submission-card summary { list-style:none; cursor:pointer; padding: 1rem; display:grid; gap:.35rem; }
+    .submission-card summary { list-style:none; cursor:pointer; padding: 1rem 1rem 1rem 2.1rem; display:grid; gap:.35rem; position:relative; }
     .submission-card summary::-webkit-details-marker { display:none; }
-    .submission-card summary:hover { background: rgba(56,189,248,.04); }
+    .submission-card summary::before {
+      content: '▶';
+      position: absolute;
+      left: .55rem;
+      top: .95rem;
+      color: #0f172a;
+      background: linear-gradient(135deg, #38bdf8, #2563eb);
+      border: 1px solid rgba(37, 99, 235, 0.25);
+      border-radius: 999px;
+      width: 1.2rem;
+      height: 1.2rem;
+      display:grid;
+      place-items:center;
+      font-size: .72rem;
+      font-weight: 800;
+      line-height: 1;
+      box-shadow: 0 6px 14px rgba(37, 99, 235, 0.18);
+      transition: transform .18s ease, background .18s ease;
+    }
+    .submission-card[open] summary::before { transform: rotate(90deg); background: linear-gradient(135deg, #2563eb, #38bdf8); }
+    .submission-card summary::after {
+      content: 'Tap or click to open full details';
+      color: #1d4ed8;
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin-top: .05rem;
+    }
+    .submission-card summary:hover { background: rgba(56,189,248,.06); }
+    .submission-card summary:hover::before { box-shadow: 0 8px 18px rgba(37, 99, 235, 0.28); }
     .summary-row { display:flex; flex-wrap:wrap; gap:.45rem; align-items:center; }
     .summary-meta { color:var(--muted); font-size:.82rem; }
     .submission-body { padding: 0 1rem 1rem; display:grid; gap:.9rem; color:var(--text); }
