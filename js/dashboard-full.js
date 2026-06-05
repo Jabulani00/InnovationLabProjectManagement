@@ -17,8 +17,8 @@ const db = getFirestore(app);
 const state = {
   activePanel: "agri",
   filters: {
-    agri: { search: "", status: "all", tag: "all" },
-    stars: { search: "", status: "all", tag: "all" }
+    agri: { search: "", status: "all", tag: "all", week: "all" },
+    stars: { search: "", status: "all", tag: "all", week: "all" }
   }
 };
 
@@ -65,7 +65,8 @@ function filterRows(rows, panel) {
     const matchesSearch = !term || label.includes(term) || tag.includes(term) || summary.includes(term);
     const matchesStatus = f.status === "all" || row.status === f.status;
     const matchesTag = f.tag === "all" || (panel === "agri" ? (row.stream || "") : (row.lane || row.storyRef || "")) === f.tag;
-    return matchesSearch && matchesStatus && matchesTag;
+    const matchesWeek = f.week === "all" || Number(row.week) === Number(f.week);
+    return matchesSearch && matchesStatus && matchesTag && matchesWeek;
   });
 }
 
@@ -144,14 +145,18 @@ function renderPanel(panel, rows) {
 function populateFilters(rows, panel) {
   const statusSelect = document.getElementById("statusFilter");
   const tagSelect = document.getElementById("tagFilter");
+  const weekSelect = document.getElementById("weekFilter");
   const currentStatus = state.filters[panel].status;
   const currentTag = state.filters[panel].tag;
+  const currentWeek = state.filters[panel].week;
 
   const statusOptions = [...new Set(rows.map((row) => row.status).filter(Boolean))];
   const tagOptions = [...new Set(rows.map((row) => panel === "agri" ? (row.stream || "") : (row.storyRef || row.lane || "")).filter(Boolean))];
+  const weekOptions = [...new Set(rows.map((row) => Number(row.week)).filter((value) => Number.isFinite(value) && value >= 0))].sort((a, b) => a - b);
 
   statusSelect.innerHTML = '<option value="all">All statuses</option>' + statusOptions.map((option) => `<option value="${escapeHtml(option)}" ${currentStatus === option ? "selected" : ""}>${escapeHtml(option)}</option>`).join("");
   tagSelect.innerHTML = '<option value="all">All streams / lanes</option>' + tagOptions.map((option) => `<option value="${escapeHtml(option)}" ${currentTag === option ? "selected" : ""}>${escapeHtml(option)}</option>`).join("");
+  weekSelect.innerHTML = '<option value="all">All weeks</option>' + weekOptions.map((option) => `<option value="${option}" ${currentWeek === String(option) ? "selected" : ""}>Week ${option}</option>`).join("");
 }
 
 async function loadDashboard() {
@@ -188,6 +193,10 @@ window.addEventListener("DOMContentLoaded", async () => {
   });
   document.getElementById("tagFilter").addEventListener("change", (event) => {
     state.filters[state.activePanel].tag = event.target.value;
+    loadDashboard();
+  });
+  document.getElementById("weekFilter").addEventListener("change", (event) => {
+    state.filters[state.activePanel].week = event.target.value;
     loadDashboard();
   });
 
