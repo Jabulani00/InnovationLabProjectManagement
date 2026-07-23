@@ -261,6 +261,18 @@
 
 <script>
 "use strict";
+// ---------- identity merge (same person recorded under different names) ----------
+// Add "variant": "canonical name" pairs here to merge people. Case-insensitive.
+const NAME_ALIASES = {
+  "thandazani": "Thandaza",
+  "mr motsilili": "Phomolo"
+};
+function canon(name){
+  const n = name.replace(/\s+/g,' ').trim();          // collapse double spaces
+  const key = n.toLowerCase();
+  return NAME_ALIASES[key] || n;
+}
+
 // ---------- state ----------
 const files = {};            // filename -> {name, rows}
 let DATA = null;             // computed analysis
@@ -283,7 +295,7 @@ function parseCSV(text){
     const rawDate = (p[ix.date]||'').trim();
     const time = (p[ix.time]||'').trim();
     const event = (p[ix.event]||'').trim();
-    const name = ix.name>=0 ? (p[ix.name]||'').trim() : '';
+    const name = ix.name>=0 ? canon(p[ix.name]||'') : '';
     const id = ix.id>=0 ? (p[ix.id]||'').trim() : '';
     if(!rawDate || !time) continue;
     const dk = dateKey(rawDate);
